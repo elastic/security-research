@@ -1,0 +1,29 @@
+{
+  "name": "elastic-security-research",
+  "version": "1.0.0",
+  "description": "A customization of MkDocs Material",
+  "keywords": [
+    "mkdocs",
+    "documentation"
+  ],
+  "homepage": "https://elastic.github.io/security-research/",
+  "bugs": {
+    "url": "https://github.com/elastic/intelligence-and-analytics-releases/issues",
+    "email": "dcode@elastic.co"
+  },
+  "license": "ASL2",
+  "private": true,
+  "author": {
+    "name": "Derek Ditch",
+    "email": "dcode@elastic.co"
+  },
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elastic/intelligence-and-analytics-releases.git"
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {}
+}

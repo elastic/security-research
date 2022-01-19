@@ -1,0 +1,4 @@
+python-frontmatter==1.0.0
+GitPython==3.1.26
+dirtools2==0.2.16
+docopt==0.6.2
