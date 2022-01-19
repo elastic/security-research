@@ -1,0 +1,74 @@
+---
+# code: language=yaml
+site_name: Elastic Security Research
+site_url: https://elastic.github.io/security-research/
+site_description: >-
+  The Elastic Security Research team pairs research on emerging threats with analysis of strategic, operational, and
+  tactical adversary objectives. The team produces public-facing content, in the way of summary blogs, detailed
+  releases, and artifacts; articulating both adversary campaign activities and threat detection steps that can be
+  leveraged to frustrate adversary goals. The team observes the efficacy of Malware Signatures, Behavior Protections,
+  and Detection Rules against real-world malware and adversary techniques. Research priorities are chosen through
+  open-source research vehicles, inputs from high-confidence third parties, and data collected from Elastic's evolving
+  telemetry.
+
+docs_dir: content
+dev_addr: 0.0.0.0:8000
+
+copyright: "&copy; 2022. Elasticsearch B.V. All Rights Reserved"
+extra:
+  generator: false
+  analytics:
+    provider: google
+    property: !ENV GA_PROPERTY_ID
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our reports and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our reporting better.
+
+theme:
+  name: material
+  logo: assets/img/logo.svg
+  favicon: assets/img/favicon.ico
+  custom_dir: overrides
+  font:
+    text: Inter
+    code: Roboto Mono
+  palette:
+    scheme: elastic
+  features:
+    - content.code.annotate
+    - navigation.tabs
+
+extra_css:
+  - assets/css/extra.css
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - meta
+  - footnotes
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg

@@ -1,0 +1,83 @@
+%YAML 1.2
+---
+input.elasticsearch:
+  # ---------------------------- Elasticsearch Input ----------------------------
+  # Env: INPUT_ELASTICSEARCH_ENABLED
+  enabled: True
+  # The cloud.id setting overwrites the `input.elasticsearch.hosts`
+  # You can find the `cloud.id` in the Elastic Cloud web UI.
+  # Env: CLOUD_ID (overrides both input and output!)
+  #cloud.id:
+  # The cloud.auth setting overwrites the `input.elasticsearch.username` and
+  # `input.elasticsearch.password` settings. The format is `<user>:<pass>`.
+  # API key is recommended (see below)
+  # Env: CLOUD_AUTH (overrides both input and output!)
+  #cloud.auth:
+
+  # Array of hosts to connect to.
+  # Scheme and port can be left out and will be set to the default (http and 9200)
+  # In case you specify an additional path, the scheme is required: http://localhost:9200/path
+  # IPv6 addresses should always be defined as: https://[2001:db8::1]:9200
+  # Env: INPUT_ELASTICSEARCH_HOSTS (comma-separated values)
+  hosts: ["localhost:9200"]
+  # Authentication credentials - either API key or username/password.
+  # Env: INPUT_ELASTICSEARCH_APIKEY
+  #api_key: "id:api_key"
+  # Env: INPUT_ELASTICSEARCH_USERNAME
+  #username: "elastic"
+  # Env: INPUT_ELASTICSEARCH_PASSWORD
+  #password: "changeme"
+  # Env: INPUT_ELASTICSEARCH_SSLVERIFY
+  ssl_verify: true
+
+  # Optional index pattern. The default is "logs-endpoint.alerts-*".
+  # Env: INPUT_ELASTICSEARCH_INDEX
+  index: "logs-endpoint.alerts-*"
+
+output.elasticsearch:
+  # ---------------------------- Elasticsearch Output ----------------------------
+  # Env: OUTPUT_ELASTICSEARCH_ENABLED
+  enabled: True
+  # The cloud.id setting overwrites the `output.elasticsearch.hosts`
+  # You can find the `cloud.id` in the Elastic Cloud web UI.
+  # Env: CLOUD_ID (overrides both input and output!)
+  #cloud.id:
+  # The cloud.auth setting overwrites the `output.elasticsearch.username` and
+  # `output.elasticsearch.password` settings. The format is `<user>:<pass>`.
+  # API key is recommended (see below)
+  # Env: CLOUD_AUTH (overrides both input and output!)
+  #cloud.auth:
+
+  # Array of hosts to connect to.
+  # Scheme and port can be left out and will be set to the default (http and 9200)
+  # In case you specify an additional path, the scheme is required: http://localhost:9200/path
+  # IPv6 addresses should always be defined as: https://[2001:db8::1]:9200
+  # Env: OUTPUT_ELASTICSEARCH_HOSTS (comma-separated values)
+  hosts: ["localhost:9200"]
+  # Authentication credentials - either API key or username/password.
+  # Env: OUTPUT_ELASTICSEARCH_APIKEY
+  #api_key: "id:api_key"
+  # Env: OUTPUT_ELASTICSEARCH_USERNAME
+  #username: "elastic"
+  # Env: OUTPUT_ELASTICSEARCH_PASSWORD
+  #password: "changeme"
+  # Env: OUTPUT_ELASTICSEARCH_SSLVERIFY
+  ssl_verify: true
+  # Optional index name. The default is "extraction-cobaltstrike".
+  # Env: OUTPUT_ELASTICSEARCH_INDEX
+  index: "extraction-cobaltstrike"
+
+output.console:
+  # ---------------------------- Console Output ----------------------------
+  # The console output is useful for testing or if you want to do some local
+  # analysis using other tools. Turning this output on will write events
+  # to standard out. You may have both the elasticsearch output and console
+  # output at the same time. Also, any too logging (not event data) will be
+  # written to standard error, which keeps this output on a separate stream.
+  # Env: OUTPUT_CONSOLE_ENABLED
+  enabled: False
+
+  # When set to True, the console output will print events on multiple lines
+  # and indented by 2 spaces. When False (default), each event will be on one line.
+  # Env: OUTPUT_CONSOLE_PRETTY
+  pretty: False

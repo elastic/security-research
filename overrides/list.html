@@ -1,0 +1,71 @@
+{#- code: language=jinja-html -#}
+{% extends "base.html" %}
+
+{% block extrahead %}
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="RSS feed of created content" href="{{ config.site_url }}feed_rss_created.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="{{ config.site_url }}feed_rss_updated.xml">
+{% endblock %}
+
+{% block content %}
+
+<!-- Edit button -->
+{% if page.edit_url %}
+<a
+    href="{{ page.edit_url }}"
+    title="{{ lang.t('edit.link.title') }}"
+    class="md-content__button md-icon"
+>
+    {% include ".icons/material/pencil.svg" %}
+</a>
+{% endif %}
+
+<!-- Tags -->
+{% if "tags" in config.plugins %}
+    {% include "partials/tags.html" %}
+{% endif %}
+
+<!--
+    Hack: check whether the content contains a h1 headline. If it
+    doesn't, the page title (or respectively site name) is used
+    as the main headline.
+-->
+{% if not "\x3ch1" in page.content %}
+    <h1>{{ page.title | d(config.site_name, true)}}</h1>
+{% endif %}
+<hr />
+
+<!-- Markdown content -->
+{{ page.content }}
+
+<!-- Index Table -->
+<table width="100%">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Publish Date</th>
+            <th>Summary Blog</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in page.Pages | selectattr("meta.date") | sort(attribute="meta.date", reverse=True) %}
+        <tr>
+            <td><a href="{{ entry.url | url }}">{{ entry.title }}</a></a></td>
+            <td>{{ entry.meta.description }}</td>
+            <td>{% if entry.meta.date %}{{ entry.meta.date }}{% endif %}</td>
+            <td>{% if entry.meta.summary_blog %}<a href="{{ entry.summary_blog }}">Summary Blog</a>{% endif %}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+<!-- Source file information -->
+{% if page and page.meta and (
+    page.meta.git_revision_date_localized or
+    page.meta.revision_date
+) %}
+    {% include "partials/source-file.html" %}
+{% endif %}
+{% endblock %}

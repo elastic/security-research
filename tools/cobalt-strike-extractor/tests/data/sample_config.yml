@@ -1,0 +1,8 @@
+---
+input.elasticsearch:
+  hosts:
+    - http://1.2.3.4:9200
+
+output.elasticsearch:
+  hosts:
+    - http://1.2.3.4:9200

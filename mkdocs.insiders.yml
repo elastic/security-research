@@ -1,0 +1,41 @@
+---
+# code: language=yaml
+INHERIT: mkdocs.yml
+plugins:
+  - awesome-pages
+  - search
+  - social
+  - git-revision-date-localized:
+      type: date
+      enable_creation_date: true
+      fallback_to_build_date: true
+  - mkdocs-simple-hooks:
+      hooks:
+        on_config: "plugins.elastic.hooks:on_config"
+        on_env: "plugins.elastic.hooks:on_env"
+        on_pre_build: "plugins.elastic.hooks:on_pre_build"
+        on_page_markdown: "plugins.elastic.hooks:on_page_markdown"
+  - tags:
+      tags_file: tags.md
+  - exclude:
+      glob:
+        - "**/README.md"
+  - rss:
+      enabled: !ENV [MKDOCS_ENABLE_RSS_PLUGIN, False]
+      abstract_chars_count: 160 # -1 for full content
+      categories:
+        - tags
+      # comments_path: "#__comments"
+      date_from_meta:
+        as_creation: "date"
+        as_update: False
+        datetime_format: "%Y-%m-%d"
+      feed_ttl: 1440
+      image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png
+      length: 20
+      pretty_print: false
+      match_path: ".*"
+      url_parameters:
+        utm_source: "elastic-security-research"
+        utm_medium: "RSS"
+        utm_campaign: "feed-syndication"

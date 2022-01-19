@@ -1,0 +1,88 @@
+[data-md-color-scheme="elastic"] {
+    --md-default-fg-color: rgba(0,0,0,.87);
+    --md-default-fg-color--light: rgba(0,0,0,.54);
+    --md-default-fg-color--lighter: rgba(0,0,0,.32);
+    --md-default-fg-color--lightest: rgba(0,0,0,.07);
+    --md-default-bg-color: #fff;
+    --md-default-bg-color--light: hsla(0,0%,100%,.7);
+    --md-default-bg-color--lighter: hsla(0,0%,100%,.3);
+    --md-default-bg-color--lightest: hsla(0,0%,100%,.12);
+    --md-primary-fg-color:        #007bff;
+    --md-primary-fg-color--light: #5d6cc0;
+    --md-primary-fg-color--dark: #303fa1;
+    --md-primary-bg-color:        #fff;
+    --md-primary-bg-color--light: hsla(0,0%,100%,.7);
+    --md-accent-fg-color: #00a9e5;
+    --md-accent-fg-color--transparent: rgba(82,108,254,.1);
+    --md-accent-bg-color: #6c757d;
+    --md-accent-bg-color--light: hsla(0,0%,100%,.7);
+    --md-shadow-z1: 0 0.2rem 0.5rem rgba(0,0,0,.05),0 0 0.05rem rgba(0,0,0,.1);
+    --md-shadow-z2: 0 0.2rem 0.5rem rgba(0,0,0,.1),0 0 0.05rem rgba(0,0,0,.25);
+    --md-shadow-z3: 0 0.2rem 0.5rem rgba(0,0,0,.2),0 0 0.05rem rgba(0,0,0,.35);
+    --md-code-fg-color: #36464e;
+    --md-code-bg-color: #f5f5f5;
+    --md-code-hl-color: rgba(255,255,0,.5);
+    --md-code-hl-number-color: #d52a2a;
+    --md-code-hl-special-color: #db1457;
+    --md-code-hl-function-color: #a846b9;
+    --md-code-hl-constant-color: #6e59d9;
+    --md-code-hl-keyword-color: #3f6ec6;
+    --md-code-hl-string-color: #1c7d4d;
+    --md-code-hl-name-color: var(--md-code-fg-color);
+    --md-code-hl-operator-color: var(--md-default-fg-color--light);
+    --md-code-hl-punctuation-color: var(--md-default-fg-color--light);
+    --md-code-hl-comment-color: var(--md-default-fg-color--light);
+    --md-code-hl-generic-color: var(--md-default-fg-color--light);
+    --md-code-hl-variable-color: var(--md-default-fg-color--light);
+    --md-typeset-color: var(--md-default-fg-color);
+    --md-typeset-a-color: var(--md-accent-fg-color);
+    --md-typeset-mark-color: rgba(255,255,0,.5);
+    --md-typeset-del-color: rgba(245,80,61,.15);
+    --md-typeset-ins-color: rgba(11,213,112,.15);
+    --md-typeset-kbd-color: #fafafa;
+    --md-typeset-kbd-accent-color: #fff;
+    --md-typeset-kbd-border-color: #b8b8b8;
+    --md-typeset-table-color: rgba(0,0,0,.12);
+    --md-admonition-fg-color: var(--md-default-fg-color);
+    --md-admonition-bg-color: var(--md-default-bg-color);
+    --md-footer-fg-color: #fff;
+    --md-footer-fg-color--light: hsla(0,0%,100%,.7);
+    --md-footer-fg-color--lighter: hsla(0,0%,100%,.3);
+    --md-footer-bg-color: rgba(0,0,0,.87);
+    --md-footer-bg-color--dark: rgba(0,0,0,.32);
+}
+
+[dir="ltr"] .md-header__title {
+    margin-left: auto;
+}
+
+.md-typeset .md-button {
+    padding: .625em 1em;
+}
+
+.md-typeset .mdx-author img {
+    border-radius: 100%;
+    height: 2rem;
+}
+
+.md-typeset .mdx-author p:first-child {
+    flex-shrink: 0;
+    margin-right: .8rem;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.md-typeset .mdx-author {
+    font-size: .68rem;
+}
+
+.md-typeset .mdx-author {
+    display: flex;
+    font-size: .68rem;
+}
+
+.md-typeset .mdx-author p > span {
+    display: block;
+}

@@ -1,0 +1,92 @@
+{
+  "query": {
+    "bool": {
+      "must": [],
+      "filter": [
+        {
+          "bool": {
+            "filter": [
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "match": {
+                              "event.category": "malware"
+                            }
+                          }
+                        ],
+                        "minimum_should_match": 1
+                      }
+                    },
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "match": {
+                              "event.category": "intrusion_detection"
+                            }
+                          }
+                        ],
+                        "minimum_should_match": 1
+                      }
+                    }
+                  ],
+                  "minimum_should_match": 1
+                }
+              },
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "match": {
+                              "rule.name": "Windows.Trojan.CobaltStrike"
+                            }
+                          }
+                        ],
+                        "minimum_should_match": 1
+                      }
+                    },
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "match": {
+                              "rule.name": "Windows.Trojan.Cobaltstrike"
+                            }
+                          }
+                        ],
+                        "minimum_should_match": 1
+                      }
+                    }
+                  ],
+                  "minimum_should_match": 1
+                }
+              }
+            ]
+          }
+        },
+        {
+          "match_phrase": {
+            "process.Ext.memory_region.bytes_compressed_present": true
+          }
+        }
+      ],
+      "should": [],
+      "must_not": []
+    }
+  },
+  "_source": [
+    "_id",
+    "_index",
+    "@timestamp",
+    "agent.id",
+    "process.Ext.memory_region.bytes_compressed",
+    "process.args"
+  ]
+}
