@@ -9,12 +9,13 @@ plugins:
       type: date
       enable_creation_date: true
       fallback_to_build_date: true
+  - authors
   - mkdocs-simple-hooks:
       hooks:
-        on_config: "plugins.elastic.hooks:on_config"
-        on_env: "plugins.elastic.hooks:on_env"
-        on_pre_build: "plugins.elastic.hooks:on_pre_build"
-        on_page_markdown: "plugins.elastic.hooks:on_page_markdown"
+        on_config: "elastic.plugins.hooks:on_config"
+        on_env: "elastic.plugins.hooks:on_env"
+        on_pre_build: "elastic.plugins.hooks:on_pre_build"
+        on_page_markdown: "elastic.plugins.hooks:on_page_markdown"
   - tags:
       tags_file: tags.md
   - exclude:

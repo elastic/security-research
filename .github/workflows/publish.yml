@@ -23,8 +23,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Clear site dir
-        run: rm -rf ./site/*
+      - name: Prepare for build
+        run: |
+          python setup.py install
+          rm -rf ./site/*
 
       - name: Run build command
         run: mkdocs build --config-file mkdocs.insiders.yml
