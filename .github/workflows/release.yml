@@ -1,0 +1,32 @@
+---
+# code: language=yaml
+name: Release Tarball
+on:
+  push:
+    tags:
+      - "*"
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+          cache: "pip"
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Build release tarball
+        run: |
+          python3 ./bin/make-release -o elastic-security-research.tar.gz
+
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "elastic-security-research.tar.gz"
+          token: ${{ secrets.GITHUB_TOKEN }}
