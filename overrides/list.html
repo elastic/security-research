@@ -54,7 +54,7 @@
             <td><a href="{{ entry.url | url }}">{{ entry.title }}</a></a></td>
             <td>{{ entry.meta.description }}</td>
             <td>{% if entry.meta.date %}{{ entry.meta.date }}{% endif %}</td>
-            <td>{% if entry.meta.summary_blog %}<a href="{{ entry.summary_blog }}">Summary Blog</a>{% endif %}</td>
+            <td>{% if entry.meta.summary_blog %}<a href="{{ entry.meta.summary_blog }}">Summary Blog</a>{% endif %}</td>
         </tr>
         {% endfor %}
     </tbody>
