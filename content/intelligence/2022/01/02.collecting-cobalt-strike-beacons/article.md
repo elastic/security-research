@@ -52,7 +52,7 @@ Finally, we’re going to add the memory and shellcode collection options. Click
 
 ![Fleet policy integration overview with Endpoint Security](media/overview-with-endpoint-security.png "Fleet policy integration overview with Endpoint Security")
 
-Under “Protections”, leave the different protection types selected, but change the Protection level from “Prevent” to “Detect”. This will allow malware to continue to run to allow for more rich event collection. There are several types of Protections (Malware, Memory, etc.), select “Detect” for each type that has Windows as an available “Operating system”; you can uncheck Mac and Linux Operating Systems.
+Under “Protections”, leave the different protection types selected, but change the Protection level from “Prevent” to “Detect”. This will allow malware to continue to run to allow for more rich event collection. There are several types of Protections (Malware, Memory, etc.), select “Detect” for each type that has Windows as an available “Operating system”; you can uncheck Mac and Linux Operating Systems. **If you are enabling this feature for a production environment, leave the Protection levels as "Prevent"**
 
 ![Setting Endpoint Security integration to detect](media/setting-policy-to-detect.png "Setting Endpoint Security integration to detect")
 
@@ -113,4 +113,4 @@ While an RE can identify a tremendous amount of information, let’s explore wha
 
 ## Next Steps
 
-In the next [release](../03.extracting-cobalt-strike-beacon/article.md, we'll use the beacon that we've just collected and extract its configuration. With this information, we'll be able to identify other important elements such as license identifications, watermarks, and atomic indicators.
+In the next [release](../03.extracting-cobalt-strike-beacon/article.md), we'll use the beacon that we've just collected and extract its configuration. With this information, we'll be able to identify other important elements such as license identifications, watermarks, and atomic indicators.
