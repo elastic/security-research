@@ -1,16 +1,16 @@
 # Elastic Security Research
 
-The Elastic Security Research team pairs research on emerging threats with analysis of strategic, operational, and
-tactical adversary objectives.
+The [Elastic](https://www.elastic.co) Security Research team pairs research on emerging threats with analysis of strategic, operational, and tactical adversary objectives.
 
-The team produces public-facing content, in the way of summary blogs, detailed releases, and artifacts; articulating
-both adversary campaign activities and threat detection steps that can be leveraged to frustrate adversary goals.
+The team produces public-facing content, in the way of summary blogs, detailed releases, and artifacts; articulating both adversary campaign activities and threat detection steps that can be leveraged to frustrate adversary goals.
 
-The team observes the efficacy of Malware Signatures, Behavior Protections, and Detection Rules against real-world
-malware and adversary techniques.
+The team publishes a variety of content: 
 
-Research priorities are chosen through open-source research vehicles, inputs from high-confidence third parties,
-and data collected from Elastic's evolving telemetry.
+* Analysis of malware signatures, behavior protections, and detection rules assessed against real-world malware and adversary techniques;
+* Whitepapers focused on vulnerabilities, exploits, and other research relevant to the security community at-large; and
+* Tools created to aid in the collection and analysis of threat data
+
+Research priorities are chosen through open-source research vehicles, inputs from high-confidence third parties, and data collected from Elastic's evolving telemetry.
 
 ## Workflow
 
