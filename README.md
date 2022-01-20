@@ -21,7 +21,7 @@ When a commit is made to the `main` branch, the custom container is used to rend
 content that is then pushed to the `gh-pages` branch. Once that succeeds, GitHub Actions kicks off the action that
 publishes the content to the website.
 
+## Contact
 
----
-Contact: `threat-notification //@// elastic.co`
+`threat-notification //@// elastic.co`  
 [Elastic Community Slack](https://elasticstack.slack.com)
