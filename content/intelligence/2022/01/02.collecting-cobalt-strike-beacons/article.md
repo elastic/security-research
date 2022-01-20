@@ -1,7 +1,7 @@
 ---
 title: Collecting Cobalt Strike Beacons with the Elastic Stack
 description: "Part 1 - Processes and technology needed to extract Cobalt Strike implant beacons"
-summary_blog: ""
+summary_blog: "https://www.elastic.co/blog/bringing-home-the-beacon-cobalt-strike"
 date: 2022-01-19
 tags:
   - Tutorial
