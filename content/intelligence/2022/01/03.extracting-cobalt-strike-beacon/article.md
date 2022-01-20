@@ -1,7 +1,7 @@
 ---
 title: Extracting Cobalt Strike Beacon Configurations
 description: "Part 2 - Extracting configurations from Cobalt Strike implant beacons."
-summary_blog: ""
+summary_blog: "https://www.elastic.co/blog/bringing-home-the-beacon-cobalt-strike"
 date: 2022-01-19
 tags:
  - Cobalt Strike
