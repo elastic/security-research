@@ -133,7 +133,7 @@ As always, using the atomic indicators extracted from the beacon payload configu
 
 ### This time at full speed
 
-All of the steps that we've highlighted in this release, as well as the [previous release](../02.collecting-cobalt-strike-beacons/article.md, can be automated and written into Elasticsearch using the [Cobalt Strike Beacon Extraction](../../../../tools/cobalt-strike-extractor/index.md) project.
+All of the steps that we've highlighted in this release, as well as the [previous release](../02.collecting-cobalt-strike-beacons/article.md), can be automated and written into Elasticsearch using the [Cobalt Strike Beacon Extraction](../../../../tools/cobalt-strike-extractor/index.md) project.
 
 ![Cobalt Strike Beacon configuration in Elasticsearch](media/cs-to-elasticsearch.png "Cobalt Strike Beacon configuration in Elasticsearch")
 
