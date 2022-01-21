@@ -20,6 +20,13 @@ extract the implant configuration using the [cobaltstrike-config-extractor](http
 The information is then normalized into an ECS-formatted JSON document and indexed into an Elasticsearch cluster or
 output to the terminal as JSON.
 
+!!! note "How can I collect Cobalt Strike beacons from the Elastic Stack?"
+
+    For help on creating Fleet policies to collect and analyze Cobalt Strike beacons in the Elastic Stack, check out our blog posts detailing this:
+
+* [Collecting Colbalt Strike Beacons](https://elastic.github.io/security-research/intelligence/2022/01/02.collecting-cobalt-strike-beacons/article/)
+* [Extracing Cobalt Strike Beacons](https://elastic.github.io/security-research/intelligence/2022/01/03.extracting-cobalt-strike-beacon/article/)
+
 ## Getting Started
 
 ### Docker
