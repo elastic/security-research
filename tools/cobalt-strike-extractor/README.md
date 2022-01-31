@@ -9,7 +9,7 @@ tags:
   - Cobalt Strike
 authors:
   - dcode
-  - dstepanic17
+  - dstepanic
 ---
 
 ## Overview

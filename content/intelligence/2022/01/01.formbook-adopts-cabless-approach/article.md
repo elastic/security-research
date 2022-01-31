@@ -10,7 +10,7 @@ tags:
   - CVE-2021-40444
 authors:
   - dcode
-  - dstepanic17
+  - dstepanic
   - seth-goodwin
   - peasead
 ---
