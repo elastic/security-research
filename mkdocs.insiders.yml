@@ -4,6 +4,7 @@ INHERIT: mkdocs.yml
 plugins:
   - awesome-pages
   - search
+  - mkdocs-video
   - social
   - git-revision-date-localized:
       type: date

