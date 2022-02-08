@@ -75,7 +75,7 @@
         {% include "partials/source.html" %}
       </div>
     {% endif %}
-    {% if "rss" in config["plugins"] %}
+    {% if "rss" in config["plugins"] and config["plugins"]["rss"]["enabled"] %}
 <div class="md-header__option">
         <div class="md-select">
           {% set icon = "material/rss" %}
