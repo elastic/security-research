@@ -41,7 +41,7 @@ For instance, when `fodhelper` (a Windows binary that allows elevation without r
 
 ![UAC bypass via fodhelper hijack](media/image13.png "UAC bypass via fodhelper hijack")
 
-Below is an example of [Glupteba](https://malpedia.caad.fkie.fraunhofer.de/details/win.glupteba) malware leveraging this method to first elevate from a Medium to High integrity process, then from Sigh to System integrity via Token Manipulation ([token stealing](https://lengjibo.github.io/token/)):
+Below is an example of [Glupteba](https://malpedia.caad.fkie.fraunhofer.de/details/win.glupteba) malware leveraging this method to first elevate from a Medium to High integrity process, then from High to System integrity via Token Manipulation ([token stealing](https://lengjibo.github.io/token/)):
 
 ![Glupteba Malware UAC Bypass via Fodhelper](media/image20.png "Glupteba Malware UAC Bypass via Fodhelper")
 
