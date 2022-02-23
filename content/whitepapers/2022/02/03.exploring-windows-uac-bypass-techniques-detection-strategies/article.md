@@ -1,6 +1,7 @@
 ---
 title: "Exploring Windows UAC Bypasses: Techniques and Detection Strategies"
 description: "In this blog post, we will take a look at a collection of UAC bypasses, investigate some of the key primitives they depend on, and explore detection opportunities."
+summary_blog: "https://www.elastic.co/blog/exploring-windows-uac-bypasses-techniques-and-detection-strategies"
 date: 2022-02-07
 draft: False
 authors:
