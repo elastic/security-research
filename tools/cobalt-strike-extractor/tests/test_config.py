@@ -113,3 +113,42 @@ def test_file_config(sample_config):
     _cfg_dict = _cfg.get_dict()
 
     assert _cfg_dict == FILE_CONFIG
+
+
+ENV_OVERRIDE_CONFIG = {
+    "input": {
+        "elasticsearch": {
+            "hosts": [""],
+            "cloud": {},
+            "ssl_verify": True,
+            "index": "logs-endpoint.alerts-*",
+            "enabled": False,
+        }
+    },
+    "output": {
+        "elasticsearch": {
+            "enabled": True,
+            "cloud": {},
+            "hosts": [""],
+            "index": "test-env-index",
+            "ssl_verify": True,
+        },
+        "console": {"enabled": True, "pretty": False},
+    },
+}
+
+
+def test_environ_override():
+    with mock.patch.dict(
+        os.environ,
+        {
+            "INPUT_ELASTICSEARCH_ENABLED": "False",
+            "OUTPUT_ELASTICSEARCH_ENABLED": "True",
+            "OUTPUT_ELASTICSEARCH_INDEX": "test-env-index",
+            "OUTPUT_CONSOLE_ENABLED": "True",
+        },
+    ):
+        _cfg: GlobalConfig = GlobalConfig({})
+        _cfg_dict = _cfg.get_dict()
+
+        assert _cfg_dict == ENV_OVERRIDE_CONFIG

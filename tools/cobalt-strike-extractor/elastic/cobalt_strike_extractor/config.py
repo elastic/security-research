@@ -1,6 +1,11 @@
 import os
 from dataclasses import asdict, dataclass, field, fields
+from logging import getLogger
 from typing import ClassVar, Dict, List, Union, cast, no_type_check
+
+from . import LOGGER_NAME
+
+logger = getLogger(LOGGER_NAME)
 
 
 @dataclass
@@ -8,6 +13,20 @@ class AbstractConfig:
     config_root: ClassVar[str] = "base"
 
     def __post_init__(self):
+        for item in fields(self):
+            _path = ".".join([self.config_root, item.name])
+            if (
+                "environ" in item.metadata
+                and not os.environ.get(item.metadata["environ"], None) is None
+            ):
+                logger.debug(
+                    f"Setting {_path} from environment var {item.metadata['environ']}."
+                )
+                _env_val = os.environ.get(item.metadata["environ"])
+                if isinstance(getattr(self, item.name, None), bool):
+                    _env_val = _env_val.lower() == "true"
+                setattr(self, item.name, _env_val)
+
         required_fields = (x for x in fields(self) if x.metadata.get("required", False))
         for item in required_fields:
             _path = ".".join([self.config_root, item.name])
@@ -21,30 +40,8 @@ class AbstractConfig:
                     raise ValueError(
                         f"Setting {_path} or environment variable {item.metadata['environ']} must be set!"
                     )
-                elif (
-                    "environ" in item.metadata
-                    and not os.environ.get(item.metadata["environ"], None) is None
-                ):
-                    setattr(self, item.name, os.environ.get(item.metadata["environ"]))
                 else:
                     raise ValueError(f"Setting {_path} must be set!")
-
-        # Update from environment, if set, no validation needed
-        optional_fields = (
-            x for x in fields(self) if not x.metadata.get("required", False)
-        )
-        for item in optional_fields:
-            if not getattr(self, item.name, None) or isinstance(
-                getattr(self, item.name, None), bool
-            ):
-                if (
-                    "environ" in item.metadata
-                    and not os.environ.get(item.metadata["environ"], None) is None
-                ):
-                    _env_val = os.environ.get(item.metadata["environ"])
-                    if isinstance(getattr(self, item.name, None), bool):
-                        _env_val = _env_val.lower() == "true"
-                    setattr(self, item.name, _env_val)
 
 
 @dataclass

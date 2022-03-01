@@ -65,6 +65,10 @@
     height: 2rem;
 }
 
+.md-typeset img, .md-typeset svg {
+    filter: drop-shadow(3px 3px 5px #000);
+}
+
 .md-typeset .mdx-author p:first-child {
     flex-shrink: 0;
     margin-right: .8rem;
