@@ -1,7 +1,7 @@
 ---
 title: "Elastic protects against data wiper malware targeting Ukraine: HERMETICWIPER"
 description: "Analysis of the HERMETICWIPER malware targeting Ukranian organizations."
-summary_blog: ""
+summary_blog: "https://www.elastic.co/blog/elastic-protects-against-data-wiper-malware-targeting-ukraine-hermeticwiper"
 date: 2022-03-01
 tags:
   - HERMETICWIPER
