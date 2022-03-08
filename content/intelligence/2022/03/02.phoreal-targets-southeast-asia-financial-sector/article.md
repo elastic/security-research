@@ -1,7 +1,7 @@
 ---
 title: "PHOREAL Malware Targets the Southeast Asian Financial Sector"
 description: "Elastic Security has identified an ongoing campaign targeting a Vietnamese financial services institution with the PHOREAL/RIZZO backdoor."
-summary_blog: ""
+summary_blog: "https://www.elastic.co/blog/phoreal-malware-targets-the-southeast-asian-financial-sector"
 date: 2022-03-07
 tags:
   - PHOREAL
