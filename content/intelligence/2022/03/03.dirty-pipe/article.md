@@ -1,5 +1,5 @@
 ---
-title: "Calling the plumber : Dirty Pipe detection and response"
+title: "Calling the plumber: Dirty Pipe detection and response"
 description: "Elastic Security is releasing detection logic for the Dirty Pipe exploit."
 summary_blog: ""
 date: 2022-03-14
@@ -87,7 +87,7 @@ Additionally, you can use the [Osquery Manager integration](https://docs.elastic
 
 ## Detecting CVE-2022-0847 exploitation using Auditd
 
-`[Auditd](https://linux.die.net/man/8/auditd)` is the userspace component of the Linux Auditing System. Auditd stands for Audit Daemon and is a background running service responsible for collecting and writing log files to disk. The Linux Audit System includes a kernel component that hooks system calls and communicates those to `Auditd`. `Auditd` is capable of logging System Calls, File Access, and certain pre-configured Audit events.
+[`Auditd`](https://linux.die.net/man/8/auditd) is the userspace component of the Linux Auditing System. Auditd stands for Audit Daemon and is a background running service responsible for collecting and writing log files to disk. The Linux Audit System includes a kernel component that hooks system calls and communicates those to `Auditd`. `Auditd` is capable of logging System Calls, File Access, and certain pre-configured Audit events.
 
 You can install and enable `Auditd` for free with the package manager on your Linux distribution of choice.
 
