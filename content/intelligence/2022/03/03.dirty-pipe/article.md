@@ -1,7 +1,7 @@
 ---
 title: "Detecting and responding to Dirty Pipe with Elastic"
 description: "Elastic Security is releasing detection logic for the Dirty Pipe exploit."
-summary_blog: ""
+summary_blog: "https://www.elastic.co/blog/detecting-and-responding-to-dirty-pipe-with-elastic"
 date: 2022-03-14
 tags:
   - Dirty Pipe
