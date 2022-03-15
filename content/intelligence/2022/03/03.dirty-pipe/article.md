@@ -69,7 +69,7 @@ Beyond using a traditional vulnerabilty scanner, there are several ways to detec
 
 ### Using the Elastic Security Integration
 
-If you have Auditbeat, Filebeat (with the Auditd module enabled) Elastic Agent (with the Security or Auditd integrations deployed) you can use the Lens visualization tool (located in Kibana) to quickly compile and save a list of vulnerable systems as evidenced in the screenshot below:
+If you have Auditbeat, Filebeat (with the Auditd module enabled), or the Elastic Agent (with the Security or Auditd integrations deployed) you can use the Lens visualization tool (located in Kibana) to quickly compile and save a list of vulnerable systems as evidenced in the screenshot below:
 
 <figure markdown>
   ![Analyzing your infrastructure for kernel versions impacted by Dirty Pipe](media/image7.png "Analyzing your infrastructure for kernel versions impacted by Dirty Pipe")
@@ -107,9 +107,13 @@ Once you have installed and enabled Auditd, you can add the below lines to your 
 
     The aforementioned rules were adapted by Elastic Security from initial findings by [Jonas LeJon](https://twitter.com/jonasl/status/1501840914381258756).
 
-## Auditd event collection with Elastic
+## Linux Auditing System event collection with Elastic
 
-There are a few different ways to collect Auditd events using Elastic. You can either use the Elastic Agent with the Auditd integration, Auditbeat, or the Auditd module for Filebeat.
+There are a few different ways to collect Linux Auditing System events using Elastic. You can either use the Elastic Agent with the Auditd integration, Auditbeat, or the Auditd module for Filebeat.
+
+!!! info
+
+    Remember, if you're using the Auditd integrations for the Elastic Agent or Filebeat, you'll need to create the [Auditd rules described above](https://elastic.github.io/security-research/intelligence/2022/03/03.dirty-pipe/article/#auditd-rules).
 
 ### The Elastic Agent w/Auditd Integration
 
