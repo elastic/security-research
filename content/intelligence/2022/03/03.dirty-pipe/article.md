@@ -1,5 +1,5 @@
 ---
-title: "Calling the plumber: Dirty Pipe detection and response"
+title: "Detecting and responding to Dirty Pipe with Elastic"
 description: "Elastic Security is releasing detection logic for the Dirty Pipe exploit."
 summary_blog: ""
 date: 2022-03-14
