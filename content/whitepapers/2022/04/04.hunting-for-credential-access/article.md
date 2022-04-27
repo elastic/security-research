@@ -1,10 +1,9 @@
 ---
 title: Detect Credential Access with Elastic Security
 description: "Hunting for credential access attempts using Windows file and registry events."
-summary_blog: ""
+summary_blog: "https://www.elastic.co/blog/detect-credential-access-with-elastic-security"
 date: 2022-04-25
 tags:
- - Tutorial
  - Windows Internals
  - Threat Hunting
 authors:
