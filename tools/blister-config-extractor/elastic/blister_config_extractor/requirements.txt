@@ -1,0 +1,3 @@
+malduck
+yara-python
+pefile
