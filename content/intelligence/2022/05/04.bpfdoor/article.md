@@ -1,7 +1,7 @@
 ---
 title: A peek behind the BPFDoor
 description: "An examination and detection of the BPFDoor malware."
-summary_blog: ""
+summary_blog: "https://www.elastic.co/blog/a-peek-behind-the-bpfdoor"
 date: 2022-05-17
 tags:
 - BPFDoor
