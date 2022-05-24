@@ -38,6 +38,16 @@
 
 {{ page.content }}
 
+{% if page and page.meta and page.meta.indicators_bundle %}
+<h2 id="artifacts">Artifacts<a class="headerlink" href="#artifacts" title="Permanent link">¶</a></h2>
+<p>
+Artifacts are also available for download in both ECS and STIX format in a combined zip bundle.
+</p>
+{% set bundle_name = page.meta.indicators_bundle.split("/")[-1] %}
+<a class="md-button" href="{{ page.meta.indicators_bundle }}">Download {{ bundle_name }}</a>
+
+{% endif %}
+
 {% if page and page.meta and (
   page.meta.git_revision_date_localized or
   page.meta.revision_date

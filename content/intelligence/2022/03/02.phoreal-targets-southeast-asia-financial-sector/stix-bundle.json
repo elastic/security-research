@@ -1,0 +1,1182 @@
+{
+  "type": "bundle",
+  "id": "bundle--257afc51-e50e-4b1e-a933-f8e5a4b9c68a",
+  "objects": [
+    {
+      "id": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "spec_version": "2.1",
+      "identity_class": "organization",
+      "name": "Elastic Intelligence & Analytics",
+      "contact_information": "intelligence_and_analytics_team@elastic.co",
+      "created": "2021-04-14T14:56:07.680Z",
+      "modified": "2022-05-12T01:27:50.182Z",
+      "x_opencti_organization_type": "vendor",
+      "x_opencti_reliability": "A",
+      "x_opencti_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+      "type": "identity"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+      "created": "2017-01-20T00:00:00.000Z",
+      "definition_type": "tlp",
+      "name": "TLP:WHITE",
+      "definition": {
+        "tlp": "white"
+      }
+    },
+    {
+      "id": "report--9cf181ec-660c-5e98-81b8-927bb0dc14ba",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-02-28T06:00:00.000Z",
+      "modified": "2022-05-23T16:41:56.593Z",
+      "name": "PHOREAL Malware Targets the Southeast Asian Financial Sector",
+      "description": "Elastic Security has identified an ongoing campaign targeting a Vietnamese financial services institution with the PHOREAL/RIZZO backdoor. While this malware has been in use for some time, this is the first time that we have observed it loading into memory as a defense evasion and campaign protection technique. Upon analysis of our own observations and previously reported information, we are tracking this activity group (malware + technique + victimology) as REF4322.",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2022-02-28T06:00:00.000Z",
+      "labels": [
+        "ref4322"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - PHOREAL Malware Targets the Southeast Asian Financial Sector",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/02.phoreal-targets-southeast-asia-financial-sector/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "47aa5385-0edc-41fa-b1ee-8c20631bbebf",
+      "type": "report",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "object_refs": [
+        "domain-name--5334cb88-c705-5dcd-b623-4f2a924ebd89",
+        "file--8dcb56a1-4e83-56b6-8b2b-b3423b00eb51",
+        "file--96ce0cd1-67bb-5277-9400-f4074318426f",
+        "file--a09ebfb0-5180-5387-8fe0-88bc510ca7cb",
+        "indicator--58db589e-bc11-5195-a4e6-fe74fe8966c6",
+        "indicator--5c81d1f2-776f-5ee0-a728-720effdb460a",
+        "indicator--6821fecd-79d6-5664-b1b2-ea76148d3667",
+        "indicator--706ca36d-b4ab-5abc-a6e2-656b920cfafa",
+        "indicator--7363652a-da6f-5741-823d-80fad8362ade",
+        "indicator--87a82f68-2828-5a36-bc68-378eef2a76a0",
+        "indicator--b8b074e8-a51d-5daa-88ec-c8a60be120d8",
+        "indicator--c0a2b413-656c-5d53-acae-91a77dd0eefb",
+        "indicator--c72d60f7-887b-5529-834c-dd8d27f064f3",
+        "indicator--db8fed23-2c61-583d-b6f7-717c2a97668d",
+        "indicator--e26f91c1-eb1d-5602-9220-62157fd302e6",
+        "ipv4-addr--405fde50-5822-5c25-a184-4dd21b9760de",
+        "ipv4-addr--539a2f26-00f5-5d18-8c51-4aa266dbcedc",
+        "ipv4-addr--64eee3bc-b700-5562-b03d-ac0e235fc3a7",
+        "ipv4-addr--7abdf719-bf58-57bf-8695-2eff5ee7c9d6",
+        "ipv4-addr--b762e6b9-6ceb-562b-8965-50b088ed8b95",
+        "malware--4da0631e-df0a-5ce2-b9dc-8195abeb45ba",
+        "process--227491ac-c5cb-5057-ab89-154a746fcecb",
+        "relationship--0b4e3897-6a0e-4b1d-af6e-f3778ff0fd19",
+        "relationship--1417574f-3215-4e94-8157-bc86413e3dd0",
+        "relationship--17e0f1aa-f0f5-4651-94ff-4cd348e6bcbe",
+        "relationship--37b5f03e-3031-4b68-a117-76500f0fdfac",
+        "relationship--52c7ad18-89ca-4870-849a-7645a380bb90",
+        "relationship--5992ff6d-98e4-4822-b00c-5ff3f4c4f5ea",
+        "relationship--69ac4d4c-c856-4ac1-a740-ce1e5d3c43fc",
+        "relationship--6aead311-8772-4fc5-8c75-8c81396951be",
+        "relationship--6fe8f3d6-5677-4574-bd67-c0131c9acbbd",
+        "relationship--7349be17-eb4b-4aa9-9a90-b9c5eba789e3",
+        "relationship--831af5bd-dc31-4b7a-bcf2-887280931920",
+        "relationship--8a804048-1084-4f81-8684-9067c42f1921",
+        "relationship--9430e535-2c93-44c7-aadf-ea215af2218d",
+        "relationship--9f7adca1-e8a1-4bdc-be7e-fb5294418556",
+        "relationship--bc9c90fb-f669-4b1a-88a5-ef4b5c71e8dd",
+        "relationship--d00fedb7-ce48-49e2-80b3-ff66e9d1b87c",
+        "relationship--e77ac767-f963-4eaf-8681-e12405073b6f",
+        "relationship--f0eab4c6-0a27-4d1a-b941-e1f59452afe7",
+        "relationship--f5ac08f0-f3af-40f9-8457-3f189a622dca",
+        "relationship--fa2d0944-1292-4711-ba4b-131310c1d2b0",
+        "relationship--fe76a693-07de-4735-93f7-77691c1864c0",
+        "x-opencti-hostname--5334cb88-c705-5dcd-b623-4f2a924ebd89"
+      ]
+    },
+    {
+      "id": "domain-name--5334cb88-c705-5dcd-b623-4f2a924ebd89",
+      "spec_version": "2.1",
+      "x_opencti_score": 99,
+      "value": "thelivemusicgroup.com",
+      "x_opencti_id": "dcc5be32-1d9b-4430-b4ec-1d2758e77b73",
+      "type": "domain-name",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--8dcb56a1-4e83-56b6-8b2b-b3423b00eb51",
+      "spec_version": "2.1",
+      "x_opencti_score": 99,
+      "size": 311296,
+      "x_opencti_additional_names": [
+        "MSvL0+5eOkhRkDi6+++51xYb_payload_x86.bin"
+      ],
+      "hashes": {
+        "SHA-256": "baf5053387dbf7afb53a661fc24212d9d79f965ba1e200ea5244dc0cf8a233ac",
+        "SHA-1": "a8be421743717b1a7d3648107feb5139901bb929",
+        "MD5": "00d049f0920e2f777456c7a5d1e2f97a"
+      },
+      "labels": [
+        "overlay",
+        "pedll"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "PE32 executable for MS Windows (DLL) (GUI) Intel 80386 32-bit",
+          "url": "https://www.virustotal.com/gui/file/baf5053387dbf7afb53a661fc24212d9d79f965ba1e200ea5244dc0cf8a233ac"
+        }
+      ],
+      "x_opencti_id": "e1cbf958-1f1f-48bd-9595-55d89774fa88",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--96ce0cd1-67bb-5277-9400-f4074318426f",
+      "spec_version": "2.1",
+      "x_opencti_description": "PHOREAL malware implant DLL",
+      "x_opencti_score": 100,
+      "size": 21113856,
+      "name": "tscon32.dll",
+      "magic_number_hex": "4D5A",
+      "hashes": {
+        "MD5": "2b6da20e4fc1af2c5dd5c6f6191936d1",
+        "SHA-1": "007970b7a42852b55379ef4cffa4475865c69d48",
+        "SHA-256": "ec5d5e18804e5d8118c459f5b6f3ca96047d629a50d1a0571dee0ac8d5a4ce33"
+      },
+      "labels": [
+        "malware",
+        "pedll"
+      ],
+      "x_opencti_id": "e16669fc-0ce5-420a-a280-808a3e7abf56",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--a09ebfb0-5180-5387-8fe0-88bc510ca7cb",
+      "spec_version": "2.1",
+      "x_opencti_description": "PHOREAL DLL implant",
+      "x_opencti_score": 100,
+      "size": 303104,
+      "magic_number_hex": "4D5A",
+      "x_opencti_additional_names": [
+        "c65c55e18d769b60b90f53ef157f08854205e50645ae3ac1e228891e9bd29668_dump7_0x00850000"
+      ],
+      "hashes": {
+        "MD5": "c60a7dac315b76f4ccd63db4ed904fc1",
+        "SHA-1": "91b324b9ba4598b326130941af2ecedc5fd029ab",
+        "SHA-256": "88f073552b30462a00d1d612b1638b0508e4ef02c15cf46203998091f0aef4de"
+      },
+      "labels": [
+        "overlay",
+        "pedll",
+        "malware"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "PE32 executable for MS Windows (DLL) (GUI) Intel 80386 32-bit",
+          "url": "https://www.virustotal.com/gui/file/88f073552b30462a00d1d612b1638b0508e4ef02c15cf46203998091f0aef4de"
+        }
+      ],
+      "x_opencti_id": "43cdaf92-9590-40de-95fc-17cef0556b08",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--58db589e-bc11-5195-a4e6-fe74fe8966c6",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-12T19:26:23.308Z",
+      "modified": "2022-05-12T19:26:23.308Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = 'ec5d5e18804e5d8118c459f5b6f3ca96047d629a50d1a0571dee0ac8d5a4ce33' OR file:hashes.'SHA-1' = '007970b7a42852b55379ef4cffa4475865c69d48' OR file:hashes.MD5 = '2b6da20e4fc1af2c5dd5c6f6191936d1']",
+      "name": "ec5d5e18804e5d8118c459f5b6f3ca96047d629a50d1a0571dee0ac8d5a4ce33",
+      "description": "PHOREAL malware implant DLL",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-12T19:26:23.282Z",
+      "valid_until": "2023-05-12T19:26:23.282Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "malware",
+        "pedll"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - PHOREAL Malware Targets the Southeast Asian Financial Sector",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/02.phoreal-targets-southeast-asia-financial-sector/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "20769320-cc1a-4925-8865-d84e445c97c8",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--5c81d1f2-776f-5ee0-a728-720effdb460a",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-02-23T21:53:36.542Z",
+      "modified": "2022-02-23T21:53:36.542Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = 'baf5053387dbf7afb53a661fc24212d9d79f965ba1e200ea5244dc0cf8a233ac']",
+      "name": "baf5053387dbf7afb53a661fc24212d9d79f965ba1e200ea5244dc0cf8a233ac",
+      "description": "Simple indicator of observable {baf5053387dbf7afb53a661fc24212d9d79f965ba1e200ea5244dc0cf8a233ac}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-02-23T21:53:36.511Z",
+      "valid_until": "2023-02-23T21:53:36.512Z",
+      "x_opencti_score": 99,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "external_references": [
+        {
+          "source_name": "Elastic - PHOREAL Malware Targets the Southeast Asian Financial Sector",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/02.phoreal-targets-southeast-asia-financial-sector/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "c9a5e9e8-e6b6-403d-8638-10fb26d2ecb5",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--6821fecd-79d6-5664-b1b2-ea76148d3667",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-02-23T21:58:52.066Z",
+      "modified": "2022-02-23T21:58:52.066Z",
+      "pattern_type": "stix",
+      "pattern": "[domain-name:value = 'thelivemusicgroup.com']",
+      "name": "thelivemusicgroup.com",
+      "description": "Simple indicator of observable {thelivemusicgroup.com}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-02-23T21:58:52.031Z",
+      "valid_until": "2023-02-23T21:58:52.031Z",
+      "x_opencti_score": 99,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "Domain-Name",
+      "external_references": [
+        {
+          "source_name": "Elastic - PHOREAL Malware Targets the Southeast Asian Financial Sector",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/02.phoreal-targets-southeast-asia-financial-sector/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "6289b286-d56d-40d4-a2e5-98bbd7b11a4f",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--706ca36d-b4ab-5abc-a6e2-656b920cfafa",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-12T20:01:00.784Z",
+      "modified": "2022-05-12T20:01:00.784Z",
+      "pattern_type": "stix",
+      "pattern": "[ipv4-addr:value = '103.75.190.6']",
+      "name": "103.75.190.6",
+      "description": "Simple indicator of observable {103.75.190.6}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-12T20:01:00.760Z",
+      "valid_until": "2022-06-11T20:01:00.760Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "IPv4-Addr",
+      "external_references": [
+        {
+          "source_name": "Elastic - PHOREAL Malware Targets the Southeast Asian Financial Sector",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/02.phoreal-targets-southeast-asia-financial-sector/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "8b2d3e43-3744-46ae-8eca-150fa98f8ca6",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--7363652a-da6f-5741-823d-80fad8362ade",
+      "spec_version": "2.1",
+      "revoked": true,
+      "confidence": 15,
+      "created": "2022-02-23T21:53:40.233Z",
+      "modified": "2022-02-23T21:54:12.423Z",
+      "pattern_type": "yara",
+      "pattern": "rule win_phoreal_auto\n{\n\tmeta:\n\t\tauthor = \"Felix Bilstein - yara-signator at cocacoding dot com\"\n\t\tdate = \"2021-10-07\"\n\t\tversion = \"1\"\n\t\tdescription = \"Detects win.phoreal.\"\n\t\tinfo = \"autogenerated rule brought to you by yara-signator\"\n\t\ttool = \"yara-signator v0.6.0\"\n\t\tsignator_config = \"callsandjumps;datarefs;binvalue\"\n\t\tmalpedia_reference = \"https://malpedia.caad.fkie.fraunhofer.de/details/win.phoreal\"\n\t\tmalpedia_rule_date = \"20211007\"\n\t\tmalpedia_hash = \"e5b790e0f888f252d49063a1251ca60ec2832535\"\n\t\tmalpedia_version = \"20211008\"\n\t\tmalpedia_license = \"CC BY-SA 4.0\"\n\t\tmalpedia_sharing = \"TLP:WHITE\"\n\n\tstrings:\n\t\t$sequence_0 = { 83f910 7205 8955c0 eb06 8d45d4 8945c0 8b4dc0 }\n\t\t$sequence_1 = { 33c0 c745e807000000 895de4 668945d4 837f1408 7317 }\n\t\t$sequence_2 = { 83c404 8b45cc c745dc00000000 397de0 7303 8d45cc 33c9 }\n\t\t$sequence_3 = { 8d55e8 52 ff15???????? 8945ac 3bc3 741c 8b4d98 }\n\t\t$sequence_4 = { 33c9 c7461407000000 897e10 66890e 837de808 720c 8b55d4 }\n\t\t$sequence_5 = { 4e e8???????? 8bf8 8b442414 8b4860 51 6a00 }\n\t\t$sequence_6 = { 03c0 8d34bd00000000 8d0c16 2bc1 03c2 c1f802 }\n\t\t$sequence_7 = { 7410 e8???????? 56 e8???????? 83c404 }\n\t\t$sequence_8 = { 51 c745f800000000 ff15???????? 85c0 745a 8b7df8 }\n\t\t$sequence_9 = { 85c0 7f0b ff15???????? e9???????? e8???????? 33c0 6a35 }\n\n\tcondition:\n\t\t7 of them and filesize <622592\n}\n",
+      "name": "win_phoreal_auto",
+      "description": "{\"description\": \"Detects win.phoreal.\", \"author\": \"Felix Bilstein - yara-signator at cocacoding dot com\", \"source\": \"https://malpedia.caad.fkie.fraunhofer.de/\", \"ruleset_id\": \"00839b2356\", \"ruleset_name\": \"win.phoreal_auto\"}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2010-06-26T14:26:15.000Z",
+      "valid_until": "2011-06-26T14:26:15.000Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "x_opencti_id": "25823169-b253-4312-9fca-0b5911eebdb6",
+      "type": "indicator"
+    },
+    {
+      "id": "indicator--87a82f68-2828-5a36-bc68-378eef2a76a0",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-02-23T21:48:39.323Z",
+      "modified": "2022-05-12T18:49:55.040Z",
+      "pattern_type": "yara",
+      "pattern": "rule Windows_Trojan_PHOREAL {\n    meta:\n        Author = \"Elastic Security\"\n        creation_date = \"2022-02-16\"\n        last_modified = \"2022-02-16\"\n        os = \"Windows\"\n        arch = \"x86\"\n        category_type = \"Trojan\"\n        family = \"PHOREAL\"\n        threat_name = \"Windows.Trojan.PHOREAL\"\n        description = \"Detects REF4322/APT32 in-memory backdoor PHOREAL/Rizzo.\"\n        reference_sample = \"88f073552b30462a00d1d612b1638b0508e4ef02c15cf46203998091f0aef4de\"\n\n\n    strings:\n              \\\\  \"\\\\.\\pipe\\{A06F176F-79F1-473E-AF44-9763E3CB34E5}\"  ascii wide\n        $a1 = { 5C 00 5C 00 2E 00 5C 00 70 00 69 00 70 00 65 00 5C 00 7B 00 41 00 \n                30 00 36 00 46 00 31 00 37 00 36 00 46 00 2D 00 37 00 39 00 46 00 \n                31 00 2D 00 34 00 37 00 33 00 45 00 2D 00 41 00 46 00 34 00 34 00 \n                2D 00 39 00 37 00 36 00 33 00 45 00 33 00 43 00 42 00 33 00 34 00 \n                45 00 35 00 7D 00 }\n\n              \\\\  \"Local\\{5FBC3F53-A76D-4248-969A-31740CBC8AD6}\"  ascii wide\n        $a2 = { 4C 00 6F 00 63 00 61 00 6C 00 5C 00 7B 00 35 00 46 00 42 00 43 00 \n                33 00 46 00 35 00 33 00 2D 00 41 00 37 00 36 00 44 00 2D 00 34 00 \n                32 00 34 00 38 00 2D 00 39 00 36 00 39 00 41 00 2D 00 33 00 31 00 \n                37 00 34 00 30 00 43 00 42 00 43 00 38 00 41 00 44 00 36 00 7D 00 }\n\n              \\\\  \"{FD5F8447-657A-45C1-894B-D533926C9B66}.dll\"  ascii\n        $a3 = { 7B 46 44 35 46 38 34 34 37 2D 36 35 37 41 2D 34 35 43 31 2D 38 39 \n                34 42 2D 44 35 33 33 39 32 36 43 39 42 36 36 7D 2E 64 6C 6C }\n\n              \\\\  PHOREAL start_address_bytes sequence\n        $str_addr = { 8B FF 55 8B EC 56 E8 3F 3E 00 00 E8 34 3E 00 00 50 E8 14 3E \n                00 00 85 C0 75 2A 8B 75 08 56 E8 21 }\n    condition:\n        2 of them\n}\n",
+      "name": "Windows_Trojan_PHOREAL",
+      "description": "Searches for overlapping byte sequences found in two samples.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-02-16T06:00:00.000Z",
+      "valid_until": "2023-02-16T06:00:00.000Z",
+      "x_opencti_score": 100,
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution",
+          "x_opencti_order": 0
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - PHOREAL Malware Targets the Southeast Asian Financial Sector",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/02.phoreal-targets-southeast-asia-financial-sector/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "54b73481-7594-460a-8e7b-07f262891bb1",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--b8b074e8-a51d-5daa-88ec-c8a60be120d8",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-12T20:00:23.638Z",
+      "modified": "2022-05-12T20:00:23.638Z",
+      "pattern_type": "stix",
+      "pattern": "[ipv4-addr:value = '188.166.203.57']",
+      "name": "188.166.203.57",
+      "description": "Simple indicator of observable {188.166.203.57}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-12T20:00:23.610Z",
+      "valid_until": "2022-06-11T20:00:23.610Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "IPv4-Addr",
+      "external_references": [
+        {
+          "source_name": "Elastic - PHOREAL Malware Targets the Southeast Asian Financial Sector",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/02.phoreal-targets-southeast-asia-financial-sector/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "7753a03b-6148-4998-adaa-fdeb88c38dfb",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--c0a2b413-656c-5d53-acae-91a77dd0eefb",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-12T18:58:37.161Z",
+      "modified": "2022-05-12T18:58:37.161Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '88f073552b30462a00d1d612b1638b0508e4ef02c15cf46203998091f0aef4de' OR file:hashes.'SHA-1' = '91b324b9ba4598b326130941af2ecedc5fd029ab' OR file:hashes.MD5 = 'c60a7dac315b76f4ccd63db4ed904fc1']",
+      "name": "88f073552b30462a00d1d612b1638b0508e4ef02c15cf46203998091f0aef4de",
+      "description": "PHOREAL DLL implant",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-12T18:58:37.128Z",
+      "valid_until": "2023-05-12T18:58:37.128Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "overlay",
+        "pedll",
+        "malware"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - PHOREAL Malware Targets the Southeast Asian Financial Sector",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/02.phoreal-targets-southeast-asia-financial-sector/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "52ef88bc-6644-4da8-b3f1-ff731ca61578",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--c72d60f7-887b-5529-834c-dd8d27f064f3",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-12T20:01:17.782Z",
+      "modified": "2022-05-12T20:01:17.782Z",
+      "pattern_type": "stix",
+      "pattern": "[ipv4-addr:value = '72.52.179.174']",
+      "name": "72.52.179.174",
+      "description": "Simple indicator of observable {72.52.179.174}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-12T20:01:17.755Z",
+      "valid_until": "2022-06-11T20:01:17.755Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "IPv4-Addr",
+      "external_references": [
+        {
+          "source_name": "Elastic - PHOREAL Malware Targets the Southeast Asian Financial Sector",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/02.phoreal-targets-southeast-asia-financial-sector/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "0fc8e079-cce7-423a-a336-a099b65e3cb4",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--db8fed23-2c61-583d-b6f7-717c2a97668d",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-12T18:59:54.171Z",
+      "modified": "2022-05-12T18:59:54.171Z",
+      "pattern_type": "stix",
+      "pattern": "[ipv4-addr:value = '103.75.117.250']",
+      "name": "103.75.117.250",
+      "description": "Resolved IP of thelivemusicgroup[.]com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-12T18:59:54.140Z",
+      "valid_until": "2022-06-11T18:59:54.140Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "IPv4-Addr",
+      "external_references": [
+        {
+          "source_name": "Elastic - PHOREAL Malware Targets the Southeast Asian Financial Sector",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/02.phoreal-targets-southeast-asia-financial-sector/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "2cfd98c6-8e12-4b18-8498-c4db2f93c989",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--e26f91c1-eb1d-5602-9220-62157fd302e6",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-12T20:00:40.751Z",
+      "modified": "2022-05-12T20:00:40.751Z",
+      "pattern_type": "stix",
+      "pattern": "[ipv4-addr:value = '37.220.14.17']",
+      "name": "37.220.14.17",
+      "description": "Simple indicator of observable {37.220.14.17}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-12T20:00:40.723Z",
+      "valid_until": "2022-06-11T20:00:40.724Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "IPv4-Addr",
+      "external_references": [
+        {
+          "source_name": "Elastic - PHOREAL Malware Targets the Southeast Asian Financial Sector",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/02.phoreal-targets-southeast-asia-financial-sector/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "84400d6d-c1df-47f6-8a0c-f41e62405999",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "ipv4-addr--405fde50-5822-5c25-a184-4dd21b9760de",
+      "spec_version": "2.1",
+      "x_opencti_score": 50,
+      "value": "37.220.14.17",
+      "external_references": [
+        {
+          "source_name": "VirusTotal - thelivemusicgroup.com relations",
+          "url": "https://www.virustotal.com/gui/domain/thelivemusicgroup.com/relations"
+        }
+      ],
+      "x_opencti_id": "22215f57-49a7-49e9-aade-fbc2dad5b0be",
+      "type": "ipv4-addr",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "ipv4-addr--539a2f26-00f5-5d18-8c51-4aa266dbcedc",
+      "spec_version": "2.1",
+      "x_opencti_score": 50,
+      "value": "188.166.203.57",
+      "external_references": [
+        {
+          "source_name": "VirusTotal - thelivemusicgroup.com relations",
+          "url": "https://www.virustotal.com/gui/domain/thelivemusicgroup.com/relations"
+        }
+      ],
+      "x_opencti_id": "1fcdef91-f0b0-4c92-8cce-b1cd12a7780c",
+      "type": "ipv4-addr",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "ipv4-addr--64eee3bc-b700-5562-b03d-ac0e235fc3a7",
+      "spec_version": "2.1",
+      "x_opencti_score": 50,
+      "value": "72.52.179.174",
+      "external_references": [
+        {
+          "source_name": "Elastic - PHOREAL Malware Targets the Southeast Asian Financial Sector",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/02.phoreal-targets-southeast-asia-financial-sector/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "38eddc81-c0c2-4fa2-bd31-bbaa9a2a341f",
+      "type": "ipv4-addr",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "ipv4-addr--7abdf719-bf58-57bf-8695-2eff5ee7c9d6",
+      "spec_version": "2.1",
+      "x_opencti_score": 50,
+      "value": "103.75.190.6",
+      "external_references": [
+        {
+          "source_name": "VirusTotal - thelivemusicgroup.com relations",
+          "url": "https://www.virustotal.com/gui/domain/thelivemusicgroup.com/relations"
+        }
+      ],
+      "x_opencti_id": "02ec44f4-7309-41fe-b425-bf94932fb56c",
+      "type": "ipv4-addr",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "ipv4-addr--b762e6b9-6ceb-562b-8965-50b088ed8b95",
+      "spec_version": "2.1",
+      "x_opencti_description": "Resolved IP of thelivemusicgroup[.]com",
+      "x_opencti_score": 100,
+      "value": "103.75.117.250",
+      "x_opencti_id": "f33a6cb8-af9d-4f0b-980c-09399495bd96",
+      "type": "ipv4-addr",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+      "spec_version": "2.1",
+      "identity_class": "organization",
+      "name": "The MITRE Corporation",
+      "created": "2021-04-05T18:51:47.239Z",
+      "modified": "2022-05-18T19:22:45.284Z",
+      "x_opencti_id": "2b89f7fb-6c5f-4104-8dd1-a34cbc1d0a5a",
+      "type": "identity"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--47645da4-afb2-5733-bafb-f7cd98ec4e7d",
+      "created": "2017-06-01T00:00:00.000Z",
+      "definition_type": "statement",
+      "name": "Copyright 2015-2021, The MITRE Corporation. MITRE ATT&CK and ATT&CK are registered trademarks of The MITRE Corporation.",
+      "definition": {
+        "statement": "copyright 2015-2021, the mitre corporation. mitre att&ck and att&ck are registered trademarks of the mitre corporation."
+      }
+    },
+    {
+      "id": "malware--4da0631e-df0a-5ce2-b9dc-8195abeb45ba",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 15,
+      "created": "2017-12-14T16:46:06.044Z",
+      "modified": "2022-05-18T19:26:07.315Z",
+      "name": "PHOREAL",
+      "description": "[PHOREAL](https://attack.mitre.org/software/S0158) is a signature backdoor used by [APT32](https://attack.mitre.org/groups/G0050). (Citation: FireEye APT32 May 2017)",
+      "aliases": [
+        "PHOREAL"
+      ],
+      "is_family": false,
+      "first_seen": "1970-01-01T00:00:00.000Z",
+      "last_seen": "5138-11-16T09:46:40.000Z",
+      "labels": [
+        "malware"
+      ],
+      "external_references": [
+        {
+          "source_name": "FireEye APT32 May 2017",
+          "description": "Carr, N.. (2017, May 14). Cyber Espionage is Alive and Well: APT32 and the Threat to Global Corporations. Retrieved June 18, 2017.",
+          "url": "https://www.fireeye.com/blog/threat-research/2017/05/cyber-espionage-apt32.html"
+        },
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/software/S0158",
+          "external_id": "S0158"
+        },
+        {
+          "source_name": "Elastic - PHOREAL Malware Targets the Southeast Asian Financial Sector",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/02.phoreal-targets-southeast-asia-financial-sector/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "d868118d-1c7e-4142-8a8f-c9329a85d035",
+      "type": "malware",
+      "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+      "object_marking_refs": [
+        "marking-definition--47645da4-afb2-5733-bafb-f7cd98ec4e7d"
+      ]
+    },
+    {
+      "id": "process--227491ac-c5cb-5057-ab89-154a746fcecb",
+      "spec_version": "2.1",
+      "x_opencti_score": 99,
+      "is_hidden": false,
+      "pid": 8308,
+      "command_line": "control.exe \"Firewall.cpl\" {2D48D219-C306-4349-AE1F-09744DFFB5B9}",
+      "x_opencti_id": "9206a60c-84fd-4982-9b23-5c95e00e119d",
+      "type": "process",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "relationship--0b4e3897-6a0e-4b1d-af6e-f3778ff0fd19",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-02-28T06:00:00.000Z",
+      "stop_time": "2023-02-28T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 75,
+      "lang": "en",
+      "created": "2022-02-23T22:30:51.132Z",
+      "modified": "2022-02-23T22:30:51.132Z",
+      "x_opencti_id": "c9f6ee67-fc3f-4692-968e-eca03f17a0ba",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--5c81d1f2-776f-5ee0-a728-720effdb460a",
+      "target_ref": "malware--4da0631e-df0a-5ce2-b9dc-8195abeb45ba"
+    },
+    {
+      "id": "relationship--1417574f-3215-4e94-8157-bc86413e3dd0",
+      "spec_version": "2.1",
+      "relationship_type": "related-to",
+      "description": "resolved-to\n\nAccording to passive DNS records at VirusTotal, this hostname resolved the identified IP address.",
+      "start_time": "2019-12-02T06:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-02-23T22:13:04.683Z",
+      "modified": "2023-02-23T22:14:05.512Z",
+      "external_references": [
+        {
+          "source_name": "VirusTotal - thelivemusicgroup.com relations",
+          "url": "https://www.virustotal.com/gui/domain/thelivemusicgroup.com/relations"
+        }
+      ],
+      "x_opencti_id": "5160efd0-b18c-4d3c-8cc8-86783e8e10f5",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "x-opencti-hostname--5334cb88-c705-5dcd-b623-4f2a924ebd89",
+      "target_ref": "ipv4-addr--405fde50-5822-5c25-a184-4dd21b9760de"
+    },
+    {
+      "id": "relationship--17e0f1aa-f0f5-4651-94ff-4cd348e6bcbe",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-05-12T18:58:37.353Z",
+      "modified": "2022-05-12T18:58:37.353Z",
+      "x_opencti_id": "3dba506e-bb73-4107-a4be-439a11b3f953",
+      "type": "relationship",
+      "source_ref": "indicator--c0a2b413-656c-5d53-acae-91a77dd0eefb",
+      "target_ref": "file--a09ebfb0-5180-5387-8fe0-88bc510ca7cb"
+    },
+    {
+      "id": "relationship--37b5f03e-3031-4b68-a117-76500f0fdfac",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-02-28T06:00:00.000Z",
+      "stop_time": "2023-02-27T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 75,
+      "lang": "en",
+      "created": "2022-05-12T19:27:46.745Z",
+      "modified": "2022-05-12T19:27:46.745Z",
+      "x_opencti_id": "674211c9-aa57-4473-96aa-3a10de989878",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--c0a2b413-656c-5d53-acae-91a77dd0eefb",
+      "target_ref": "malware--4da0631e-df0a-5ce2-b9dc-8195abeb45ba"
+    },
+    {
+      "id": "relationship--52c7ad18-89ca-4870-849a-7645a380bb90",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-02-28T06:00:00.000Z",
+      "stop_time": "2023-02-28T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 75,
+      "lang": "en",
+      "created": "2022-02-23T22:22:51.274Z",
+      "modified": "2022-02-23T22:22:51.274Z",
+      "x_opencti_id": "4b2cd5e4-f172-4f7d-bc85-ee9821315bb1",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--7363652a-da6f-5741-823d-80fad8362ade",
+      "target_ref": "malware--4da0631e-df0a-5ce2-b9dc-8195abeb45ba"
+    },
+    {
+      "id": "relationship--5992ff6d-98e4-4822-b00c-5ff3f4c4f5ea",
+      "spec_version": "2.1",
+      "relationship_type": "related-to",
+      "description": "member-of\n\nThe hostname is a member of the DNS zone",
+      "start_time": "2022-02-28T06:00:00.000Z",
+      "stop_time": "2023-02-28T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 75,
+      "lang": "en",
+      "created": "2022-02-23T22:25:22.602Z",
+      "modified": "2022-02-23T22:25:22.602Z",
+      "x_opencti_id": "fd171d9b-d187-4daf-92e1-416884c28c22",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "x-opencti-hostname--5334cb88-c705-5dcd-b623-4f2a924ebd89",
+      "target_ref": "domain-name--5334cb88-c705-5dcd-b623-4f2a924ebd89"
+    },
+    {
+      "id": "relationship--69ac4d4c-c856-4ac1-a740-ce1e5d3c43fc",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "2022-02-28T06:00:00.000Z",
+      "stop_time": "2023-02-28T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-02-23T22:29:38.928Z",
+      "modified": "2022-02-23T22:29:38.928Z",
+      "x_opencti_id": "a9500a3b-db7a-446b-b8b3-d32136557db8",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--87a82f68-2828-5a36-bc68-378eef2a76a0",
+      "target_ref": "file--8dcb56a1-4e83-56b6-8b2b-b3423b00eb51"
+    },
+    {
+      "id": "relationship--6aead311-8772-4fc5-8c75-8c81396951be",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-02-28T06:00:00.000Z",
+      "stop_time": "2023-02-28T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-02-23T22:22:38.017Z",
+      "modified": "2022-02-23T22:22:38.017Z",
+      "x_opencti_id": "c4c8f4be-f77e-40d3-bef4-3ef1aeba4332",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--87a82f68-2828-5a36-bc68-378eef2a76a0",
+      "target_ref": "malware--4da0631e-df0a-5ce2-b9dc-8195abeb45ba"
+    },
+    {
+      "id": "relationship--6fe8f3d6-5677-4574-bd67-c0131c9acbbd",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-02-23T21:53:36.771Z",
+      "modified": "2022-02-23T21:53:36.771Z",
+      "x_opencti_id": "f7cebbea-2f3e-4061-b48d-c882ec126a1a",
+      "type": "relationship",
+      "source_ref": "indicator--5c81d1f2-776f-5ee0-a728-720effdb460a",
+      "target_ref": "file--8dcb56a1-4e83-56b6-8b2b-b3423b00eb51"
+    },
+    {
+      "id": "relationship--7349be17-eb4b-4aa9-9a90-b9c5eba789e3",
+      "spec_version": "2.1",
+      "relationship_type": "related-to",
+      "description": "loads-file\n\nThe process entity loaded the DLL PE file into its memory for execution.",
+      "start_time": "2022-02-28T06:00:00.000Z",
+      "stop_time": "2023-02-28T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 75,
+      "lang": "en",
+      "created": "2022-02-23T22:28:48.885Z",
+      "modified": "2022-02-23T22:28:48.885Z",
+      "x_opencti_id": "e5d2f93f-f2e2-4d36-a0c7-0728c5351d3a",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "process--227491ac-c5cb-5057-ab89-154a746fcecb",
+      "target_ref": "file--8dcb56a1-4e83-56b6-8b2b-b3423b00eb51"
+    },
+    {
+      "id": "relationship--831af5bd-dc31-4b7a-bcf2-887280931920",
+      "spec_version": "2.1",
+      "relationship_type": "related-to",
+      "description": "resolved-to\n\nAccording to passive DNS records at VirusTotal, this hostname resolved the identified IP address.",
+      "start_time": "2021-03-25T05:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-02-23T22:13:05.843Z",
+      "modified": "2022-02-23T22:13:37.303Z",
+      "external_references": [
+        {
+          "source_name": "VirusTotal - thelivemusicgroup.com relations",
+          "url": "https://www.virustotal.com/gui/domain/thelivemusicgroup.com/relations"
+        }
+      ],
+      "x_opencti_id": "95ea0ecb-0376-4709-ad8f-223c3651a989",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "x-opencti-hostname--5334cb88-c705-5dcd-b623-4f2a924ebd89",
+      "target_ref": "ipv4-addr--b762e6b9-6ceb-562b-8965-50b088ed8b95"
+    },
+    {
+      "id": "relationship--8a804048-1084-4f81-8684-9067c42f1921",
+      "spec_version": "2.1",
+      "relationship_type": "related-to",
+      "description": "resolved-to\n\nAccording to passive DNS records at VirusTotal, this hostname resolved the identified IP address.",
+      "start_time": "2021-04-06T05:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-02-23T22:13:05.494Z",
+      "modified": "2022-02-23T22:14:26.627Z",
+      "external_references": [
+        {
+          "source_name": "VirusTotal - thelivemusicgroup.com relations",
+          "url": "https://www.virustotal.com/gui/domain/thelivemusicgroup.com/relations"
+        }
+      ],
+      "x_opencti_id": "cd916e38-eee5-4640-a550-b844d9e32a2e",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "x-opencti-hostname--5334cb88-c705-5dcd-b623-4f2a924ebd89",
+      "target_ref": "ipv4-addr--64eee3bc-b700-5562-b03d-ac0e235fc3a7"
+    },
+    {
+      "id": "relationship--9430e535-2c93-44c7-aadf-ea215af2218d",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-05-12T19:26:23.504Z",
+      "modified": "2022-05-12T19:26:23.504Z",
+      "x_opencti_id": "f1fd44c9-e866-488b-b21f-0fa53d73c492",
+      "type": "relationship",
+      "source_ref": "indicator--58db589e-bc11-5195-a4e6-fe74fe8966c6",
+      "target_ref": "file--96ce0cd1-67bb-5277-9400-f4074318426f"
+    },
+    {
+      "id": "relationship--9f7adca1-e8a1-4bdc-be7e-fb5294418556",
+      "spec_version": "2.1",
+      "relationship_type": "related-to",
+      "description": "resolved-to\n\nAccording to passive DNS records at VirusTotal, this hostname resolved the identified IP address.",
+      "start_time": "2019-04-06T05:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-02-23T22:13:04.205Z",
+      "modified": "2022-02-23T22:14:45.708Z",
+      "external_references": [
+        {
+          "source_name": "VirusTotal - thelivemusicgroup.com relations",
+          "url": "https://www.virustotal.com/gui/domain/thelivemusicgroup.com/relations"
+        }
+      ],
+      "x_opencti_id": "767d4c80-d434-4613-9fb0-255c6fb17650",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "x-opencti-hostname--5334cb88-c705-5dcd-b623-4f2a924ebd89",
+      "target_ref": "ipv4-addr--539a2f26-00f5-5d18-8c51-4aa266dbcedc"
+    },
+    {
+      "id": "relationship--bc9c90fb-f669-4b1a-88a5-ef4b5c71e8dd",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-02-23T21:58:52.281Z",
+      "modified": "2022-02-23T21:58:52.281Z",
+      "x_opencti_id": "a60af6cf-1171-464d-b19c-a5c71fc4dfdd",
+      "type": "relationship",
+      "source_ref": "indicator--6821fecd-79d6-5664-b1b2-ea76148d3667",
+      "target_ref": "domain-name--5334cb88-c705-5dcd-b623-4f2a924ebd89"
+    },
+    {
+      "id": "relationship--d00fedb7-ce48-49e2-80b3-ff66e9d1b87c",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-02-28T06:00:00.000Z",
+      "stop_time": "2023-02-28T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 75,
+      "lang": "en",
+      "created": "2022-02-23T22:30:36.283Z",
+      "modified": "2022-02-23T22:30:36.283Z",
+      "x_opencti_id": "826015e2-3a02-45ba-80a8-bc8d897f85ea",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--6821fecd-79d6-5664-b1b2-ea76148d3667",
+      "target_ref": "malware--4da0631e-df0a-5ce2-b9dc-8195abeb45ba"
+    },
+    {
+      "id": "relationship--e77ac767-f963-4eaf-8681-e12405073b6f",
+      "spec_version": "2.1",
+      "relationship_type": "related-to",
+      "description": "resolved-to\n\nAccording to passive DNS records at VirusTotal, this hostname resolved the identified IP address.",
+      "start_time": "2020-09-17T05:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-02-23T22:13:05.102Z",
+      "modified": "2022-02-23T22:15:03.281Z",
+      "external_references": [
+        {
+          "source_name": "VirusTotal - thelivemusicgroup.com relations",
+          "url": "https://www.virustotal.com/gui/domain/thelivemusicgroup.com/relations"
+        }
+      ],
+      "x_opencti_id": "3102fff9-4e3a-4aa1-ad75-8f5fbdef9c08",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "x-opencti-hostname--5334cb88-c705-5dcd-b623-4f2a924ebd89",
+      "target_ref": "ipv4-addr--7abdf719-bf58-57bf-8695-2eff5ee7c9d6"
+    },
+    {
+      "id": "relationship--f0eab4c6-0a27-4d1a-b941-e1f59452afe7",
+      "spec_version": "2.1",
+      "relationship_type": "related-to",
+      "description": "contains\n\nThe file contains the encoded string of the hostname. The hostname is RC4 encrypted.",
+      "start_time": "2022-02-28T06:00:00.000Z",
+      "stop_time": "2023-02-28T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 75,
+      "lang": "en",
+      "created": "2022-02-23T22:32:36.297Z",
+      "modified": "2022-02-23T22:32:36.297Z",
+      "x_opencti_id": "4c00fa22-e124-4dcc-967e-a58d90a86460",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "file--8dcb56a1-4e83-56b6-8b2b-b3423b00eb51",
+      "target_ref": "x-opencti-hostname--5334cb88-c705-5dcd-b623-4f2a924ebd89"
+    },
+    {
+      "id": "relationship--f5ac08f0-f3af-40f9-8457-3f189a622dca",
+      "spec_version": "2.1",
+      "relationship_type": "related-to",
+      "start_time": "2022-02-28T06:00:00.000Z",
+      "stop_time": "2023-02-28T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 75,
+      "lang": "en",
+      "created": "2022-02-23T22:29:20.775Z",
+      "modified": "2022-02-23T22:29:20.775Z",
+      "x_opencti_id": "4f57f3a0-5108-4cfd-b81c-8216957b71b0",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--7363652a-da6f-5741-823d-80fad8362ade",
+      "target_ref": "file--8dcb56a1-4e83-56b6-8b2b-b3423b00eb51"
+    },
+    {
+      "id": "relationship--fa2d0944-1292-4711-ba4b-131310c1d2b0",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-02-28T06:00:00.000Z",
+      "stop_time": "2023-02-28T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 75,
+      "lang": "en",
+      "created": "2022-05-12T19:27:15.651Z",
+      "modified": "2022-05-12T19:27:15.651Z",
+      "x_opencti_id": "81082695-96c5-4803-b702-45edef1864ad",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--58db589e-bc11-5195-a4e6-fe74fe8966c6",
+      "target_ref": "malware--4da0631e-df0a-5ce2-b9dc-8195abeb45ba"
+    },
+    {
+      "id": "relationship--fe76a693-07de-4735-93f7-77691c1864c0",
+      "spec_version": "2.1",
+      "relationship_type": "related-to",
+      "description": "resolved-to\n\nThe hostname resolved to the identified ip address using active DNS resolution from Elastic infrastructure.",
+      "start_time": "2022-02-23T06:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-02-23T22:16:41.369Z",
+      "modified": "2022-02-23T22:16:41.369Z",
+      "x_opencti_id": "1206a7ae-c209-4d37-ae16-68d7e6910c07",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "x-opencti-hostname--5334cb88-c705-5dcd-b623-4f2a924ebd89",
+      "target_ref": "ipv4-addr--b762e6b9-6ceb-562b-8965-50b088ed8b95"
+    },
+    {
+      "id": "x-opencti-hostname--5334cb88-c705-5dcd-b623-4f2a924ebd89",
+      "spec_version": "2.1",
+      "x_opencti_description": "Hostname embedded in malicious Phoreal DLL",
+      "x_opencti_score": 99,
+      "value": "thelivemusicgroup.com",
+      "x_opencti_id": "79f3d109-fa2e-421b-ba2a-5f309d1233a7",
+      "type": "x-opencti-hostname",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    }
+  ]
+}

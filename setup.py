@@ -61,6 +61,7 @@ setup(
     entry_points={
         "mkdocs.plugins": [
             "authors = elastic.plugins.authors.plugin:AuthorsPlugin",
+            "build_ext = elastic.plugins.build_ext.plugin:BuildExtPlugin",
         ]
     },
     zip_safe=False,

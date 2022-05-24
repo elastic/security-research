@@ -1,0 +1,2007 @@
+{
+  "type": "bundle",
+  "id": "bundle--0ac2b828-fe0d-49b6-87bc-3f0830cd50a7",
+  "objects": [
+    {
+      "id": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "spec_version": "2.1",
+      "identity_class": "organization",
+      "name": "Elastic Intelligence & Analytics",
+      "contact_information": "intelligence_and_analytics_team@elastic.co",
+      "created": "2021-04-14T14:56:07.680Z",
+      "modified": "2022-05-12T01:27:50.182Z",
+      "x_opencti_organization_type": "vendor",
+      "x_opencti_reliability": "A",
+      "x_opencti_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+      "type": "identity"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+      "created": "2017-01-20T00:00:00.000Z",
+      "definition_type": "tlp",
+      "name": "TLP:WHITE",
+      "definition": {
+        "tlp": "white"
+      }
+    },
+    {
+      "id": "report--50849299-918e-5602-99b2-439f9a1c8bd4",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-18T05:00:00.000Z",
+      "modified": "2022-05-19T16:55:31.056Z",
+      "name": "A Peek Behind the BPFDoor",
+      "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research post released last week.",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2022-05-18T05:00:00.000Z",
+      "labels": [
+        "bpfdoor",
+        "elf",
+        "malware"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "e3a5030d-8547-42ae-9f3b-9988b4c3061c",
+      "type": "report",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "object_refs": [
+        "file--01483bfa-50ee-57ce-9e4a-c9839ed31e8e",
+        "file--2aceda62-6767-57b2-a8ab-850772993889",
+        "file--2f73f69b-ac68-5a24-85bc-44de53d7eeae",
+        "file--346ca99d-dce8-5fb1-9861-a6a389946d4d",
+        "file--39962e11-1bf2-5fd5-bec0-4222505eb3ee",
+        "file--3b2be619-1f10-5612-bd95-f21aa98b3abc",
+        "file--412f3608-da85-51f1-9ed4-a5147a8e7c50",
+        "file--4790cfb7-8f0b-5bc5-806c-59b4f138bfb0",
+        "file--69f0162c-9fcc-5a1f-ad99-3b5bc1ded898",
+        "file--7252c8e4-91f6-59a4-88d8-29bdee628296",
+        "file--729e6f44-5e74-5d15-83f4-b450064d07a0",
+        "file--771d2e2a-d0d1-563c-a40a-e9cf44f0f793",
+        "file--88647052-dd6f-58c2-a6b9-4736bd311648",
+        "file--9dde7a84-01c6-5ff1-bb95-b217baac6a4e",
+        "file--9f049253-04ee-5ea5-ad38-32e8a1185d86",
+        "file--a70b250e-0ab6-506b-88e8-759a033a6e2c",
+        "file--aa23e686-8329-5032-a8cc-dfd456b06811",
+        "file--ae25f6bf-11bb-512f-8202-0fbcbd0dc8a9",
+        "file--c0e35136-bb75-50e5-95b3-65fbf4d4e84c",
+        "file--dec1bee8-6ba3-5a6e-abc8-3c70e49e3005",
+        "indicator--052f8c22-d79d-5e62-9a8f-3bcc6822db18",
+        "indicator--118aa706-7e1b-5f76-9cb2-3b3fffe59399",
+        "indicator--157479f1-c3fe-5665-a608-6276b8722767",
+        "indicator--1b5a832c-4c8d-57ef-b330-29cb8fbfb5e0",
+        "indicator--1c081ed6-87bd-5ddf-9396-f9bf0e291e34",
+        "indicator--310bc080-31ce-518d-b290-9a3e0ba75446",
+        "indicator--37f870c5-41cf-5ed1-969c-bc422c9bdfb9",
+        "indicator--3b9fcd6c-525c-5694-b15e-153629a96f9a",
+        "indicator--3f6ece1e-ffdf-55ef-a6d2-71f909d9848d",
+        "indicator--4273c8ca-2cef-5278-b765-6aa46865bfe8",
+        "indicator--498e0385-dd96-50c3-ac6c-fa0335c5ae4c",
+        "indicator--59500fa2-44c2-5323-943a-e0eaa8cbe448",
+        "indicator--65696a4b-e6ae-5436-80cd-464e8b9d2f60",
+        "indicator--67957100-3c21-5ac7-b324-fcf9a715bcda",
+        "indicator--724f82ba-b954-56dc-aabb-c9eceafbebe8",
+        "indicator--9ea5bef9-c398-5931-905b-b3e4f190a2d9",
+        "indicator--a732c8e6-1017-5626-b68e-ad5a9d8c59d9",
+        "indicator--b404b17b-e28d-5322-84bc-215abe8da97c",
+        "indicator--bf7d371a-0973-5253-ab22-93a9b1d89081",
+        "indicator--c985792a-4827-5972-930c-5723e23e95d8",
+        "indicator--ce886819-7c46-5055-88fe-00ea2bac84b4",
+        "indicator--d004297e-9ef7-5574-bf9b-b956be45e582",
+        "indicator--d0a302b6-bd47-51d4-8944-4f7dea8efc8e",
+        "indicator--dad10dd9-caf0-5c75-aed6-445695f05280",
+        "indicator--eb49e8ae-6c38-5d4f-8bcb-e0470933ada1",
+        "indicator--ee3d3a32-2dba-5f88-8fc0-05a381795c6c",
+        "intrusion-set--1314ea2d-2257-50c5-af84-72a15fae8569",
+        "malware--50a7406c-7a67-5a6e-ab43-f8bcaa0d965b",
+        "relationship--18cc935b-656d-4cf4-920f-d9760df4a209",
+        "relationship--1ce9198b-1162-407c-8e48-9f1f7bff53e1",
+        "relationship--3451ca5a-2dba-46af-ac7a-654c7613231c",
+        "relationship--4164190b-ea05-49a1-a0e4-9e2e0c9d3de0",
+        "relationship--4c32c385-dfa1-4011-8bd9-d91b63f73118",
+        "relationship--5b9e7642-940d-43d7-99a9-7b2160c93bd1",
+        "relationship--61740760-4394-4bb3-bc56-b039b5e5300f",
+        "relationship--7df5b909-8cf1-4d0f-8626-0e46969f04d0",
+        "relationship--82104b5c-be7c-4639-9784-b9012f6fce41",
+        "relationship--84be96ac-320b-4975-ab18-79b16ba4e39d",
+        "relationship--9417d703-f969-457d-abad-738a08e15296",
+        "relationship--c2849b11-c0b6-4787-9979-4aac3ff0580f",
+        "relationship--efb64f8e-8333-40e8-a5c7-49b38b46786b"
+      ]
+    },
+    {
+      "id": "file--01483bfa-50ee-57ce-9e4a-c9839ed31e8e",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 20688,
+      "x_opencti_additional_names": [
+        "agettyd"
+      ],
+      "hashes": {
+        "SHA-256": "144526d30ae747982079d5d340d1ff116a7963aba2e3ed589e7ebc297ba0c1b3",
+        "SHA-1": "ae929ac1cf0a8cb999a3cf22a342afa20f6ef4d5",
+        "MD5": "6c6012f0879abfe41617ea188e0c3e43"
+      },
+      "labels": [
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, stripped",
+          "url": "https://www.virustotal.com/gui/file/144526d30ae747982079d5d340d1ff116a7963aba2e3ed589e7ebc297ba0c1b3"
+        }
+      ],
+      "x_opencti_id": "3b3aa683-c407-46a1-94fd-2fa806b1a536",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--2aceda62-6767-57b2-a8ab-850772993889",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 29758,
+      "x_opencti_additional_names": [
+        "Source.c"
+      ],
+      "hashes": {
+        "SHA-1": "024ee38c4a451620e5044e99dea89f99e38b0eef",
+        "SHA-256": "8b9db0bc9152628bdacc32dab01590211bee9f27d58e0f66f6a1e26aea7552a6",
+        "MD5": "9bf404c9930e419402c315f35109f85e"
+      },
+      "labels": [
+        "c"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ASCII C program text, with CRLF line terminators",
+          "url": "https://www.virustotal.com/gui/file/8b9db0bc9152628bdacc32dab01590211bee9f27d58e0f66f6a1e26aea7552a6"
+        }
+      ],
+      "x_opencti_id": "86dc519d-ba1e-4acf-a64f-513863fcc076",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--2f73f69b-ac68-5a24-85bc-44de53d7eeae",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 31352,
+      "x_opencti_additional_names": [
+        "/dev/shm/kdmtmpflush",
+        "jexecd"
+      ],
+      "hashes": {
+        "SHA-1": "68af74718f5eeb824258e69af5a23a3c0f6fb54d",
+        "SHA-256": "2e0aa3da45a0360d051359e1a038beff8551b957698f21756cfc6ed5539e4bdb",
+        "MD5": "a4bbcbdb2d65d1b966943f6955c05048"
+      },
+      "labels": [
+        "elf",
+        "64bits"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32, stripped",
+          "url": "https://www.virustotal.com/gui/file/2e0aa3da45a0360d051359e1a038beff8551b957698f21756cfc6ed5539e4bdb"
+        }
+      ],
+      "x_opencti_id": "0b050ee5-329e-446c-a2f7-39715a5ddb83",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--346ca99d-dce8-5fb1-9861-a6a389946d4d",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 24576,
+      "x_opencti_additional_names": [
+        "/dev/shm/kdmtmpflush",
+        "f7983456.elf"
+      ],
+      "hashes": {
+        "SHA-1": "057b1783e8829e34e0c544c770360215fb60b7bb",
+        "SHA-256": "5faab159397964e630c4156f8852bcc6ee46df1cdd8be2a8d3f3d8e5980f3bb3",
+        "MD5": "3a270b673d47c0b69c3baf5d73010773"
+      },
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, stripped",
+          "url": "https://www.virustotal.com/gui/file/5faab159397964e630c4156f8852bcc6ee46df1cdd8be2a8d3f3d8e5980f3bb3"
+        }
+      ],
+      "x_opencti_id": "47b3eee9-43fb-490a-b57c-3233bed14baf",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--39962e11-1bf2-5fd5-bec0-4222505eb3ee",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 31368,
+      "x_opencti_additional_names": [
+        "/run/lock/kdumpflush",
+        "kdumpflush"
+      ],
+      "hashes": {
+        "SHA-1": "27fc5359c0200cb33b328048d317605c255db6ea",
+        "SHA-256": "c80bd1c4a796b4d3944a097e96f384c85687daeedcdcf05cc885c8c9b279b09c",
+        "MD5": "b65d8705c8d30ccc855e0dc48f093591"
+      },
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32, stripped",
+          "url": "https://www.virustotal.com/gui/file/c80bd1c4a796b4d3944a097e96f384c85687daeedcdcf05cc885c8c9b279b09c"
+        }
+      ],
+      "x_opencti_id": "734f74ff-75f4-4846-acf7-2e5fce300ee4",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--3b2be619-1f10-5612-bd95-f21aa98b3abc",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 31368,
+      "x_opencti_additional_names": [
+        "systemd-machine"
+      ],
+      "hashes": {
+        "SHA-256": "96e906128095dead57fdc9ce8688bb889166b67c9a1b8fdb93d7cff7f3836bb9",
+        "SHA-1": "ca73295816ca7b693471803274115457a156ecb2",
+        "MD5": "11daa1c8a3846d9ef3d030efb51c2e14"
+      },
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32, stripped",
+          "url": "https://www.virustotal.com/gui/file/96e906128095dead57fdc9ce8688bb889166b67c9a1b8fdb93d7cff7f3836bb9"
+        }
+      ],
+      "x_opencti_id": "0b874bed-b4c1-4b6a-ace2-80b4c9fdc293",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--412f3608-da85-51f1-9ed4-a5147a8e7c50",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 31408,
+      "x_opencti_additional_names": [
+        "/run/lock/kdumpdb",
+        "opt.conf"
+      ],
+      "hashes": {
+        "SHA-1": "0e214a3bb9955b9b792d0ef785beee212a26c7fd",
+        "SHA-256": "f47de978da1dbfc5e0f195745e3368d3ceef034e964817c66ba01396a1953d72",
+        "MD5": "915ca30a12f19152e6ee7fcd595b7b41"
+      },
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32, stripped",
+          "url": "https://www.virustotal.com/gui/file/f47de978da1dbfc5e0f195745e3368d3ceef034e964817c66ba01396a1953d72"
+        }
+      ],
+      "x_opencti_id": "e22e6eec-d3c1-45b9-bf61-3125f9ae8f1a",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--4790cfb7-8f0b-5bc5-806c-59b4f138bfb0",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 25145,
+      "x_opencti_additional_names": [
+        "lv.run.lock.lvm"
+      ],
+      "hashes": {
+        "SHA-256": "93f4262fce8c6b4f8e239c35a0679fbbbb722141b95a5f2af53a2bcafe4edd1c",
+        "SHA-1": "65e4d507b1de3a1e4820e4c81808fdfd7e238e10",
+        "MD5": "8f05657f0bd8f4eb60fba59cc94fe189"
+      },
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, not stripped",
+          "url": "https://www.virustotal.com/gui/file/93f4262fce8c6b4f8e239c35a0679fbbbb722141b95a5f2af53a2bcafe4edd1c"
+        }
+      ],
+      "x_opencti_id": "6ca15593-61ca-4965-8418-6ac94a924b53",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--69f0162c-9fcc-5a1f-ad99-3b5bc1ded898",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 29213,
+      "x_opencti_additional_names": [
+        "/dev/shm/kdmtmpflush",
+        "rsyslog.dat"
+      ],
+      "hashes": {
+        "SHA-1": "01c895b0c46e77fa41e0033b3beaff0fc7a01562",
+        "SHA-256": "3a1b174f0c19c28f71e1babde01982c56d38d3672ea14d47c35ae3062e49b155",
+        "MD5": "f8236fd4066e8bfea11d6a6420cfc16a"
+      },
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, not stripped",
+          "url": "https://www.virustotal.com/gui/file/3a1b174f0c19c28f71e1babde01982c56d38d3672ea14d47c35ae3062e49b155"
+        }
+      ],
+      "x_opencti_id": "cf2e4e60-7f07-40b2-8d8a-4f0139bb8836",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--7252c8e4-91f6-59a4-88d8-29bdee628296",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 27712,
+      "x_opencti_additional_names": [
+        "/run/lock/kdumpflush",
+        "kdumpflush"
+      ],
+      "hashes": {
+        "SHA-1": "ed0cd45c3bb95ef8da214048799395e247040d17",
+        "SHA-256": "4c5cf8f977fc7c368a8e095700a44be36c8332462c0b1e41bff03238b2bf2a2d",
+        "MD5": "156226c90974180cc4b5f9738e80f1f8"
+      },
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, stripped",
+          "url": "https://www.virustotal.com/gui/file/4c5cf8f977fc7c368a8e095700a44be36c8332462c0b1e41bff03238b2bf2a2d"
+        }
+      ],
+      "x_opencti_id": "fe6b3619-938d-49d8-8bc2-088d84f379cf",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--729e6f44-5e74-5d15-83f4-b450064d07a0",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 25302,
+      "x_opencti_additional_names": [
+        "fafsdfs",
+        "fl",
+        "fl.dat"
+      ],
+      "hashes": {
+        "SHA-256": "591198c234416c6ccbcea6967963ca2ca0f17050be7eed1602198308d9127c78",
+        "SHA-1": "6227cb77cb4ab1d066eebf14e825dbc0a0a7f1e9",
+        "MD5": "7af0e479e50cf2f1c8256f7431b7e0c3"
+      },
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped",
+          "url": "https://www.virustotal.com/gui/file/591198c234416c6ccbcea6967963ca2ca0f17050be7eed1602198308d9127c78"
+        }
+      ],
+      "x_opencti_id": "c49f237d-bfec-4900-8763-f77891f8f505",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--771d2e2a-d0d1-563c-a40a-e9cf44f0f793",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 23288,
+      "x_opencti_additional_names": [
+        "dbus-console"
+      ],
+      "hashes": {
+        "SHA-256": "07ecb1f2d9ffbd20a46cd36cd06b022db3cc8e45b1ecab62cd11f9ca7a26ab6d",
+        "SHA-1": "46cc04585e4fd8181470c7f0359d7b18a52211dc",
+        "MD5": "83023ecfc4836df0a25eec8826cbb80c"
+      },
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.4, stripped",
+          "url": "https://www.virustotal.com/gui/file/07ecb1f2d9ffbd20a46cd36cd06b022db3cc8e45b1ecab62cd11f9ca7a26ab6d"
+        }
+      ],
+      "x_opencti_id": "dccfa5ef-8dfb-4c19-b962-b18bc44700c0",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--88647052-dd6f-58c2-a6b9-4736bd311648",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 29213,
+      "x_opencti_additional_names": [
+        "/dev/shm/kdmtmpflush",
+        "nfsd"
+      ],
+      "hashes": {
+        "SHA-1": "8535c3b18a10649b94531c6d9f79750324498e5c",
+        "SHA-256": "97a546c7d08ad34dfab74c9c8a96986c54768c592a8dae521ddcf612a84fb8cc",
+        "MD5": "5fda35bd30be1cc21f8e933e41a88d9b"
+      },
+      "labels": [
+        "elf",
+        "64bits"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, not stripped",
+          "url": "https://www.virustotal.com/gui/file/97a546c7d08ad34dfab74c9c8a96986c54768c592a8dae521ddcf612a84fb8cc"
+        }
+      ],
+      "x_opencti_id": "a97957e0-2ed0-404c-ae38-ab9851292b9a",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--9dde7a84-01c6-5ff1-bb95-b217baac6a4e",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 29324,
+      "x_opencti_additional_names": [
+        "Solaris-piclc"
+      ],
+      "hashes": {
+        "SHA-256": "dc8346bf443b7b453f062740d8ae8d8d7ce879672810f4296158f90359dcae3a",
+        "SHA-1": "e6fc57807585331b85cc957cb5c4767b9f5faf5b",
+        "MD5": "4574b9a820d22c411d53aa2f1b56b045"
+      },
+      "labels": [
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 32-bit MSB executable, SPARC, version 1, dynamically linked (uses shared libs), not stripped",
+          "url": "https://www.virustotal.com/gui/file/dc8346bf443b7b453f062740d8ae8d8d7ce879672810f4296158f90359dcae3a"
+        }
+      ],
+      "x_opencti_id": "e7b7043f-2458-4830-a7a8-f86d8a01b0ca",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--9f049253-04ee-5ea5-ad38-32e8a1185d86",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 36864,
+      "x_opencti_additional_names": [
+        "/dev/shm/kdmtmpflush",
+        "f7951368.elf"
+      ],
+      "hashes": {
+        "SHA-256": "f8a5e735d6e79eb587954a371515a82a15883cf2eda9d7ddb8938b86e714ea27",
+        "SHA-1": "851d9a438b9bf3e9b0dc65fb2d18d6f3636ad71c",
+        "MD5": "eb9c1fc238d078f49a33442e8adaa73f"
+      },
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, not stripped",
+          "url": "https://www.virustotal.com/gui/file/f8a5e735d6e79eb587954a371515a82a15883cf2eda9d7ddb8938b86e714ea27"
+        }
+      ],
+      "x_opencti_id": "3805082d-b8e8-4b70-891b-8247de2b051c",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--a70b250e-0ab6-506b-88e8-759a033a6e2c",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 35704,
+      "x_opencti_additional_names": [
+        "74ef6cc38f5a1a80148752b63c117e6846984debd2af806c65887195a8eccc56.bin",
+        "74ef6cc38f5a1a80148752b63c117e6846984debd2af806c65887195a8eccc56.sample",
+        "Malware"
+      ],
+      "hashes": {
+        "SHA-256": "74ef6cc38f5a1a80148752b63c117e6846984debd2af806c65887195a8eccc56",
+        "SHA-1": "fe3168d630ccb61559c06b6b0ab68d5cfa1c1a8f",
+        "MD5": "686a654a185db3f40514966d1409b2b1"
+      },
+      "labels": [
+        "64bits",
+        "shared-lib",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 3.2.0, not stripped",
+          "url": "https://www.virustotal.com/gui/file/74ef6cc38f5a1a80148752b63c117e6846984debd2af806c65887195a8eccc56"
+        }
+      ],
+      "x_opencti_id": "3f9011d6-1ca8-4541-bd2c-7ce9a8f253ed",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--aa23e686-8329-5032-a8cc-dfd456b06811",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 27712,
+      "x_opencti_additional_names": [
+        "suspicious.bin"
+      ],
+      "hashes": {
+        "SHA-256": "599ae527f10ddb4625687748b7d3734ee51673b664f2e5d0346e64f85e185683",
+        "SHA-1": "2bc4dfec30893df28357e8affae068b32f0796d8",
+        "MD5": "85f538110d3e59bef69119db03932b16"
+      },
+      "labels": [
+        "elf",
+        "64bits"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, stripped",
+          "url": "https://www.virustotal.com/gui/file/599ae527f10ddb4625687748b7d3734ee51673b664f2e5d0346e64f85e185683"
+        }
+      ],
+      "x_opencti_id": "f82be3e0-1ca3-43b0-8993-cfb0f4a9570c",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--ae25f6bf-11bb-512f-8202-0fbcbd0dc8a9",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 23488,
+      "x_opencti_additional_names": [
+        "/dev/shm/kdmtmpflush",
+        "orb.jar"
+      ],
+      "hashes": {
+        "SHA-1": "e935bbdc493017ff6b427d194c81063125705259",
+        "SHA-256": "5b2a079690efb5f4e0944353dd883303ffd6bab4aad1f0c88b49a76ddcb28ee9",
+        "MD5": "3a2a08c0f98389d8def6fe82fcb3cc1b"
+      },
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, stripped",
+          "url": "https://www.virustotal.com/gui/file/5b2a079690efb5f4e0944353dd883303ffd6bab4aad1f0c88b49a76ddcb28ee9"
+        }
+      ],
+      "x_opencti_id": "e21da1a4-b8dc-4006-8318-b722ecde6a8f",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--c0e35136-bb75-50e5-95b3-65fbf4d4e84c",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 31456,
+      "x_opencti_additional_names": [
+        "libcaac.so.1"
+      ],
+      "hashes": {
+        "SHA-1": "cf0a7634830a6344d70a01fc972bd7494ad5d383",
+        "SHA-256": "76bf736b25d5c9aaf6a84edd4e615796fffc338a893b49c120c0b4941ce37925",
+        "MD5": "712823df0696ae694cd690b767fad955"
+      },
+      "labels": [
+        "64bits",
+        "shared-lib",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, stripped",
+          "url": "https://www.virustotal.com/gui/file/76bf736b25d5c9aaf6a84edd4e615796fffc338a893b49c120c0b4941ce37925"
+        }
+      ],
+      "x_opencti_id": "aef2c3d9-a700-4f02-995b-045bb3de7ecb",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--dec1bee8-6ba3-5a6e-abc8-3c70e49e3005",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 23488,
+      "x_opencti_additional_names": [
+        "cups"
+      ],
+      "hashes": {
+        "SHA-1": "5c2aa2735f5c925fd309b41d02f29473448aea68",
+        "SHA-256": "fd1b20ee5bd429046d3c04e9c675c41e9095bea70e0329bd32d7edd17ebaf68a",
+        "MD5": "aa78b0d9c6351cb664780d9203a331a9"
+      },
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, stripped",
+          "url": "https://www.virustotal.com/gui/file/fd1b20ee5bd429046d3c04e9c675c41e9095bea70e0329bd32d7edd17ebaf68a"
+        }
+      ],
+      "x_opencti_id": "a3f6a0da-6588-4be0-b769-e66f11b4f824",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--052f8c22-d79d-5e62-9a8f-3bcc6822db18",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:17:28.840Z",
+      "modified": "2022-05-20T17:17:28.840Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '96e906128095dead57fdc9ce8688bb889166b67c9a1b8fdb93d7cff7f3836bb9' OR file:hashes.'SHA-1' = 'ca73295816ca7b693471803274115457a156ecb2' OR file:hashes.MD5 = '11daa1c8a3846d9ef3d030efb51c2e14']",
+      "name": "96e906128095dead57fdc9ce8688bb889166b67c9a1b8fdb93d7cff7f3836bb9",
+      "description": "Simple indicator of observable {96e906128095dead57fdc9ce8688bb889166b67c9a1b8fdb93d7cff7f3836bb9}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:17:28.816Z",
+      "valid_until": "2023-05-20T17:17:28.816Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "elf",
+        "64bits"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "b4c05389-bff3-4966-afcb-aff5d3561ac9",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--118aa706-7e1b-5f76-9cb2-3b3fffe59399",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-18T20:01:22.260Z",
+      "modified": "2022-05-18T21:49:03.521Z",
+      "pattern_type": "yara",
+      "pattern": "rule Linux_Trojan_BPFDoor_3 {\n    meta:\n        Author = \"Elastic Security\"\n        creation_date = \"2022-05-10\"\n        last_modified = \"2022-05-10\"\n        os = \"Linux\"\n        arch = \"x86\"\n        category_type = \"Trojan\"\n        family = \"BPFDoor\"\n        threat_name = \"Linux.Trojan.BPFDoor\"\n        description = \"Detects BPFDoor malware.\"\n        reference_sample = \"591198c234416c6ccbcea6967963ca2ca0f17050be7eed1602198308d9127c78\"\n    strings:\n        $a1 = \"[-] Spawn shell failed.\" ascii fullword\n        $a2 = \"[+] Packet Successfuly Sending %d Size.\" ascii fullword\n        $a3 = \"[+] Monitor packet send.\" ascii fullword\n        $a4 = \"[+] Using port %d\"\n        $a5 = \"decrypt_ctx\" ascii fullword\n        $a6 = \"getshell\" ascii fullword\n        $a7 = \"getpassw\" ascii fullword\n        $a8 = \"export %s=%s\" ascii fullword\n    condition:\n        all of them\n}",
+      "name": "Linux_Trojan_BPFDoor_3",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-10T05:00:00.000Z",
+      "valid_until": "2023-05-10T05:00:00.000Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": true,
+      "x_mitre_platforms": [
+        "Linux"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "dd86bb57-cb9b-4898-95fc-7b82d8a4b7cd",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--157479f1-c3fe-5665-a608-6276b8722767",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:16:05.891Z",
+      "modified": "2022-05-20T17:16:05.891Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = 'f8a5e735d6e79eb587954a371515a82a15883cf2eda9d7ddb8938b86e714ea27' OR file:hashes.'SHA-1' = '851d9a438b9bf3e9b0dc65fb2d18d6f3636ad71c' OR file:hashes.MD5 = 'eb9c1fc238d078f49a33442e8adaa73f']",
+      "name": "f8a5e735d6e79eb587954a371515a82a15883cf2eda9d7ddb8938b86e714ea27",
+      "description": "Simple indicator of observable {f8a5e735d6e79eb587954a371515a82a15883cf2eda9d7ddb8938b86e714ea27}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:16:05.866Z",
+      "valid_until": "2023-05-20T17:16:05.866Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "elf",
+        "64bits"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "f801c5b3-b6fa-48ec-91d2-5dec98c4b075",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--1b5a832c-4c8d-57ef-b330-29cb8fbfb5e0",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:22:27.051Z",
+      "modified": "2022-05-20T17:22:27.051Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = 'fd1b20ee5bd429046d3c04e9c675c41e9095bea70e0329bd32d7edd17ebaf68a' OR file:hashes.'SHA-1' = '5c2aa2735f5c925fd309b41d02f29473448aea68' OR file:hashes.MD5 = 'aa78b0d9c6351cb664780d9203a331a9']",
+      "name": "fd1b20ee5bd429046d3c04e9c675c41e9095bea70e0329bd32d7edd17ebaf68a",
+      "description": "Simple indicator of observable {fd1b20ee5bd429046d3c04e9c675c41e9095bea70e0329bd32d7edd17ebaf68a}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:22:27.024Z",
+      "valid_until": "2023-05-20T17:22:27.024Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "3da4e5c1-0365-4307-9fc9-fa03acd48cdf",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--1c081ed6-87bd-5ddf-9396-f9bf0e291e34",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-18T20:05:15.911Z",
+      "modified": "2022-05-18T21:49:56.746Z",
+      "pattern_type": "yara",
+      "pattern": "rule Linux_Trojan_BPFDoor_4 {\n    meta:\n        Author = \"Elastic Security\"\n        creation_date = \"2022-05-10\"\n        last_modified = \"2022-05-10\"\n        os = \"Linux\"\n        arch = \"x86\"\n        category_type = \"Trojan\"\n        family = \"BPFDoor\"\n        threat_name = \"Linux.Trojan.BPFDoor\"\n        description = \"Detects BPFDoor malware.\"\n        reference_sample = \"591198c234416c6ccbcea6967963ca2ca0f17050be7eed1602198308d9127c78\"\n    strings:\n        $a1 = { 45 D8 0F B6 10 0F B6 45 FF 48 03 45 F0 0F B6 00 8D 04 02 00 }\n    condition:\n        all of them\n}\n",
+      "name": "Linux_Trojan_BPFDoor_4",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-10T05:00:00.000Z",
+      "valid_until": "2023-05-10T05:00:00.000Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": true,
+      "x_mitre_platforms": [
+        "Linux"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "030a7ad4-f0b8-421c-a0ff-a7b0168b6375",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--310bc080-31ce-518d-b290-9a3e0ba75446",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:14:06.648Z",
+      "modified": "2022-05-20T17:14:06.648Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '3a1b174f0c19c28f71e1babde01982c56d38d3672ea14d47c35ae3062e49b155' OR file:hashes.'SHA-1' = '01c895b0c46e77fa41e0033b3beaff0fc7a01562' OR file:hashes.MD5 = 'f8236fd4066e8bfea11d6a6420cfc16a']",
+      "name": "3a1b174f0c19c28f71e1babde01982c56d38d3672ea14d47c35ae3062e49b155",
+      "description": "Simple indicator of observable {3a1b174f0c19c28f71e1babde01982c56d38d3672ea14d47c35ae3062e49b155}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:14:06.623Z",
+      "valid_until": "2023-05-20T17:14:06.623Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "elf",
+        "64bits"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "2b975c7d-2189-450c-b52c-9f81c85d45dd",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--37f870c5-41cf-5ed1-969c-bc422c9bdfb9",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:15:42.868Z",
+      "modified": "2022-05-20T17:15:42.868Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '97a546c7d08ad34dfab74c9c8a96986c54768c592a8dae521ddcf612a84fb8cc' OR file:hashes.'SHA-1' = '8535c3b18a10649b94531c6d9f79750324498e5c' OR file:hashes.MD5 = '5fda35bd30be1cc21f8e933e41a88d9b']",
+      "name": "97a546c7d08ad34dfab74c9c8a96986c54768c592a8dae521ddcf612a84fb8cc",
+      "description": "Simple indicator of observable {97a546c7d08ad34dfab74c9c8a96986c54768c592a8dae521ddcf612a84fb8cc}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:15:42.841Z",
+      "valid_until": "2023-05-20T17:15:42.842Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "elf",
+        "64bits"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "ca060d2f-02b1-413b-8d1d-219a74cba284",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--3b9fcd6c-525c-5694-b15e-153629a96f9a",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:18:31.406Z",
+      "modified": "2022-05-20T17:18:31.406Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '74ef6cc38f5a1a80148752b63c117e6846984debd2af806c65887195a8eccc56' OR file:hashes.'SHA-1' = 'fe3168d630ccb61559c06b6b0ab68d5cfa1c1a8f' OR file:hashes.MD5 = '686a654a185db3f40514966d1409b2b1']",
+      "name": "74ef6cc38f5a1a80148752b63c117e6846984debd2af806c65887195a8eccc56",
+      "description": "Simple indicator of observable {74ef6cc38f5a1a80148752b63c117e6846984debd2af806c65887195a8eccc56}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:18:31.382Z",
+      "valid_until": "2023-05-20T17:18:31.382Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "elf",
+        "64bits",
+        "shared-lib"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "d669f708-fb59-4086-990c-e839b9e225b0",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--3f6ece1e-ffdf-55ef-a6d2-71f909d9848d",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-18T21:47:19.237Z",
+      "modified": "2022-05-18T21:50:45.882Z",
+      "pattern_type": "yara",
+      "pattern": "rule Linux_Trojan_BPFDoor_5 {\n    meta:\n        Author = \"Elastic Security\"\n        creation_date = \"2022-05-10\"\n        last_modified = \"2022-05-10\"\n        os = \"Linux\"\n        arch = \"x86\"\n        category_type = \"Trojan\"\n        family = \"BPFDoor\"\n        threat_name = \"Linux.Trojan.BPFDoor\"\n        description = \"Detects BPFDoor malware.\"\n        reference_sample = \"76bf736b25d5c9aaf6a84edd4e615796fffc338a893b49c120c0b4941ce37925\"\n    strings:\n        $a1 = \"getshell\" ascii fullword\n        $a2 = \"/sbin/agetty --noclear tty1 linux\" ascii fullword\n        $a3 = \"packet_loop\" ascii fullword\n        $a4 = \"godpid\" ascii fullword\n        $a5 = \"ttcompat\" ascii fullword\n        $a6 = \"decrypt_ctx\" ascii fullword\n        $a7 = \"rc4_init\" ascii fullword\n        $b1 = { D0 48 89 45 F8 48 8B 45 F8 0F B6 40 0C C0 E8 04 0F B6 C0 C1 }\n    condition:\n        all of ($a*) or 1 of ($b*)\n}",
+      "name": "Linux_Trojan_BPFDoor_5",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-10T05:00:00.000Z",
+      "valid_until": "2023-05-10T05:00:00.000Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": true,
+      "x_mitre_platforms": [
+        "Linux"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "cf5f3e84-e877-460d-bcc7-f84d5d3af504",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--4273c8ca-2cef-5278-b765-6aa46865bfe8",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:13:17.407Z",
+      "modified": "2022-05-20T17:13:17.407Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '8b9db0bc9152628bdacc32dab01590211bee9f27d58e0f66f6a1e26aea7552a6' OR file:hashes.'SHA-1' = '024ee38c4a451620e5044e99dea89f99e38b0eef' OR file:hashes.MD5 = '9bf404c9930e419402c315f35109f85e']",
+      "name": "8b9db0bc9152628bdacc32dab01590211bee9f27d58e0f66f6a1e26aea7552a6",
+      "description": "Simple indicator of observable {8b9db0bc9152628bdacc32dab01590211bee9f27d58e0f66f6a1e26aea7552a6}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:13:17.378Z",
+      "valid_until": "2023-05-20T17:13:17.378Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "c"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "901dedd8-c446-48c6-82fc-6540f6c9150b",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--498e0385-dd96-50c3-ac6c-fa0335c5ae4c",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-18T19:59:01.442Z",
+      "modified": "2022-05-18T19:59:29.538Z",
+      "pattern_type": "yara",
+      "pattern": "rule Linux_Trojan_BPFDoor_2 {\n    meta:\n        Author = \"Elastic Security\"\n        creation_date = \"2022-05-10\"\n        last_modified = \"2022-05-10\"\n        os = \"Linux\"\n        arch = \"x86\"\n        category_type = \"Trojan\"\n        family = \"BPFDoor\"\n        threat_name = \"Linux.Trojan.BPFDoor\"\n        description = \"Detects BPFDoor malware.\"\n        reference_sample = \"3a1b174f0c19c28f71e1babde01982c56d38d3672ea14d47c35ae3062e49b155\"\n    strings:\n        $a1 = \"hald-addon-acpi: listening on acpi kernel interface /proc/acpi/event\" ascii fullword\n        $a2 = \"/sbin/mingetty /dev/tty7\" ascii fullword\n        $a3 = \"pickup -l -t fifo -u\" ascii fullword\n        $a4 = \"kdmtmpflush\" ascii fullword\n        $a5 = \"avahi-daemon: chroot helper\" ascii fullword\n        $a6 = \"/sbin/auditd -n\" ascii fullword\n    condition:\n        all of them\n}\n",
+      "name": "Linux_Trojan_BPFDoor_2",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-10T05:00:00.000Z",
+      "valid_until": "2023-05-10T05:00:00.000Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": true,
+      "x_mitre_platforms": [
+        "Linux"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "a2caefe6-468c-4d5e-b12a-b6dd3c0a2c95",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--59500fa2-44c2-5323-943a-e0eaa8cbe448",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:15:53.156Z",
+      "modified": "2022-05-20T17:15:53.156Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '5b2a079690efb5f4e0944353dd883303ffd6bab4aad1f0c88b49a76ddcb28ee9' OR file:hashes.'SHA-1' = 'e935bbdc493017ff6b427d194c81063125705259' OR file:hashes.MD5 = '3a2a08c0f98389d8def6fe82fcb3cc1b']",
+      "name": "5b2a079690efb5f4e0944353dd883303ffd6bab4aad1f0c88b49a76ddcb28ee9",
+      "description": "Simple indicator of observable {5b2a079690efb5f4e0944353dd883303ffd6bab4aad1f0c88b49a76ddcb28ee9}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:15:53.131Z",
+      "valid_until": "2023-05-20T17:15:53.131Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "6c3489db-9b5a-4f0b-bac1-0ab2a061c2a2",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--65696a4b-e6ae-5436-80cd-464e8b9d2f60",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:15:30.930Z",
+      "modified": "2022-05-20T17:15:30.930Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = 'c80bd1c4a796b4d3944a097e96f384c85687daeedcdcf05cc885c8c9b279b09c' OR file:hashes.'SHA-1' = '27fc5359c0200cb33b328048d317605c255db6ea' OR file:hashes.MD5 = 'b65d8705c8d30ccc855e0dc48f093591']",
+      "name": "c80bd1c4a796b4d3944a097e96f384c85687daeedcdcf05cc885c8c9b279b09c",
+      "description": "Simple indicator of observable {c80bd1c4a796b4d3944a097e96f384c85687daeedcdcf05cc885c8c9b279b09c}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:15:30.906Z",
+      "valid_until": "2023-05-20T17:15:30.906Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "fe9aa2f1-cc6a-43e8-9db1-3a2a8253b8da",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--67957100-3c21-5ac7-b324-fcf9a715bcda",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:16:54.969Z",
+      "modified": "2022-05-20T17:16:54.969Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '2e0aa3da45a0360d051359e1a038beff8551b957698f21756cfc6ed5539e4bdb' OR file:hashes.'SHA-1' = '68af74718f5eeb824258e69af5a23a3c0f6fb54d' OR file:hashes.MD5 = 'a4bbcbdb2d65d1b966943f6955c05048']",
+      "name": "2e0aa3da45a0360d051359e1a038beff8551b957698f21756cfc6ed5539e4bdb",
+      "description": "Simple indicator of observable {2e0aa3da45a0360d051359e1a038beff8551b957698f21756cfc6ed5539e4bdb}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:16:54.946Z",
+      "valid_until": "2023-05-20T17:16:54.946Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "91349d7d-cef1-4462-b6c1-fcfb7c0e71a3",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--724f82ba-b954-56dc-aabb-c9eceafbebe8",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-18T21:47:56.597Z",
+      "modified": "2022-05-20T16:22:06.385Z",
+      "pattern_type": "yara",
+      "pattern": "rule Linux_Trojan_BPFDoor_6 {\n    meta:\n        Author = \"Elastic Security\"\n        creation_date = \"2022-05-10\"\n        last_modified = \"2022-05-10\"\n        os = \"Linux\"\n        arch = \"x86\"\n        category_type = \"Trojan\"\n        family = \"BPFDoor\"\n        threat_name = \"Linux.Trojan.BPFDoor\"\n        description = \"Detects BPFDoor malware.\"\n        reference_sample = \"dc8346bf443b7b453f062740d8ae8d8d7ce879672810f4296158f90359dcae3a\"\n    strings:\n        $a1 = \"getpassw\" ascii fullword\n        $a2 = \"(udp[8:2]=0x7255) or (icmp[8:2]=0x7255) or (tcp[((tcp[12]&0xf0)>>2):2]=0x5293)\" ascii fullword\n        $a3 = \"/var/run/haldrund.pid\" ascii fullword\n        $a4 = \"Couldn't install filter %s: %s\" ascii fullword\n        $a5 = \"godpid\" ascii fullword\n    condition:\n        all of them\n}",
+      "name": "Linux_Trojan_BPFDoor_6",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-10T05:00:00.000Z",
+      "valid_until": "2023-05-10T05:00:00.000Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": true,
+      "x_mitre_platforms": [
+        "Linux"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "7bc72111-f25d-4412-af76-3ae549ec884a",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--9ea5bef9-c398-5931-905b-b3e4f190a2d9",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:17:42.696Z",
+      "modified": "2022-05-20T17:17:42.696Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '93f4262fce8c6b4f8e239c35a0679fbbbb722141b95a5f2af53a2bcafe4edd1c' OR file:hashes.'SHA-1' = '65e4d507b1de3a1e4820e4c81808fdfd7e238e10' OR file:hashes.MD5 = '8f05657f0bd8f4eb60fba59cc94fe189']",
+      "name": "93f4262fce8c6b4f8e239c35a0679fbbbb722141b95a5f2af53a2bcafe4edd1c",
+      "description": "Simple indicator of observable {93f4262fce8c6b4f8e239c35a0679fbbbb722141b95a5f2af53a2bcafe4edd1c}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:17:42.672Z",
+      "valid_until": "2023-05-20T17:17:42.672Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "elf",
+        "64bits"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "3a923f15-b0de-4618-b381-57a59d108d57",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--a732c8e6-1017-5626-b68e-ad5a9d8c59d9",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-18T19:56:06.461Z",
+      "modified": "2022-05-18T19:58:06.443Z",
+      "pattern_type": "yara",
+      "pattern": "rule Linux_Trojan_BPFDoor_1 {\n\n    meta:\n        Author = \"Elastic Security\"\n        creation_date = \"2022-05-10\"\n        last_modified = \"2022-05-10\"\n        os = \"Linux\"\n        arch = \"x86\"\n        category_type = \"Trojan\"\n        family = \"BPFDoor\"\n        threat_name = \"Linux.Trojan.BPFDoor\"\n        description = \"Detects BPFDoor malware.\"\n        reference_sample = \"144526d30ae747982079d5d340d1ff116a7963aba2e3ed589e7ebc297ba0c1b3\"\n    strings:\n        $a1 = \"hald-addon-acpi: listening on acpi kernel interface /proc/acpi/event\" ascii fullword\n        $a2 = \"/sbin/iptables -t nat -D PREROUTING -p tcp -s %s --dport %d -j REDIRECT --to-ports %d\" ascii fullword\n        $a3 = \"avahi-daemon: chroot helper\" ascii fullword\n        $a4 = \"/sbin/mingetty /dev/tty6\" ascii fullword\n        $a5 = \"ttcompat\" ascii fullword\n    condition:\n        all of them\n}",
+      "name": "Linux_Trojan_BPFDoor_1",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-10T05:00:00.000Z",
+      "valid_until": "2023-05-10T05:00:00.000Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": true,
+      "x_mitre_platforms": [
+        "Linux"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "ad2e5912-4f55-4697-b985-27a6f0873b60",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--b404b17b-e28d-5322-84bc-215abe8da97c",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:16:18.725Z",
+      "modified": "2022-05-20T17:16:18.725Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '5faab159397964e630c4156f8852bcc6ee46df1cdd8be2a8d3f3d8e5980f3bb3' OR file:hashes.'SHA-1' = '057b1783e8829e34e0c544c770360215fb60b7bb' OR file:hashes.MD5 = '3a270b673d47c0b69c3baf5d73010773']",
+      "name": "5faab159397964e630c4156f8852bcc6ee46df1cdd8be2a8d3f3d8e5980f3bb3",
+      "description": "Simple indicator of observable {5faab159397964e630c4156f8852bcc6ee46df1cdd8be2a8d3f3d8e5980f3bb3}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:16:18.701Z",
+      "valid_until": "2023-05-20T17:16:18.701Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "elf",
+        "64bits"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "a435f691-4ed0-48b8-bdda-96cf54c1c217",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--bf7d371a-0973-5253-ab22-93a9b1d89081",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:17:59.496Z",
+      "modified": "2022-05-20T17:17:59.496Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '76bf736b25d5c9aaf6a84edd4e615796fffc338a893b49c120c0b4941ce37925' OR file:hashes.'SHA-1' = 'cf0a7634830a6344d70a01fc972bd7494ad5d383' OR file:hashes.MD5 = '712823df0696ae694cd690b767fad955']",
+      "name": "76bf736b25d5c9aaf6a84edd4e615796fffc338a893b49c120c0b4941ce37925",
+      "description": "Simple indicator of observable {76bf736b25d5c9aaf6a84edd4e615796fffc338a893b49c120c0b4941ce37925}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:17:59.471Z",
+      "valid_until": "2023-05-20T17:17:59.471Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "shared-lib",
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "3b23819f-f787-4e86-b306-7159274b4f9b",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--c985792a-4827-5972-930c-5723e23e95d8",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:17:08.819Z",
+      "modified": "2022-05-20T17:17:08.819Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '599ae527f10ddb4625687748b7d3734ee51673b664f2e5d0346e64f85e185683' OR file:hashes.'SHA-1' = '2bc4dfec30893df28357e8affae068b32f0796d8' OR file:hashes.MD5 = '85f538110d3e59bef69119db03932b16']",
+      "name": "599ae527f10ddb4625687748b7d3734ee51673b664f2e5d0346e64f85e185683",
+      "description": "Simple indicator of observable {599ae527f10ddb4625687748b7d3734ee51673b664f2e5d0346e64f85e185683}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:17:08.793Z",
+      "valid_until": "2023-05-20T17:17:08.793Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "b29fe521-cb3f-4edf-9c75-f6df668464fa",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--ce886819-7c46-5055-88fe-00ea2bac84b4",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:14:23.630Z",
+      "modified": "2022-05-20T17:14:23.630Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '144526d30ae747982079d5d340d1ff116a7963aba2e3ed589e7ebc297ba0c1b3' OR file:hashes.'SHA-1' = 'ae929ac1cf0a8cb999a3cf22a342afa20f6ef4d5' OR file:hashes.MD5 = '6c6012f0879abfe41617ea188e0c3e43']",
+      "name": "144526d30ae747982079d5d340d1ff116a7963aba2e3ed589e7ebc297ba0c1b3",
+      "description": "Simple indicator of observable {144526d30ae747982079d5d340d1ff116a7963aba2e3ed589e7ebc297ba0c1b3}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:14:23.605Z",
+      "valid_until": "2023-05-20T17:14:23.605Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "ea2f31aa-a6fe-4be8-b39b-9d189303e76c",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--d004297e-9ef7-5574-bf9b-b956be45e582",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:18:14.140Z",
+      "modified": "2022-05-20T17:18:14.140Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '07ecb1f2d9ffbd20a46cd36cd06b022db3cc8e45b1ecab62cd11f9ca7a26ab6d' OR file:hashes.'SHA-1' = '46cc04585e4fd8181470c7f0359d7b18a52211dc' OR file:hashes.MD5 = '83023ecfc4836df0a25eec8826cbb80c']",
+      "name": "07ecb1f2d9ffbd20a46cd36cd06b022db3cc8e45b1ecab62cd11f9ca7a26ab6d",
+      "description": "Simple indicator of observable {07ecb1f2d9ffbd20a46cd36cd06b022db3cc8e45b1ecab62cd11f9ca7a26ab6d}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:18:14.116Z",
+      "valid_until": "2023-05-20T17:18:14.116Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "elf",
+        "64bits"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "c8b95f4b-e9cb-4e53-8ab9-083da2f10a5f",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--d0a302b6-bd47-51d4-8944-4f7dea8efc8e",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:14:37.084Z",
+      "modified": "2022-05-20T17:14:37.084Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '4c5cf8f977fc7c368a8e095700a44be36c8332462c0b1e41bff03238b2bf2a2d' OR file:hashes.'SHA-1' = 'ed0cd45c3bb95ef8da214048799395e247040d17' OR file:hashes.MD5 = '156226c90974180cc4b5f9738e80f1f8']",
+      "name": "4c5cf8f977fc7c368a8e095700a44be36c8332462c0b1e41bff03238b2bf2a2d",
+      "description": "Simple indicator of observable {4c5cf8f977fc7c368a8e095700a44be36c8332462c0b1e41bff03238b2bf2a2d}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:14:37.059Z",
+      "valid_until": "2023-05-20T17:14:37.059Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "8fea45a0-34ec-46ff-b3e8-b79cc0295933",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--dad10dd9-caf0-5c75-aed6-445695f05280",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:13:54.843Z",
+      "modified": "2022-05-20T17:13:54.843Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '591198c234416c6ccbcea6967963ca2ca0f17050be7eed1602198308d9127c78' OR file:hashes.'SHA-1' = '6227cb77cb4ab1d066eebf14e825dbc0a0a7f1e9' OR file:hashes.MD5 = '7af0e479e50cf2f1c8256f7431b7e0c3']",
+      "name": "591198c234416c6ccbcea6967963ca2ca0f17050be7eed1602198308d9127c78",
+      "description": "Simple indicator of observable {591198c234416c6ccbcea6967963ca2ca0f17050be7eed1602198308d9127c78}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:13:54.814Z",
+      "valid_until": "2023-05-20T17:13:54.814Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "d70faf21-a7ce-4a39-9de5-15d42fd73e3f",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--eb49e8ae-6c38-5d4f-8bcb-e0470933ada1",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:16:42.001Z",
+      "modified": "2022-05-20T17:16:42.001Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = 'f47de978da1dbfc5e0f195745e3368d3ceef034e964817c66ba01396a1953d72' OR file:hashes.'SHA-1' = '0e214a3bb9955b9b792d0ef785beee212a26c7fd' OR file:hashes.MD5 = '915ca30a12f19152e6ee7fcd595b7b41']",
+      "name": "f47de978da1dbfc5e0f195745e3368d3ceef034e964817c66ba01396a1953d72",
+      "description": "Simple indicator of observable {f47de978da1dbfc5e0f195745e3368d3ceef034e964817c66ba01396a1953d72}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:16:41.971Z",
+      "valid_until": "2023-05-20T17:16:41.972Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "64bits",
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "ab542674-bb64-485f-bd74-14ae977ac0bb",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--ee3d3a32-2dba-5f88-8fc0-05a381795c6c",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T17:13:32.640Z",
+      "modified": "2022-05-20T17:13:32.640Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = 'dc8346bf443b7b453f062740d8ae8d8d7ce879672810f4296158f90359dcae3a' OR file:hashes.'SHA-1' = 'e6fc57807585331b85cc957cb5c4767b9f5faf5b' OR file:hashes.MD5 = '4574b9a820d22c411d53aa2f1b56b045']",
+      "name": "dc8346bf443b7b453f062740d8ae8d8d7ce879672810f4296158f90359dcae3a",
+      "description": "Simple indicator of observable {dc8346bf443b7b453f062740d8ae8d8d7ce879672810f4296158f90359dcae3a}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T17:13:32.613Z",
+      "valid_until": "2023-05-20T17:13:32.613Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "elf"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - A Peek Behind the BPFDoor",
+          "description": "BPFDoor is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat research.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/05/04.bpfdoor/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "971b40ac-1886-4490-ab4f-56848d3aed26",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "intrusion-set--1314ea2d-2257-50c5-af84-72a15fae8569",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 50,
+      "created": "2022-05-18T22:04:32.711Z",
+      "modified": "2022-05-18T22:06:21.656Z",
+      "name": "Red Menshen",
+      "description": "Since 2021, Red Menshen, a China based threat actor, which has been observed targeting telecommunications providers across the Middle East and Asia, as well as entities in the government, education, and logistics sectors using a custom backdoor referred as BPFDoor. This threat actor uses a variety of tools in its post-exploitation phase. This includes custom variants of the shared tool Mangzamel (including Golang variants), custom variants of Gh0st, and open source tools like Mimikatz and Metasploit to aid in its lateral movement across Windows systems. Also, They have been seen sending commands to BPFDoor victims via Virtual Privat Servers (VPSs) hosted at a well-known provider, and that these VPSs, in turn, are administered via compromised routers based in Taiwan, which the threat actor uses as VPN tunnels. Most Red Menshen activity that has been observed took place between Monday to Friday (with none observed on the weekends), with most communication taking place between 01:00 and 10:00 UTC.131 This pattern suggests a consistent 8 to 9-hour activity window for the threat actor, with realistic probability of it aligning to local working hours. ",
+      "aliases": [
+        "Red Dev 18"
+      ],
+      "external_references": [
+        {
+          "source_name": "Malpedia - Red Menshen",
+          "url": "https://malpedia.caad.fkie.fraunhofer.de/actor/red_menshen",
+          "external_id": "red_menshen"
+        }
+      ],
+      "x_opencti_id": "e91d1a68-819f-428e-9d04-576eb6a47ab3",
+      "type": "intrusion-set",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "malware--50a7406c-7a67-5a6e-ab43-f8bcaa0d965b",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-18T21:54:43.908Z",
+      "modified": "2022-05-18T22:00:28.113Z",
+      "name": "BPFDoor",
+      "description": "[BPFDoor](https://doublepulsar.com/bpfdoor-an-active-chinese-global-surveillance-tool-54b078f1a896) is a backdoor payload specifically crafted for Linux. Its purpose is for long-term persistence in order to gain re-entry into a previously or actively compromised target environment. It notably utilizes BPF along with a number of other techniques to achieve this goal, taking great care to be as efficient and stealthy as possible. PWC researchers discovered this very interesting piece of malware in 2021. PWC attributes this back door to a specific group from China, Red Menshen, and detailed a number of interesting components in a high-level threat [research post](https://www.pwc.com/gx/en/issues/cybersecurity/cyber-threat-intelligence/cyber-year-in-retrospect/yir-cyber-threats-report-download.pdf).",
+      "malware_types": [
+        "backdoor"
+      ],
+      "is_family": true,
+      "architecture_execution_envs": [
+        "sparc",
+        "x86",
+        "x86-64"
+      ],
+      "implementation_languages": [
+        "c"
+      ],
+      "capabilities": [
+        "accesses-remote-machines",
+        "communicates-with-c2",
+        "controls-local-machine"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence",
+          "x_opencti_order": 0
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "Malpedia - BPFDoor",
+          "url": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.bpfdoor",
+          "external_id": "elf.bpfdoor"
+        }
+      ],
+      "x_opencti_id": "0c869087-12a6-430e-b7d4-83e987db672d",
+      "type": "malware",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "relationship--18cc935b-656d-4cf4-920f-d9760df4a209",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-05-10T05:00:00.000Z",
+      "stop_time": "2023-05-10T05:00:00.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-05-18T22:14:08.302Z",
+      "modified": "2022-05-18T22:14:08.302Z",
+      "x_opencti_id": "24673ab2-8400-4125-b442-be19bcbee30b",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--3f6ece1e-ffdf-55ef-a6d2-71f909d9848d",
+      "target_ref": "malware--50a7406c-7a67-5a6e-ab43-f8bcaa0d965b"
+    },
+    {
+      "id": "relationship--1ce9198b-1162-407c-8e48-9f1f7bff53e1",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-05-10T05:00:00.000Z",
+      "stop_time": "2023-05-10T05:00:00.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-05-18T22:14:08.303Z",
+      "modified": "2022-05-18T22:14:08.303Z",
+      "x_opencti_id": "b39f6757-7d2b-4386-9f43-860b6bda194b",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--118aa706-7e1b-5f76-9cb2-3b3fffe59399",
+      "target_ref": "malware--50a7406c-7a67-5a6e-ab43-f8bcaa0d965b"
+    },
+    {
+      "id": "relationship--3451ca5a-2dba-46af-ac7a-654c7613231c",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-05-18T19:57:22.576Z",
+      "modified": "2022-05-18T19:57:22.576Z",
+      "x_opencti_id": "ea981c17-02ed-4232-a213-45dac1782e2b",
+      "type": "relationship",
+      "source_ref": "indicator--a732c8e6-1017-5626-b68e-ad5a9d8c59d9",
+      "target_ref": "file--01483bfa-50ee-57ce-9e4a-c9839ed31e8e"
+    },
+    {
+      "id": "relationship--4164190b-ea05-49a1-a0e4-9e2e0c9d3de0",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-05-10T05:00:00.000Z",
+      "stop_time": "2023-05-10T05:00:00.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-05-18T22:14:08.361Z",
+      "modified": "2022-05-18T22:14:08.361Z",
+      "x_opencti_id": "5bb11ff7-76db-4ca5-a804-df61268987f8",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--1c081ed6-87bd-5ddf-9396-f9bf0e291e34",
+      "target_ref": "malware--50a7406c-7a67-5a6e-ab43-f8bcaa0d965b"
+    },
+    {
+      "id": "relationship--4c32c385-dfa1-4011-8bd9-d91b63f73118",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-05-10T05:00:00.000Z",
+      "stop_time": "2023-05-10T05:00:00.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-05-18T22:14:08.324Z",
+      "modified": "2022-05-18T22:14:08.324Z",
+      "x_opencti_id": "30730353-4932-4ad2-8d97-55c85b5ce582",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--a732c8e6-1017-5626-b68e-ad5a9d8c59d9",
+      "target_ref": "malware--50a7406c-7a67-5a6e-ab43-f8bcaa0d965b"
+    },
+    {
+      "id": "relationship--5b9e7642-940d-43d7-99a9-7b2160c93bd1",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-05-18T21:50:21.343Z",
+      "modified": "2022-05-18T21:50:21.343Z",
+      "x_opencti_id": "c0d95f3d-156c-4977-abf2-44cf9d13212e",
+      "type": "relationship",
+      "source_ref": "indicator--3f6ece1e-ffdf-55ef-a6d2-71f909d9848d",
+      "target_ref": "file--c0e35136-bb75-50e5-95b3-65fbf4d4e84c"
+    },
+    {
+      "id": "relationship--61740760-4394-4bb3-bc56-b039b5e5300f",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-05-18T21:48:16.390Z",
+      "modified": "2022-05-18T21:48:16.390Z",
+      "x_opencti_id": "b75d9dee-8dc3-4aa1-b6d3-fc7a22f28dc0",
+      "type": "relationship",
+      "source_ref": "indicator--498e0385-dd96-50c3-ac6c-fa0335c5ae4c",
+      "target_ref": "file--69f0162c-9fcc-5a1f-ad99-3b5bc1ded898"
+    },
+    {
+      "id": "relationship--7df5b909-8cf1-4d0f-8626-0e46969f04d0",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-05-10T05:00:00.000Z",
+      "stop_time": "2023-05-10T05:00:00.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-05-18T22:14:08.322Z",
+      "modified": "2022-05-18T22:14:08.322Z",
+      "x_opencti_id": "1565e651-9eb6-4287-b663-81a468936569",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--498e0385-dd96-50c3-ac6c-fa0335c5ae4c",
+      "target_ref": "malware--50a7406c-7a67-5a6e-ab43-f8bcaa0d965b"
+    },
+    {
+      "id": "relationship--82104b5c-be7c-4639-9784-b9012f6fce41",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-05-18T21:48:41.097Z",
+      "modified": "2022-05-18T21:48:41.097Z",
+      "x_opencti_id": "28a13b15-dddb-4cff-906d-eff822807346",
+      "type": "relationship",
+      "source_ref": "indicator--118aa706-7e1b-5f76-9cb2-3b3fffe59399",
+      "target_ref": "file--729e6f44-5e74-5d15-83f4-b450064d07a0"
+    },
+    {
+      "id": "relationship--84be96ac-320b-4975-ab18-79b16ba4e39d",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-05-18T21:49:25.143Z",
+      "modified": "2022-05-18T21:49:25.143Z",
+      "x_opencti_id": "7f841f5a-2836-4f79-af4f-8e845dccbac0",
+      "type": "relationship",
+      "source_ref": "indicator--1c081ed6-87bd-5ddf-9396-f9bf0e291e34",
+      "target_ref": "file--729e6f44-5e74-5d15-83f4-b450064d07a0"
+    },
+    {
+      "id": "relationship--9417d703-f969-457d-abad-738a08e15296",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-05-10T05:00:00.000Z",
+      "stop_time": "2023-05-10T05:00:00.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-05-18T22:14:08.303Z",
+      "modified": "2022-05-18T22:14:08.303Z",
+      "x_opencti_id": "7b0d861c-f080-4cc1-aac9-19dc0b04abfb",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--724f82ba-b954-56dc-aabb-c9eceafbebe8",
+      "target_ref": "malware--50a7406c-7a67-5a6e-ab43-f8bcaa0d965b"
+    },
+    {
+      "id": "relationship--c2849b11-c0b6-4787-9979-4aac3ff0580f",
+      "spec_version": "2.1",
+      "relationship_type": "uses",
+      "start_time": "2009-01-01T06:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 50,
+      "lang": "en",
+      "created": "2022-05-18T22:06:08.372Z",
+      "modified": "2022-05-18T22:12:26.096Z",
+      "x_opencti_id": "708452b7-6e27-46ba-af9c-295b87090b29",
+      "type": "relationship",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "intrusion-set--1314ea2d-2257-50c5-af84-72a15fae8569",
+      "target_ref": "malware--50a7406c-7a67-5a6e-ab43-f8bcaa0d965b"
+    },
+    {
+      "id": "relationship--efb64f8e-8333-40e8-a5c7-49b38b46786b",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-05-18T21:51:21.849Z",
+      "modified": "2022-05-18T21:51:21.849Z",
+      "x_opencti_id": "35af4ab1-4d59-42be-8d4a-885fa0350075",
+      "type": "relationship",
+      "source_ref": "indicator--724f82ba-b954-56dc-aabb-c9eceafbebe8",
+      "target_ref": "file--9dde7a84-01c6-5ff1-bb95-b217baac6a4e"
+    }
+  ]
+}

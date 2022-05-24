@@ -1,0 +1,138 @@
+{
+  "type": "bundle",
+  "id": "bundle--72587bb2-b732-4f91-9164-27cc89420e71",
+  "objects": [
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+      "created": "2017-01-20T00:00:00.000Z",
+      "definition_type": "tlp",
+      "name": "TLP:WHITE",
+      "definition": {
+        "tlp": "white"
+      }
+    },
+    {
+      "id": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "spec_version": "2.1",
+      "identity_class": "organization",
+      "name": "Elastic Intelligence & Analytics",
+      "contact_information": "intelligence_and_analytics_team@elastic.co",
+      "created": "2021-04-14T14:56:07.680Z",
+      "modified": "2021-09-08T14:59:20.501Z",
+      "x_opencti_organization_type": "other",
+      "x_opencti_reliability": "A",
+      "x_opencti_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+      "type": "identity"
+    },
+    {
+      "id": "indicator--d79fcee8-5022-5b8e-b37f-af2738cea2c4",
+      "spec_version": "2.1",
+      "revoked": true,
+      "confidence": 85,
+      "created": "2022-05-11T19:19:51.624Z",
+      "modified": "2022-05-11T19:22:40.776Z",
+      "pattern_type": "stix",
+      "pattern": "[ipv4-addr:value = '192.64.119.19']",
+      "name": "192.64.119.19",
+      "description": "Cobalt Strike Malleable C2 IP address",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2021-05-20T05:00:00.000Z",
+      "valid_until": "2021-06-20T05:00:00.000Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "IPv4-Addr",
+      "labels": [
+        "c2 server"
+      ],
+      "external_references": [
+        {
+          "source_name": "Extracting Cobalt Strike Beacon Configurations",
+          "description": "In this post, we’ll walk through manually analyzing a Cobalt Strike C2 configuration from a binary beacon payload using the excellent Cobalt Strike Configuration Extractor (CSCE). We’ll also cover enabling some newer features of the Elastic Stack that will allow you to do this at scale across all your monitored endpoints, by extracting the beacons from memory.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/03.extracting-cobalt-strike-beacon/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "bbb3c7c3-06e7-4624-975f-71d4c840ab36",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--fad94fdc-d382-5200-b614-228ca5d65477",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-11T19:17:52.116Z",
+      "modified": "2022-05-11T19:17:52.116Z",
+      "pattern_type": "stix",
+      "pattern": "[ipv4-addr:value = '104.197.142.19']",
+      "name": "104.197.142.19",
+      "description": "Cobalt Strike Malleable C2 IP address",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-11T19:17:52.084Z",
+      "valid_until": "2022-06-10T19:17:52.084Z",
+      "x_opencti_score": 99,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "IPv4-Addr",
+      "labels": [
+        "c2 server"
+      ],
+      "external_references": [
+        {
+          "source_name": "Extracting Cobalt Strike Beacon Configurations",
+          "description": "In this post, we’ll walk through manually analyzing a Cobalt Strike C2 configuration from a binary beacon payload using the excellent Cobalt Strike Configuration Extractor (CSCE). We’ll also cover enabling some newer features of the Elastic Stack that will allow you to do this at scale across all your monitored endpoints, by extracting the beacons from memory.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/03.extracting-cobalt-strike-beacon/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "9995f206-b89d-40d9-b09d-b8619b593e67",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--c04efcbc-843f-5d12-9873-cd61b02c0dfe",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-11T19:16:44.993Z",
+      "modified": "2022-05-11T19:16:44.993Z",
+      "pattern_type": "stix",
+      "pattern": "[domain-name:value = 'clevelandclinic.cloud']",
+      "name": "clevelandclinic.cloud",
+      "description": "Simple indicator of observable {clevelandclinic.cloud}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-11T19:16:44.953Z",
+      "valid_until": "2023-05-11T19:16:44.953Z",
+      "x_opencti_score": 99,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "Domain-Name",
+      "labels": [
+        "c2 server"
+      ],
+      "external_references": [
+        {
+          "source_name": "Extracting Cobalt Strike Beacon Configurations",
+          "description": "In this post, we’ll walk through manually analyzing a Cobalt Strike C2 configuration from a binary beacon payload using the excellent Cobalt Strike Configuration Extractor (CSCE). We’ll also cover enabling some newer features of the Elastic Stack that will allow you to do this at scale across all your monitored endpoints, by extracting the beacons from memory.",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/03.extracting-cobalt-strike-beacon/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "22a5323e-1fe8-4818-968c-0c0b8e9ea371",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    }
+  ]
+}

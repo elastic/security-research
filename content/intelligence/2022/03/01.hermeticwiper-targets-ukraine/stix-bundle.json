@@ -1,0 +1,756 @@
+{
+  "type": "bundle",
+  "id": "bundle--b58ef9a0-d07f-4d7b-b83a-1d143ba94c80",
+  "objects": [
+    {
+      "id": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "spec_version": "2.1",
+      "identity_class": "organization",
+      "name": "Elastic Intelligence & Analytics",
+      "contact_information": "intelligence_and_analytics_team@elastic.co",
+      "created": "2021-04-14T14:56:07.680Z",
+      "modified": "2022-05-12T01:27:50.182Z",
+      "x_opencti_organization_type": "vendor",
+      "x_opencti_reliability": "A",
+      "x_opencti_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+      "type": "identity"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+      "created": "2017-01-20T00:00:00.000Z",
+      "definition_type": "tlp",
+      "name": "TLP:WHITE",
+      "definition": {
+        "tlp": "white"
+      }
+    },
+    {
+      "id": "report--47445eae-05e1-5a3a-8942-997b98d365da",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-03-01T06:00:00.000Z",
+      "modified": "2022-05-12T01:26:09.875Z",
+      "name": " Elastic protects against data wiper malware targeting Ukraine: HERMETICWIPER ",
+      "report_types": [
+        "threat report"
+      ],
+      "published": "2022-03-01T06:00:00.000Z",
+      "labels": [
+        "wiper"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - Elastic protects against data wiper malware targeting Ukraine: HERMETICWIPER ",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/01.hermeticwiper-targets-ukraine/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "0fe250fa-6d28-44bd-ba0d-a63a0e4e0e3a",
+      "type": "report",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "object_refs": [
+        "file--1356899c-4a2b-5d0e-a473-0dbb94a9a8a6",
+        "file--8c654691-5a02-506f-8a98-6ad549c375a7",
+        "file--c9cce43e-ca18-51d8-ae33-c32be5fa42ea",
+        "file--f096877a-cd29-5bb5-a5e0-44d2f0e8e3a6",
+        "indicator--397b96f9-d4cf-5077-a05b-563ae5391626",
+        "indicator--5c0cd526-d905-5ee1-9dc3-491ffb0506df",
+        "indicator--67c7aafe-b9fb-5913-90f7-2c28d2a5b7b3",
+        "indicator--6b5284c8-3090-5354-97bb-fafa604395b6",
+        "indicator--c68415f7-a44f-57fd-90fa-bfabce632da3",
+        "malware--aad0872d-ffd9-5a05-84c4-34b697466e7f",
+        "relationship--43f29c49-3b4a-48a4-b977-66316207e052",
+        "relationship--60766878-c6f6-4051-9df2-a11f8a9c8e2f",
+        "relationship--6ae9864e-3580-400b-af8f-12b66a9be2fc",
+        "relationship--8dd4ea16-03fd-49c4-ba84-b9a02ded31dc",
+        "relationship--95c19b1c-fc79-464e-adee-e452fb3e5865",
+        "relationship--d7059482-3ab9-43b0-ab41-02ab369dd828",
+        "relationship--d84bd5bf-023a-49c5-92c8-74450c4ef069",
+        "relationship--da13c9ea-49e8-4a9d-a801-7d84448753ec",
+        "relationship--fa6de856-9b14-40da-9349-d6a00af1c9e5"
+      ]
+    },
+    {
+      "id": "file--1356899c-4a2b-5d0e-a473-0dbb94a9a8a6",
+      "spec_version": "2.1",
+      "x_opencti_description": "HERMETICWIPER malware",
+      "x_opencti_score": 100,
+      "size": 117000,
+      "magic_number_hex": "4D5A",
+      "x_opencti_additional_names": [
+        "C:\\Users\\user\\Desktop\\ccvqja.ocx",
+        "C:\\Users\\user\\Desktop\\cjepub.ocx",
+        "C:\\Users\\user\\Desktop\\cjgnsn.ocx",
+        "C:\\Users\\user\\Desktop\\cjmtyb.ocx",
+        "C:\\Users\\user\\Desktop\\cjyjwn.ocx",
+        "C:\\Users\\user\\Desktop\\ctehsn.ocx",
+        "C:\\Users\\user\\Desktop\\cuvcds.ocx",
+        "C:\\Users\\user\\Desktop\\cxqpsh.ocx",
+        "C:\\Users\\user\\Desktop\\cybibc.ocx",
+        "XPwW3xb0HhPFl7QNyEhg.exe"
+      ],
+      "hashes": {
+        "MD5": "84ba0197920fd3e2b7dfa719fee09d2f",
+        "SHA-1": "912342f1c840a42f6b74132f8a7c4ffe7d40fb77",
+        "SHA-256": "0385eeab00e946a302b24a91dea4187c1210597b8e17cd9e2230450f5ece21da"
+      },
+      "labels": [
+        "revoked-cert",
+        "via-tor",
+        "wiper",
+        "peexe",
+        "long-sleeps",
+        "direct-cpu-clock-access",
+        "runtime-modules",
+        "signed",
+        "overlay"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+          "url": "https://www.virustotal.com/gui/file/0385eeab00e946a302b24a91dea4187c1210597b8e17cd9e2230450f5ece21da"
+        },
+        {
+          "source_name": "Elastic - Elastic protects against data wiper malware targeting Ukraine: HERMETICWIPER ",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/01.hermeticwiper-targets-ukraine/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "3c9f1dd4-8bd3-4c98-b1bc-892a8a9f0b11",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--8c654691-5a02-506f-8a98-6ad549c375a7",
+      "spec_version": "2.1",
+      "x_opencti_description": "HERMETICWIPER malware",
+      "x_opencti_score": 100,
+      "size": 117000,
+      "magic_number_hex": "4D5A",
+      "hashes": {
+        "MD5": "decc2726599edcae8d1d1d0ca99d83a6",
+        "SHA-1": "0d8cc992f279ec45e8b8dfd05a700ff1f0437f29",
+        "SHA-256": "3c557727953a8f6b4788984464fb77741b821991acbf5e746aebdd02615b1767"
+      },
+      "labels": [
+        "direct-cpu-clock-access",
+        "revoked-cert",
+        "invalid-signature",
+        "long-sleeps",
+        "signed",
+        "peexe",
+        "overlay",
+        "runtime-modules",
+        "cve-2014-3931",
+        "wiper",
+        "exploit"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+          "url": "https://www.virustotal.com/gui/file/3c557727953a8f6b4788984464fb77741b821991acbf5e746aebdd02615b1767"
+        },
+        {
+          "source_name": "Elastic - Elastic protects against data wiper malware targeting Ukraine: HERMETICWIPER ",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/01.hermeticwiper-targets-ukraine/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "b4c3d8cf-ef5f-4294-942e-319657e71fc8",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--c9cce43e-ca18-51d8-ae33-c32be5fa42ea",
+      "spec_version": "2.1",
+      "x_opencti_description": "HERMETICWIPER malware",
+      "x_opencti_score": 100,
+      "size": 117000,
+      "magic_number_hex": "4D5A",
+      "x_opencti_additional_names": [
+        "c:\\windows\\system32\\wlnzvve7v.dll"
+      ],
+      "hashes": {
+        "MD5": "382fc1a3c5225fceb672eea13f572a38",
+        "SHA-1": "d9a3596af0463797df4ff25b7999184946e3bfa2",
+        "SHA-256": "2c10b2ec0b995b88c27d141d6f7b14d6b8177c52818687e4ff8e6ecf53adf5bf"
+      },
+      "labels": [
+        "invalid-signature",
+        "peexe",
+        "long-sleeps",
+        "overlay",
+        "direct-cpu-clock-access",
+        "signed",
+        "runtime-modules",
+        "wiper",
+        "revoked-cert"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+          "url": "https://www.virustotal.com/gui/file/2c10b2ec0b995b88c27d141d6f7b14d6b8177c52818687e4ff8e6ecf53adf5bf"
+        },
+        {
+          "source_name": "Elastic - Elastic protects against data wiper malware targeting Ukraine: HERMETICWIPER ",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/01.hermeticwiper-targets-ukraine/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "b999a4b6-46cb-4d36-997f-cf7c474ea82a",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--f096877a-cd29-5bb5-a5e0-44d2f0e8e3a6",
+      "spec_version": "2.1",
+      "x_opencti_description": "HERMETICWIPER malware ",
+      "x_opencti_score": 100,
+      "size": 117000,
+      "magic_number_hex": "4D5A",
+      "x_opencti_additional_names": [
+        "%TEMP%\\MW-69c46f22-1075-4948-a27c-84de7cc6b392\\files\\c2.exe",
+        "1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591.moo",
+        "1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591.sample",
+        "C:\\Users\\Flare\\Downloads\\1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591.exe",
+        "C:\\Users\\JohnStevePeter\\Desktop\\Hermetic\\1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591.exe",
+        "C:\\Users\\JohnStevePeter\\Desktop\\Hermetic\\1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591~\\1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591.exe",
+        "C:\\Users\\Mallab\\Desktop\\0223\\malwaresample.exe",
+        "C:\\Users\\admin\\Desktop\\1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591.exe",
+        "C:\\Users\\andre\\Desktop\\test.bin - Copia - Copia.exe",
+        "C:\\Users\\andre\\Desktop\\test.bin.exe",
+        "C:\\Users\\tester\\Downloads\\infected.exe",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\MW-97f7cb30-c2c4-4b0f-ae6e-11b64825d523\\files\\1638ae4b8b8f45a99143d74c68a79215$dpx$.tmp\\23f1cde63b693048b7f5310a4d1e1c16.tmp",
+        "C:\\Users\\who\\Desktop\\1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591.exe",
+        "C:\\Users\\zhong\\Desktop\\1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591.exe",
+        "C:\\tmp\\conhosts.exe",
+        "KYMHOcljP0dN77ZfHz8.exe",
+        "conhosts._exe"
+      ],
+      "hashes": {
+        "MD5": "3f4a16b29f2f0532b7ce3e7656799125",
+        "SHA-1": "61b25d11392172e587d8da3045812a66c3385451",
+        "SHA-256": "1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591"
+      },
+      "labels": [
+        "long-sleeps",
+        "exploit",
+        "wiper",
+        "overlay",
+        "direct-cpu-clock-access",
+        "signed",
+        "cve-2014-3931",
+        "runtime-modules",
+        "peexe",
+        "revoked-cert"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - Elastic protects against data wiper malware targeting Ukraine: HERMETICWIPER ",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/01.hermeticwiper-targets-ukraine/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        },
+        {
+          "source_name": "VirusTotal",
+          "description": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+          "url": "https://www.virustotal.com/gui/file/1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591"
+        }
+      ],
+      "x_opencti_id": "1305f4a4-872f-4275-be75-3a321f86e1c6",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--397b96f9-d4cf-5077-a05b-563ae5391626",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-12T01:03:05.542Z",
+      "modified": "2022-05-12T01:19:13.146Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591' OR file:hashes.'SHA-1' = '61b25d11392172e587d8da3045812a66c3385451' OR file:hashes.MD5 = '3f4a16b29f2f0532b7ce3e7656799125']",
+      "name": "1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591",
+      "description": "Simple indicator of observable {1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-02-23T06:00:00.000Z",
+      "valid_until": "2023-02-23T06:00:00.000Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "labels": [
+        "wiper"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution",
+          "x_opencti_order": 0
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - Elastic protects against data wiper malware targeting Ukraine: HERMETICWIPER ",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/01.hermeticwiper-targets-ukraine/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "d0583de8-aa00-46dc-a006-a28edb5c85f4",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--5c0cd526-d905-5ee1-9dc3-491ffb0506df",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-12T01:13:23.493Z",
+      "modified": "2022-05-12T01:18:12.527Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '3c557727953a8f6b4788984464fb77741b821991acbf5e746aebdd02615b1767' OR file:hashes.'SHA-1' = '0d8cc992f279ec45e8b8dfd05a700ff1f0437f29' OR file:hashes.MD5 = 'decc2726599edcae8d1d1d0ca99d83a6']",
+      "name": "3c557727953a8f6b4788984464fb77741b821991acbf5e746aebdd02615b1767",
+      "description": "Simple indicator of observable {3c557727953a8f6b4788984464fb77741b821991acbf5e746aebdd02615b1767}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-02-28T06:00:00.000Z",
+      "valid_until": "2023-02-28T06:00:00.000Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "labels": [
+        "wiper"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution",
+          "x_opencti_order": 0
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - Elastic protects against data wiper malware targeting Ukraine: HERMETICWIPER ",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/01.hermeticwiper-targets-ukraine/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "1d64bd33-ef85-4426-8dde-1c91e6ef6c20",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--67c7aafe-b9fb-5913-90f7-2c28d2a5b7b3",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-12T00:57:32.872Z",
+      "modified": "2022-05-12T00:58:35.767Z",
+      "pattern_type": "yara",
+      "pattern": "rule Windows_Wiper_HERMETICWIPER {\n    meta:\n        Author = \"Elastic Security\"\n        creation_date = \"2022-02-24\"\n        last_modified = \"2022-02-24\"\n        os = \"Windows\"\n        arch = \"x86\"\n        category_type = \"Wiper\"\n        family = \"HERMETICWIPER\"\n        threat_name = \"Windows.Wiper.HERMETICWIPER\"\n        description = \"Detects HERMETICWIPER used to target Ukrainian organization\"\n        reference_sample = \"1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591\"\n\n    strings:\n        $a1 = \"\\\\\\\\?\\\\C:\\\\Windows\\\\System32\\\\winevt\\\\Logs\" wide fullword\n        $a2 = \"\\\\\\\\.\\\\EPMNTDRV\\\\%u\" wide fullword\n        $a3 = \"tdrv.pdb\" ascii fullword\n        $a4 = \"%s%.2s\" wide fullword\n        $a5 = \"ccessdri\" ascii fullword\n        $a6 = \"Hermetica Digital\"\n    condition:\n        all of them\n}",
+      "name": "Windows_Wiper_HERMETICWIPER",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-02-24T06:00:00.000Z",
+      "valid_until": "2023-02-24T06:00:00.000Z",
+      "x_opencti_score": 100,
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "labels": [
+        "wiper"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution",
+          "x_opencti_order": 0
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - Elastic protects against data wiper malware targeting Ukraine: HERMETICWIPER ",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/01.hermeticwiper-targets-ukraine/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "94665261-2b70-40b6-9603-9e1c8bf1e0e4",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--6b5284c8-3090-5354-97bb-fafa604395b6",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-12T01:15:51.621Z",
+      "modified": "2022-05-12T01:16:58.491Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '2c10b2ec0b995b88c27d141d6f7b14d6b8177c52818687e4ff8e6ecf53adf5bf' OR file:hashes.'SHA-1' = 'd9a3596af0463797df4ff25b7999184946e3bfa2' OR file:hashes.MD5 = '382fc1a3c5225fceb672eea13f572a38']",
+      "name": "2c10b2ec0b995b88c27d141d6f7b14d6b8177c52818687e4ff8e6ecf53adf5bf",
+      "description": "HERMETICWIPER malware",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-02-24T06:00:00.000Z",
+      "valid_until": "2023-02-24T06:00:00.000Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "labels": [
+        "wiper"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution",
+          "x_opencti_order": 0
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - Elastic protects against data wiper malware targeting Ukraine: HERMETICWIPER ",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/01.hermeticwiper-targets-ukraine/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "519a3715-7b44-4a89-9b99-cbadf951f05c",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--c68415f7-a44f-57fd-90fa-bfabce632da3",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-12T01:10:12.238Z",
+      "modified": "2022-05-12T01:20:12.249Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '0385eeab00e946a302b24a91dea4187c1210597b8e17cd9e2230450f5ece21da' OR file:hashes.'SHA-1' = '912342f1c840a42f6b74132f8a7c4ffe7d40fb77' OR file:hashes.MD5 = '84ba0197920fd3e2b7dfa719fee09d2f']",
+      "name": "0385eeab00e946a302b24a91dea4187c1210597b8e17cd9e2230450f5ece21da",
+      "description": "HERMETICWIPER malware",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-02-24T06:00:00.000Z",
+      "valid_until": "2023-02-24T06:00:00.000Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "labels": [
+        "wiper"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution",
+          "x_opencti_order": 0
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - Elastic protects against data wiper malware targeting Ukraine: HERMETICWIPER ",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/01.hermeticwiper-targets-ukraine/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "e36d28f9-28ee-4d68-96b3-e33d5eeb90b9",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+      "spec_version": "2.1",
+      "identity_class": "organization",
+      "name": "The MITRE Corporation",
+      "created": "2021-04-05T18:51:47.239Z",
+      "modified": "2022-05-18T19:22:45.284Z",
+      "x_opencti_id": "2b89f7fb-6c5f-4104-8dd1-a34cbc1d0a5a",
+      "type": "identity"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--47645da4-afb2-5733-bafb-f7cd98ec4e7d",
+      "created": "2017-06-01T00:00:00.000Z",
+      "definition_type": "statement",
+      "name": "Copyright 2015-2021, The MITRE Corporation. MITRE ATT&CK and ATT&CK are registered trademarks of The MITRE Corporation.",
+      "definition": {
+        "statement": "copyright 2015-2021, the mitre corporation. mitre att&ck and att&ck are registered trademarks of the mitre corporation."
+      }
+    },
+    {
+      "id": "malware--aad0872d-ffd9-5a05-84c4-34b697466e7f",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 15,
+      "created": "2022-03-25T18:30:08.906Z",
+      "modified": "2022-05-18T19:25:35.693Z",
+      "name": "HermeticWiper",
+      "description": "[HermeticWiper](https://attack.mitre.org/software/S0697) is a data wiper that has been used since at least early 2022, primarily against Ukraine with additional activity observed in Latvia and Lithuania. Some sectors targeted include government, financial, defense, aviation, and IT services.(Citation: SentinelOne Hermetic Wiper February 2022)(Citation: Symantec Ukraine Wipers February 2022)(Citation: Crowdstrike DriveSlayer February 2022)(Citation: ESET Hermetic Wiper February 2022)(Citation: Qualys Hermetic Wiper March 2022)",
+      "aliases": [
+        "HermeticWiper",
+        "Trojan.Killdisk",
+        "DriveSlayer"
+      ],
+      "is_family": false,
+      "first_seen": "1970-01-01T00:00:00.000Z",
+      "last_seen": "5138-11-16T09:46:40.000Z",
+      "labels": [
+        "malware"
+      ],
+      "external_references": [
+        {
+          "source_name": "Crowdstrike DriveSlayer February 2022",
+          "description": "Thomas, W. et al. (2022, February 25). CrowdStrike Falcon Protects from New Wiper Malware Used in Ukraine Cyberattacks. Retrieved March 25, 2022.",
+          "url": "https://www.crowdstrike.com/blog/how-crowdstrike-falcon-protects-against-wiper-malware-used-in-ukraine-attacks/"
+        },
+        {
+          "source_name": "CISA AA22-057A Destructive Malware February 2022",
+          "description": "CISA. (2022, February 26). Destructive Malware Targeting Organizations in Ukraine. Retrieved March 25, 2022.",
+          "url": "https://www.cisa.gov/uscert/ncas/alerts/aa22-057a"
+        },
+        {
+          "source_name": "Symantec Ukraine Wipers February 2022",
+          "description": "Symantec Threat Hunter Team. (2022, February 24). Ukraine: Disk-wiping Attacks Precede Russian Invasion. Retrieved March 25, 2022.",
+          "url": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/ukraine-wiper-malware-russia"
+        },
+        {
+          "source_name": "Crowdstrike PartyTicket March 2022",
+          "description": "Crowdstrike. (2022, March 1). Decryptable PartyTicket Ransomware Reportedly Targeting Ukrainian Entities. Retrieved March 1, 2022.",
+          "url": "https://www.crowdstrike.com/blog/how-to-decrypt-the-partyticket-ransomware-targeting-ukraine"
+        },
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/software/S0697",
+          "external_id": "S0697"
+        },
+        {
+          "source_name": "Qualys Hermetic Wiper March 2022",
+          "description": "Dani, M. (2022, March 1). Ukrainian Targets Hit by HermeticWiper, New Datawiper Malware. Retrieved March 25, 2022.",
+          "url": "https://blog.qualys.com/vulnerabilities-threat-research/2022/03/01/ukrainian-targets-hit-by-hermeticwiper-new-datawiper-malware"
+        },
+        {
+          "source_name": "Elastic - Elastic protects against data wiper malware targeting Ukraine: HERMETICWIPER ",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/03/01.hermeticwiper-targets-ukraine/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        },
+        {
+          "source_name": "SentinelOne Hermetic Wiper February 2022",
+          "description": "Guerrero-Saade, J. (2022, February 23). HermeticWiper | New Destructive Malware Used In Cyber Attacks on Ukraine. Retrieved March 25, 2022.",
+          "url": "https://www.sentinelone.com/labs/hermetic-wiper-ukraine-under-attack"
+        },
+        {
+          "source_name": "ESET Hermetic Wiper February 2022",
+          "description": "ESET. (2022, February 24). HermeticWiper: New data wiping malware hits Ukraine. Retrieved March 25, 2022.",
+          "url": "https://www.welivesecurity.com/2022/02/24/hermeticwiper-new-data-wiping-malware-hits-ukraine"
+        }
+      ],
+      "x_opencti_id": "832f6ed5-cca6-4343-b558-5ca3e5933102",
+      "type": "malware",
+      "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+      "object_marking_refs": [
+        "marking-definition--47645da4-afb2-5733-bafb-f7cd98ec4e7d"
+      ]
+    },
+    {
+      "id": "relationship--43f29c49-3b4a-48a4-b977-66316207e052",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-03-01T06:00:00.000Z",
+      "stop_time": "2023-03-01T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-05-12T01:25:05.151Z",
+      "modified": "2022-05-12T01:25:05.151Z",
+      "x_opencti_id": "a1783801-67ff-4a4a-b05d-dcc6dd772a20",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--5c0cd526-d905-5ee1-9dc3-491ffb0506df",
+      "target_ref": "malware--aad0872d-ffd9-5a05-84c4-34b697466e7f"
+    },
+    {
+      "id": "relationship--60766878-c6f6-4051-9df2-a11f8a9c8e2f",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-05-12T01:10:12.434Z",
+      "modified": "2022-05-12T01:10:12.434Z",
+      "x_opencti_id": "6bc11653-5483-423b-9e33-1cfc7d391b0b",
+      "type": "relationship",
+      "source_ref": "indicator--c68415f7-a44f-57fd-90fa-bfabce632da3",
+      "target_ref": "file--1356899c-4a2b-5d0e-a473-0dbb94a9a8a6"
+    },
+    {
+      "id": "relationship--6ae9864e-3580-400b-af8f-12b66a9be2fc",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-03-01T06:00:00.000Z",
+      "stop_time": "2023-03-01T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-05-12T01:24:38.325Z",
+      "modified": "2022-05-12T01:24:38.325Z",
+      "x_opencti_id": "c810b7e5-0e9c-45f9-b79b-2eb34550fb05",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--397b96f9-d4cf-5077-a05b-563ae5391626",
+      "target_ref": "malware--aad0872d-ffd9-5a05-84c4-34b697466e7f"
+    },
+    {
+      "id": "relationship--8dd4ea16-03fd-49c4-ba84-b9a02ded31dc",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-05-12T01:15:53.976Z",
+      "modified": "2022-05-12T01:15:53.976Z",
+      "x_opencti_id": "c6bf4a64-90f6-44b9-aceb-fb732b6be6f8",
+      "type": "relationship",
+      "source_ref": "indicator--6b5284c8-3090-5354-97bb-fafa604395b6",
+      "target_ref": "file--c9cce43e-ca18-51d8-ae33-c32be5fa42ea"
+    },
+    {
+      "id": "relationship--95c19b1c-fc79-464e-adee-e452fb3e5865",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-05-12T01:13:24.643Z",
+      "modified": "2022-05-12T01:13:24.643Z",
+      "x_opencti_id": "30c9ca58-aa52-4e04-854d-f31329912e9f",
+      "type": "relationship",
+      "source_ref": "indicator--5c0cd526-d905-5ee1-9dc3-491ffb0506df",
+      "target_ref": "file--8c654691-5a02-506f-8a98-6ad549c375a7"
+    },
+    {
+      "id": "relationship--d7059482-3ab9-43b0-ab41-02ab369dd828",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-05-12T01:03:13.552Z",
+      "modified": "2022-05-12T01:03:13.552Z",
+      "x_opencti_id": "c7b568c4-e66e-4182-b162-da6ff95eeeb2",
+      "type": "relationship",
+      "source_ref": "indicator--67c7aafe-b9fb-5913-90f7-2c28d2a5b7b3",
+      "target_ref": "file--f096877a-cd29-5bb5-a5e0-44d2f0e8e3a6"
+    },
+    {
+      "id": "relationship--d84bd5bf-023a-49c5-92c8-74450c4ef069",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-03-01T06:00:00.000Z",
+      "stop_time": "2023-03-01T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-05-12T01:25:17.637Z",
+      "modified": "2022-05-12T01:25:17.637Z",
+      "x_opencti_id": "aa04011f-b5d6-4957-bc30-f0d334c0e25b",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--c68415f7-a44f-57fd-90fa-bfabce632da3",
+      "target_ref": "malware--aad0872d-ffd9-5a05-84c4-34b697466e7f"
+    },
+    {
+      "id": "relationship--da13c9ea-49e8-4a9d-a801-7d84448753ec",
+      "spec_version": "2.1",
+      "relationship_type": "based-on",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 15,
+      "lang": "en",
+      "created": "2022-05-12T01:03:05.784Z",
+      "modified": "2022-05-12T01:03:05.784Z",
+      "x_opencti_id": "38f4c97b-d94b-447e-b893-6a57290d406c",
+      "type": "relationship",
+      "source_ref": "indicator--397b96f9-d4cf-5077-a05b-563ae5391626",
+      "target_ref": "file--f096877a-cd29-5bb5-a5e0-44d2f0e8e3a6"
+    },
+    {
+      "id": "relationship--fa6de856-9b14-40da-9349-d6a00af1c9e5",
+      "spec_version": "2.1",
+      "relationship_type": "indicates",
+      "start_time": "2022-03-01T06:00:00.000Z",
+      "stop_time": "2023-03-01T06:00:00.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-05-12T01:24:20.615Z",
+      "modified": "2022-05-12T01:24:20.615Z",
+      "x_opencti_id": "220b6b63-340b-4d3e-9d37-666f9b4c2502",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "indicator--6b5284c8-3090-5354-97bb-fafa604395b6",
+      "target_ref": "malware--aad0872d-ffd9-5a05-84c4-34b697466e7f"
+    }
+  ]
+}

@@ -5,6 +5,8 @@ from datetime import datetime, timedelta
 import pickle
 import os
 
+import mkdocs
+
 import logging
 
 logger = logging.getLogger(__name__)
@@ -23,7 +25,22 @@ class AuthorsPlugin(BasePlugin):
         self.cache = ".cache"
         self.ttl = 1440  # Seconds to cache = 1 day
 
+    config_scheme = (
+        ("enabled", mkdocs.config.config_options.Type(bool, default=True)),
+    )
+
+    def load_config(self, options, config_file_path=None):
+        errs, warns = super(AuthorsPlugin, self).load_config(options, config_file_path)
+
+        if not self.config.get("enabled"):
+            return errs, warns
+
+        return errs, warns
+
     def on_config(self, config):
+        if not self.config.get("enabled"):
+            return
+
         # Ensure presence of cache directory
         if not os.path.isdir(self.cache):
             os.makedirs(self.cache)
@@ -75,6 +92,18 @@ class AuthorsPlugin(BasePlugin):
             _match = re_name.match(entry)
             if _match:
                 _name = _match["username"]
+
+                if not self.config.get("enabled"):
+                    _val = {
+                        "name": _name,
+                        "url": f"https://github.com/{_name}",
+                        "username": _name,
+                        "twitter": None,
+                        "avatar_url": None,
+                    }
+                    _authors.append(_val)
+                    continue
+
                 try:
                     _u = self.gh.get_user(_name)
                     _val = {
@@ -101,6 +130,7 @@ class AuthorsPlugin(BasePlugin):
         return _authors
 
     def on_page_markdown(self, markdown, page, config, files):
+
         if page.meta and "authors" in page.meta:
             _authors = self.get_authors(page.meta["authors"])
             page.meta["authors"] = _authors

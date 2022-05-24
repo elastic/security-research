@@ -1,0 +1,2096 @@
+{
+  "type": "bundle",
+  "id": "bundle--f3d6176c-e325-4019-91c8-3415385b1e00",
+  "objects": [
+    {
+      "id": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "spec_version": "2.1",
+      "identity_class": "organization",
+      "name": "Elastic Intelligence & Analytics",
+      "contact_information": "intelligence_and_analytics_team@elastic.co",
+      "created": "2021-04-14T14:56:07.680Z",
+      "modified": "2022-05-12T01:27:50.182Z",
+      "x_opencti_organization_type": "vendor",
+      "x_opencti_reliability": "A",
+      "x_opencti_id": "e5937d41-d6f7-4159-b3d9-3f159cad312f",
+      "type": "identity"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+      "created": "2017-01-20T00:00:00.000Z",
+      "definition_type": "tlp",
+      "name": "TLP:WHITE",
+      "definition": {
+        "tlp": "white"
+      }
+    },
+    {
+      "id": "report--7494af78-9102-5be4-ae86-f1957d45cb41",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-01-18T06:00:00.000Z",
+      "modified": "2022-04-21T15:45:58.516Z",
+      "name": "FORMBOOK Adopts CAB-less Approach",
+      "report_types": [
+        "internal-report"
+      ],
+      "published": "2022-01-18T06:00:00.000Z",
+      "labels": [
+        "malware",
+        "cve-2021-40444",
+        "formbook",
+        "phishing"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "ca45c20c-9d03-4cee-90a6-9acffe2d1fc9",
+      "type": "report",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "object_refs": [
+        "domain-name--2bd23465-a677-5c34-90dd-f87d07f4dbe1",
+        "domain-name--72c6401a-5e51-56ad-9a2a-9f4ab2cca795",
+        "email-addr--07874102-ad52-534e-8abe-3163a2ff85ad",
+        "email-addr--1d0be7bf-ca10-55f8-973c-4b39ba071f47",
+        "email-addr--bc7a5c83-6b8d-532a-b394-6b1df7be816f",
+        "email-message--6f2de1b7-0989-594d-a676-9e657137df52",
+        "email-message--73294485-72bb-50be-84eb-e1bb3a998683",
+        "email-message--bb3c2849-289a-543a-8ddb-cee29f054158",
+        "file--3984e9d7-d7de-5275-810c-c3ec7fcdc62e",
+        "file--50d17ed2-139a-5750-ba08-2a034d0d53df",
+        "file--5fde8031-5be8-5c08-9b35-27d8569bb0d5",
+        "file--6f729755-25f3-5e8e-9b40-e2a03aa9693f",
+        "file--8c93063a-2e79-5dfc-bc4c-3e0edaf19cd5",
+        "file--a961e467-937b-5c8a-b6a0-a1cf53a9a56d",
+        "file--aef9c60f-c7cb-5c26-b72a-cbd5c1c34953",
+        "file--bb01ff76-53d5-552e-91c7-8bacf1a52d63",
+        "file--bea5cdc4-2fd4-594e-9fd6-5a6953c3cd34",
+        "file--cd073143-c1e8-52aa-b01c-adb64bd77a22",
+        "file--d4039931-b29e-5810-bd50-9847639828fa",
+        "file--e342bd46-89f0-56f2-8684-938f2d6fe08e",
+        "file--e552a98c-2b83-54f1-bb35-5022b6d05dbc",
+        "file--e9958e1f-4014-54f0-963e-f9c2b8d3fd1d",
+        "indicator--059aa5e5-7219-5d2f-bf8a-534d71923d74",
+        "indicator--0e2029c6-8f39-52e8-8707-3f9da626d9e1",
+        "indicator--206ab306-ad6a-5a8a-aea8-2051d3d6a2f7",
+        "indicator--253c13bc-01a6-5d08-b77d-5540824e3234",
+        "indicator--25dc81ea-90e5-594c-8c5a-a6e605a38e8f",
+        "indicator--295d7230-687f-548a-be0b-ae446f6b5e80",
+        "indicator--2b20b608-f958-5fc1-9f37-41e826492976",
+        "indicator--33df9660-ea7c-5512-aa3f-44050a155ee2",
+        "indicator--3fd30edb-ab45-5a27-8ef8-5ea38a203e62",
+        "indicator--3ff12748-3f3b-5947-bd4a-e3660f90c600",
+        "indicator--417d4a86-ba7a-5cfd-ba41-d4308dd3c936",
+        "indicator--479fc422-7bb0-56dd-92bc-61de83d12558",
+        "indicator--489aa486-6348-5b16-939c-4b6fd63a9cd2",
+        "indicator--585eeb2b-31d4-5505-8434-3c77173abe83",
+        "indicator--82b71909-0a9d-56e6-a35e-4a79104c2dfe",
+        "indicator--85ae6fbb-12ff-53ec-bcd0-742f8c6a1603",
+        "indicator--87c7eaea-1fa7-56ef-92a9-a1315d999b39",
+        "indicator--9cff9861-72d0-5ee1-b2bb-63877dbed23f",
+        "indicator--a4177467-fca2-52e3-a602-dadb0d4f80c7",
+        "indicator--ac264e8e-fa15-5b24-84c3-bfaf9eff8257",
+        "indicator--b1c0abeb-9444-54d2-8398-fb40cfb58d8f",
+        "indicator--b3bd8fac-0b06-5e15-be9e-c91fd877d993",
+        "indicator--b8259f0d-fc6f-5110-a5ce-b903d02818d8",
+        "indicator--b874ca60-dcd9-5d04-99f6-44958ce6c339",
+        "indicator--c6a32671-711d-575a-a628-9bb9bae78619",
+        "indicator--ca4c6f5e-648c-57c1-84cf-332a5956e0a1",
+        "indicator--ccd75ba3-d354-5eed-8ba2-ef1d8d77a6f9",
+        "indicator--d5fc9549-190e-527e-84bb-9cd551e5607d",
+        "indicator--f805d27c-078e-5503-b03d-4aeb5826fb54",
+        "ipv4-addr--00032b16-b64e-5dcd-ac94-08d63035a645",
+        "ipv4-addr--23ac08c7-76bb-539c-b598-399d5b120092",
+        "ipv4-addr--3667359c-565a-5e33-9435-36f312ec239c",
+        "ipv4-addr--e1b5b828-3d0c-52e8-b10e-daa02a2581dd",
+        "malware--d7fe314b-4ef2-50db-af6f-592621554d90",
+        "relationship--bbd6b5a6-9c54-4dce-b9e1-29ecfdf94458",
+        "relationship--e9e8c1a0-1b54-44d4-b0fb-24eff06b6a79",
+        "relationship--f0803f67-15b9-49cf-b75b-8c6eb138f79e",
+        "url--563ff9c1-7e82-5097-bd88-087e724c79bf",
+        "url--dbf4183a-7e0a-5a49-947e-b5a35b61158e",
+        "url--eed68aa5-90cf-54d5-a8a7-b083e5aa5d26",
+        "vulnerability--831a8750-1c0e-5eea-a979-5b0ae7af4b0a"
+      ]
+    },
+    {
+      "id": "domain-name--2bd23465-a677-5c34-90dd-f87d07f4dbe1",
+      "spec_version": "2.1",
+      "x_opencti_description": "Domain sending the phishing email.",
+      "x_opencti_score": 50,
+      "value": "issratech.com",
+      "labels": [
+        "ref2931",
+        "cve-2021-40444"
+      ],
+      "x_opencti_id": "2f0d4213-d6a7-4b04-ae03-940f9f03c943",
+      "type": "domain-name",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "domain-name--72c6401a-5e51-56ad-9a2a-9f4ab2cca795",
+      "spec_version": "2.1",
+      "x_opencti_description": "Adversary controlled domain",
+      "x_opencti_score": 100,
+      "value": "backsjoy.com",
+      "x_opencti_id": "1a70c07e-ec6d-478e-8100-c3fbe42c90a6",
+      "type": "domain-name",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "email-addr--07874102-ad52-534e-8abe-3163a2ff85ad",
+      "spec_version": "2.1",
+      "x_opencti_description": "Sender of the initial phishing email",
+      "x_opencti_score": 50,
+      "value": "admin0011@issratech.com",
+      "display_name": "Nkum, Benjamin",
+      "labels": [
+        "cve-2021-40444",
+        "ref2931"
+      ],
+      "x_opencti_id": "feec0e20-0028-4e8c-99a8-8ad02dc2dde5",
+      "type": "email-addr",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "email-addr--1d0be7bf-ca10-55f8-973c-4b39ba071f47",
+      "spec_version": "2.1",
+      "x_opencti_description": "Phishing sender address",
+      "x_opencti_score": 50,
+      "value": "admin012@leoeni.com",
+      "labels": [
+        "phishing",
+        "ref2931",
+        "formbook"
+      ],
+      "x_opencti_id": "369f57e1-2527-4d22-ba15-e0f86dc54dc5",
+      "type": "email-addr",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "email-addr--bc7a5c83-6b8d-532a-b394-6b1df7be816f",
+      "spec_version": "2.1",
+      "x_opencti_description": "Phishing sender",
+      "x_opencti_score": 50,
+      "value": "admin010@backsjoy.com",
+      "display_name": "Radovan Dimitrov",
+      "labels": [
+        "ref2931",
+        "phishing",
+        "formbook"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "fb58fb97-19d5-42f5-a3c1-f0e93311616b",
+      "type": "email-addr",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "email-message--6f2de1b7-0989-594d-a676-9e657137df52",
+      "spec_version": "2.1",
+      "x_opencti_description": "Testing phase email message",
+      "x_opencti_score": 100,
+      "is_multipart": true,
+      "message_id": "eece7c8fc16ebabdef78a2f90fb38be5@issratech.com",
+      "subject": "Request for Quote",
+      "received_lines": [
+        "Received: from mi4-p00-ob.smtp.rzone.de ([85.215.255.4]) by smtpin.rzone.de (RZmta 47.34.1 OK) with ESMTPS id 40a728x9D66vNJs (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256 bits)) (Client CN \"*.smtp.rzone.de\", Issuer \"TeleSec ServerPass Class 2 CA\" (verified OK (+EmiG))) (Client hostname verified OK) for <s.stein@maytec.de> Wed, 13 Oct 2021 08:06:57 +0200 (CEST) Received: from localhost ([unix socket]) by mailin.rzone.de (RZmta 47.34.1) with LMTPS Wed, 13 Oct 2021 08:06:55 +0200 (CEST) Received: from issratech.com ([2.56.59.105]) by smtpin.rzone.de (RZmta 47.34.1 OK) with ESMTPS id R0946ax9D66tL6t (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256 bits)) (Client did not present a certificate) for <mail@maytec.de> Received: from [2.56.59.105] (issratech.com [2.56.59.105]) (Authenticated sender: admin0011@issratech.com) by issratech.com (Postfix) with ESMTPSA id 8A76E13F3A9 Wed, 13 Oct 2021 08:06:53 +0200 (CEST)"
+      ],
+      "labels": [
+        "exploit",
+        "cve-2021-40444"
+      ],
+      "x_opencti_id": "e394cde5-f577-46e0-b6bf-4c4a26d6e93b",
+      "type": "email-message",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "date": "2021-10-13T14:44:00.000Z"
+    },
+    {
+      "id": "email-message--73294485-72bb-50be-84eb-e1bb3a998683",
+      "spec_version": "2.1",
+      "x_opencti_description": "Lure email",
+      "x_opencti_score": 50,
+      "is_multipart": true,
+      "message_id": "74886fc1350e4d820fa1bbb54e5685a2@issratech.com",
+      "subject": "New Enquiry - ISRATECH",
+      "labels": [
+        "email",
+        "ref2931",
+        "cve-2021-40444"
+      ],
+      "x_opencti_id": "914b436c-e039-4cd6-a3f5-09df50651fa5",
+      "type": "email-message",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "date": "2021-10-24T17:42:00.000Z"
+    },
+    {
+      "id": "email-message--bb3c2849-289a-543a-8ddb-cee29f054158",
+      "spec_version": "2.1",
+      "x_opencti_score": 50,
+      "is_multipart": true,
+      "message_id": "fe95f6c687c22256e6d07d10b6b6ea4a@issratech.com",
+      "subject": "New Request for Order",
+      "labels": [
+        "cve-2021-40444",
+        "email",
+        "ref2931"
+      ],
+      "x_opencti_id": "5f3e10a5-7c32-46be-8406-6758b71e16fb",
+      "type": "email-message",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--3984e9d7-d7de-5275-810c-c3ec7fcdc62e",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 8722,
+      "hashes": {
+        "SHA-1": "daaf9b9d7e2e17c84fe572d65e9e9dc4c48b4923",
+        "SHA-256": "e2ab6aab7e79a2b46232af87fcf3393a4fd8c4c5a207f06fd63846a75e190992",
+        "MD5": "4da9d16b9642982f5984b09776499f36"
+      },
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "5e3072ef-45ca-479b-84d6-dd1a70eb75dd",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--50d17ed2-139a-5750-ba08-2a034d0d53df",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 326878,
+      "name": "DWG.rar",
+      "x_opencti_additional_names": [
+        "/tmp/eml_attach_for_scan/4dca577ffe0781eef34291032326ef33.file",
+        "DWG.rar"
+      ],
+      "hashes": {
+        "SHA-256": "0c560d0a7f18b46f9d750e24667721ee123ddd8379246dde968270df1f823881",
+        "SHA-1": "02c3c5e077d30cbbc1cc748e0e477a821ce05868",
+        "MD5": "4dca577ffe0781eef34291032326ef33"
+      },
+      "labels": [
+        "rar",
+        "attachment"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "RAR archive data, vc3, flags: Archive volume, Commented, Solid, Authenticated,",
+          "url": "https://www.virustotal.com/gui/file/0c560d0a7f18b46f9d750e24667721ee123ddd8379246dde968270df1f823881"
+        }
+      ],
+      "x_opencti_id": "3180e152-c547-4627-9b2a-92671a6a38a1",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--5fde8031-5be8-5c08-9b35-27d8569bb0d5",
+      "spec_version": "2.1",
+      "x_opencti_description": "Production phase email attachment",
+      "x_opencti_score": 100,
+      "size": 83971,
+      "name": "Profile.rar",
+      "x_opencti_additional_names": [
+        "170eaccdac3c2d6e1777c38d61742ad531d6adbef3b8b031ebbbd6bc89b9add6.bin",
+        "Profile.rar",
+        "c:\\windows\\system32\\0t9wgewlc.dll",
+        "c:\\windows\\system32\\7sg4nfuaw.dll",
+        "c:\\windows\\system32\\nts6j0ie9.dll"
+      ],
+      "hashes": {
+        "SHA-256": "170eaccdac3c2d6e1777c38d61742ad531d6adbef3b8b031ebbbd6bc89b9add6",
+        "SHA-1": "fed368535a6f394c8546730eabc5ecdbda21acf8",
+        "MD5": "ebe452c864498aff74c2c74c7e2d6154"
+      },
+      "labels": [
+        "exploit",
+        "cve-2021-40444",
+        "attachment",
+        "powershell",
+        "run-file",
+        "vba",
+        "create-ole"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "data",
+          "url": "https://www.virustotal.com/gui/file/170eaccdac3c2d6e1777c38d61742ad531d6adbef3b8b031ebbbd6bc89b9add6"
+        }
+      ],
+      "x_opencti_id": "75d873ba-c359-45af-9285-9741f0824620",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--6f729755-25f3-5e8e-9b40-e2a03aa9693f",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 84521,
+      "name": "Request Details.docx",
+      "magic_number_hex": "504B",
+      "x_opencti_additional_names": [
+        "C:\\Users\\Christof.Gastager\\Desktop\\Tools\\Watchguard\\Request Details.docx",
+        "Request Details.docx"
+      ],
+      "hashes": {
+        "SHA-256": "70defbb4b846868ba5c74a526405f2271ab71de01b24fbe2d6db2c7035f8a7df",
+        "SHA-1": "97f882c5a0d7a63b441b83b7178c378166a4e405",
+        "MD5": "addfdc398c0388163fc82506bd7f8b1b"
+      },
+      "labels": [
+        "docx",
+        "exploit",
+        "calls-wmi",
+        "cve-2021-40444",
+        "attachment"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "Zip archive data, at least v2.0 to extract",
+          "url": "https://www.virustotal.com/gui/file/70defbb4b846868ba5c74a526405f2271ab71de01b24fbe2d6db2c7035f8a7df"
+        }
+      ],
+      "x_opencti_id": "5fca05ad-a010-41bb-a671-43e2434abdff",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--8c93063a-2e79-5dfc-bc4c-3e0edaf19cd5",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 6060053,
+      "name": "comres.cab",
+      "x_opencti_additional_names": [
+        "/comres.cab",
+        "comres.cab",
+        "comres[1].cab"
+      ],
+      "hashes": {
+        "SHA-1": "b74572a29f60ecfa8ac8e0e0061856e019db7f02",
+        "SHA-256": "7c98db2063c96082021708472e1afb81f3e54fe6a4a8b8516e22b3746e65433b",
+        "MD5": "395b29e0da85e40862ff9a25045f419f"
+      },
+      "labels": [
+        "malware",
+        "ref2931",
+        "cab",
+        "cve-2021-40444"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "Microsoft Cabinet archive data, 6060053 bytes, 1 file",
+          "url": "https://www.virustotal.com/gui/file/7c98db2063c96082021708472e1afb81f3e54fe6a4a8b8516e22b3746e65433b"
+        }
+      ],
+      "x_opencti_id": "fd3f672c-13de-4bb4-bc51-a5816e4e7af9",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--a961e467-937b-5c8a-b6a0-a1cf53a9a56d",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 8704,
+      "name": "IEcache.inf",
+      "x_opencti_additional_names": [
+        "D:\\f\\tools\\CVE-2021-40444_builders-main\\CVE-2021-40444\\IEcache.inf"
+      ],
+      "hashes": {
+        "SHA-256": "22cffbcad42363841d01cc7fef290511c0531aa2b4c9ca33656cc4aef315e723",
+        "SHA-1": "88c76271807fe1a4051e791760bc7871c2101ca1",
+        "MD5": "da3fc97c11c507e60c64cb7ed2d18dea"
+      },
+      "labels": [
+        "pedll",
+        "invalid-rich-pe-linker-version"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "PE32 executable for MS Windows (DLL) (GUI) Intel 80386 32-bit",
+          "url": "https://www.virustotal.com/gui/file/22cffbcad42363841d01cc7fef290511c0531aa2b4c9ca33656cc4aef315e723"
+        }
+      ],
+      "x_opencti_id": "a99e5660-ccad-4307-9475-cb71f790d73c",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--aef9c60f-c7cb-5c26-b72a-cbd5c1c34953",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 19379,
+      "name": "Profile.html",
+      "x_opencti_additional_names": [
+        "Profile.html",
+        "profile.html"
+      ],
+      "hashes": {
+        "SHA-256": "95e03836d604737f092d5534e68216f7c3ef82f529b5980e3145266d42392a82",
+        "SHA-1": "c2e7e5538a95dc4eb48ad30783d1e004b26398db",
+        "MD5": "323e588bb117530047d3971738c90d35"
+      },
+      "labels": [
+        "contains-embedded-js",
+        "cve-2021-40444",
+        "javascript",
+        "ref2931",
+        "exploit"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "UTF-8 Unicode HTML document text, with very long lines, with CRLF line terminators",
+          "url": "https://www.virustotal.com/gui/file/95e03836d604737f092d5534e68216f7c3ef82f529b5980e3145266d42392a82"
+        }
+      ],
+      "x_opencti_id": "2e5988cd-f187-4efe-b6e0-3e7776a44fea",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--bb01ff76-53d5-552e-91c7-8bacf1a52d63",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "size": 626688,
+      "name": "DWG.exe",
+      "magic_number_hex": "4D5A",
+      "x_opencti_additional_names": [
+        "%HOME%\\unpack\\DWG.exe",
+        "%ProgramFiles(x86)%\\Jlpxpl\\userpbctq0-.exe",
+        "D2110-095.exe"
+      ],
+      "hashes": {
+        "SHA-256": "4216ff4fa7533209a6e50c6f05c5216b8afb456e6a3ab6b65ed9fcbdbd275096",
+        "SHA-1": "aad1eed1c53f1d33ab52e13442b036bfeee91f1b",
+        "MD5": "ff882802d113ed02fa070c496f89d797"
+      },
+      "labels": [
+        "peexe",
+        "invalid-rich-pe-linker-version",
+        "checks-user-input"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+          "url": "https://www.virustotal.com/gui/file/4216ff4fa7533209a6e50c6f05c5216b8afb456e6a3ab6b65ed9fcbdbd275096"
+        }
+      ],
+      "x_opencti_id": "0b403dc7-ba09-4057-8081-d6a99a855470",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--bea5cdc4-2fd4-594e-9fd6-5a6953c3cd34",
+      "spec_version": "2.1",
+      "x_opencti_description": "Production phase compressed document",
+      "x_opencti_score": 100,
+      "size": 84537,
+      "name": "document.docx",
+      "x_opencti_additional_names": [
+        "c:\\windows\\system32\\vuddfjcb2.dll",
+        "document.docx"
+      ],
+      "hashes": {
+        "SHA-256": "d346b50bf9df7db09363b9227874b8a3c4aafd6648d813e2c59c36b9b4c3fa72",
+        "SHA-1": "68fff07e59ca116228e444370a3ce37f51db2690",
+        "MD5": "eb47824fe3b93f30e6805938814b9cca"
+      },
+      "labels": [
+        "ref2931",
+        "calls-wmi",
+        "docx",
+        "exploit",
+        "cve-2021-40444"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "Zip archive data, at least v2.0 to extract",
+          "url": "https://www.virustotal.com/gui/file/d346b50bf9df7db09363b9227874b8a3c4aafd6648d813e2c59c36b9b4c3fa72"
+        }
+      ],
+      "x_opencti_id": "baca3fe4-e9fe-43cc-b671-a6e3c2abecb9",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--cd073143-c1e8-52aa-b01c-adb64bd77a22",
+      "spec_version": "2.1",
+      "x_opencti_description": " MIMEType application/octet-stream\nSubsystem Windows GUI\nMachineType Intel 386 or later, and compatibles\nTimeStamp 2020:08:29 07:01:59+00:00\nFileType Win32 DLL\nPEType PE32\nCodeSize 77824\nLinkerVersion 14.16\nImageFileCharacteristics Executable, 32-bit, DLL\nFileTypeExtension dll\nInitializedDataSize 1300992\nSubsystemVersion 6.0\nImageVersion 0.0\nOSVersion 6.0\nEntryPoint 0x550365\nUninitializedDataSize 0 ",
+      "x_opencti_score": 100,
+      "size": 4465152,
+      "name": "1.doc.inf",
+      "magic_number_hex": "4D5A",
+      "ctime": "2020-08-29T05:00:00.000Z",
+      "x_opencti_additional_names": [
+        "1.doc.inf"
+      ],
+      "hashes": {
+        "SHA-256": "363837d5c41ea6b2ff6f6184d817c704e0dc5749e45968a3bc4e45ad5cf028d7",
+        "SHA-1": "f5b588372c1b96ab2f1eb9293d1bde7311bf2226",
+        "MD5": "d9ece852393073080fed604f4eac3c51"
+      },
+      "labels": [
+        "corrupt",
+        "pedll"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "PE32 executable for MS Windows (DLL) (GUI) Intel 80386 32-bit",
+          "url": "https://www.virustotal.com/gui/file/363837d5c41ea6b2ff6f6184d817c704e0dc5749e45968a3bc4e45ad5cf028d7"
+        }
+      ],
+      "x_opencti_id": "3f2615ae-6fc6-4fab-9684-00bff72b9641",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--d4039931-b29e-5810-bd50-9847639828fa",
+      "spec_version": "2.1",
+      "x_opencti_description": "Generic phase email attachment (RAR file with `.gz` file extension)",
+      "x_opencti_score": 100,
+      "size": 326890,
+      "name": "D2110-095.gz",
+      "magic_number_hex": "526172211A070100",
+      "x_opencti_additional_names": [
+        "/tmp/eml_attach_for_scan/e1407f664eef87aec8578db175c3db83.file",
+        "D2110-095.gz"
+      ],
+      "hashes": {
+        "SHA-1": "edd9fdcffa71e7ba0ac883f431e1f7aab922a5ef",
+        "SHA-256": "5a1ef64e27a8a77b13229b684c09b45a521fd6d4a16fdb843044945f12bb20e1",
+        "MD5": "e1407f664eef87aec8578db175c3db83"
+      },
+      "labels": [
+        "rar",
+        "attachment"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "RAR archive data, vc3,",
+          "url": "https://www.virustotal.com/gui/file/5a1ef64e27a8a77b13229b684c09b45a521fd6d4a16fdb843044945f12bb20e1"
+        }
+      ],
+      "x_opencti_id": "45fdfdf4-9155-4bbb-9320-71bc20d248af",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--e342bd46-89f0-56f2-8684-938f2d6fe08e",
+      "spec_version": "2.1",
+      "x_opencti_description": "Downloaded by Powershell from C2 server to file named `dllhostSvc.exe` in `%APPDATA%` directory then executed",
+      "x_opencti_score": 100,
+      "size": 577536,
+      "name": "abb01.exe",
+      "x_opencti_additional_names": [
+        "dllhostSvc.exe"
+      ],
+      "hashes": {
+        "SHA-256": "776df245d497af81c0e57fb7ef763c8b08a623ea044da9d79aa3b381192f70e2",
+        "SHA-1": "b26796f41c9d265995a608adc51d604d7cb47851",
+        "MD5": "05c21bf3df38d5b8365db71d94dbca37"
+      },
+      "labels": [
+        "detect-debug-environment",
+        "long-sleeps",
+        "cve-2021-40444",
+        "ref2931",
+        "peexe",
+        "invalid-rich-pe-linker-version",
+        "checks-user-input"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+          "url": "https://www.virustotal.com/gui/file/776df245d497af81c0e57fb7ef763c8b08a623ea044da9d79aa3b381192f70e2"
+        }
+      ],
+      "x_opencti_id": "53f29806-16f4-47d2-b3d9-ef0ffac9929c",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--e552a98c-2b83-54f1-bb35-5022b6d05dbc",
+      "spec_version": "2.1",
+      "x_opencti_score": 100,
+      "hashes": {
+        "SHA-256": "6246f3b89f0e4913abd88ae535ae3597865270f58201dc7f8ec0c87f15ff370a"
+      },
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "771d5f55-3164-4a78-9e44-81fe4f920121",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "file--e9958e1f-4014-54f0-963e-f9c2b8d3fd1d",
+      "spec_version": "2.1",
+      "x_opencti_description": "FORMBOOK malware",
+      "x_opencti_score": 100,
+      "size": 166912,
+      "name": "yxohzzvhi0.exe",
+      "hashes": {
+        "SHA-256": "bd1c1900ac1a6c7a9f52034618fed74b93acbc33332890e7d738a1d90cbc2126",
+        "SHA-1": "c3bf87e4cf4073bd1e252bb7928b48c49e9ac899",
+        "MD5": "18c5bd51dc833a73288d137a9cee7349"
+      },
+      "labels": [
+        "formbook",
+        "xloader",
+        "ref2931",
+        "cve-2021-40444",
+        "peexe"
+      ],
+      "external_references": [
+        {
+          "source_name": "VirusTotal",
+          "description": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+          "url": "https://www.virustotal.com/gui/file/bd1c1900ac1a6c7a9f52034618fed74b93acbc33332890e7d738a1d90cbc2126"
+        }
+      ],
+      "x_opencti_id": "e8b18993-9baf-480d-9ed1-384f7a4baa32",
+      "type": "file",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--059aa5e5-7219-5d2f-bf8a-534d71923d74",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:19:37.518Z",
+      "modified": "2022-05-20T20:19:37.518Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = 'e2ab6aab7e79a2b46232af87fcf3393a4fd8c4c5a207f06fd63846a75e190992' OR file:hashes.'SHA-1' = 'daaf9b9d7e2e17c84fe572d65e9e9dc4c48b4923' OR file:hashes.MD5 = '4da9d16b9642982f5984b09776499f36']",
+      "name": "e2ab6aab7e79a2b46232af87fcf3393a4fd8c4c5a207f06fd63846a75e190992",
+      "description": "Simple indicator of observable {e2ab6aab7e79a2b46232af87fcf3393a4fd8c4c5a207f06fd63846a75e190992}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:19:37.497Z",
+      "valid_until": "2023-05-20T20:19:37.497Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "f25fdd23-a70d-49e4-9586-6630f17efbf7",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--0e2029c6-8f39-52e8-8707-3f9da626d9e1",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:17:24.206Z",
+      "modified": "2022-05-20T20:17:24.206Z",
+      "pattern_type": "stix",
+      "pattern": "[url:value = 'http://104.244.78.177/comres.cab']",
+      "name": "http://104.244.78.177/comres.cab",
+      "description": "Second stage download link from malicious docx",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:17:24.184Z",
+      "valid_until": "2022-07-19T20:17:24.184Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "Url",
+      "labels": [
+        "ip"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "54f77cf0-4e6d-45e9-b88f-eaa65ff13936",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--206ab306-ad6a-5a8a-aea8-2051d3d6a2f7",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:22:22.400Z",
+      "modified": "2022-05-20T20:22:22.400Z",
+      "pattern_type": "stix",
+      "pattern": "[email-addr:value = 'admin012@leoeni.com']",
+      "name": "admin012@leoeni.com",
+      "description": "Phishing sender address",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:22:22.373Z",
+      "valid_until": "2023-05-20T20:22:22.373Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "Email-Addr",
+      "labels": [
+        "formbook",
+        "ref2931",
+        "phishing"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "2129c7b8-067c-40fc-bb04-3313f1f04e3d",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--253c13bc-01a6-5d08-b77d-5540824e3234",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:34:12.413Z",
+      "modified": "2022-05-23T15:50:32.377Z",
+      "pattern_type": "stix",
+      "pattern": "[email-message:subject = 'New Request for Order' OR email-message:message_id = 'fe95f6c687c22256e6d07d10b6b6ea4a@issratech.com']",
+      "name": "New Request for Order",
+      "description": "Generic phase email",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:34:12.384Z",
+      "valid_until": "2023-05-20T20:34:12.384Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "Email-Message",
+      "labels": [
+        "ref2931",
+        "email",
+        "cve-2021-40444"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "452460a9-ce88-4706-9c97-34b2ba5d6279",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--25dc81ea-90e5-594c-8c5a-a6e605a38e8f",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:18:07.410Z",
+      "modified": "2022-05-20T20:18:07.410Z",
+      "pattern_type": "stix",
+      "pattern": "[url:value = 'http://104.244.78.177/abb01.exe']",
+      "name": "http://104.244.78.177/abb01.exe",
+      "description": "Provides the malware loader abb01.exe",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:18:07.301Z",
+      "valid_until": "2022-07-19T20:18:07.301Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "Url",
+      "labels": [
+        "cve-2021-40444",
+        "c2 server",
+        "ref2931"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "5f1ee4f2-ac24-4ac5-a9c9-8f5b0d55fa06",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--295d7230-687f-548a-be0b-ae446f6b5e80",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:24:47.215Z",
+      "modified": "2022-05-20T20:24:47.215Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '95e03836d604737f092d5534e68216f7c3ef82f529b5980e3145266d42392a82' OR file:hashes.'SHA-1' = 'c2e7e5538a95dc4eb48ad30783d1e004b26398db' OR file:hashes.MD5 = '323e588bb117530047d3971738c90d35']",
+      "name": "95e03836d604737f092d5534e68216f7c3ef82f529b5980e3145266d42392a82",
+      "description": "Simple indicator of observable {95e03836d604737f092d5534e68216f7c3ef82f529b5980e3145266d42392a82}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:24:47.187Z",
+      "valid_until": "2023-05-20T20:24:47.187Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "javascript",
+        "exploit",
+        "cve-2021-40444",
+        "contains-embedded-js",
+        "ref2931"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "6b9a876b-fa9e-487b-a63a-4cb3e7c7a4a2",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--2b20b608-f958-5fc1-9f37-41e826492976",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-04-20T21:55:46.408Z",
+      "modified": "2022-05-23T15:23:06.747Z",
+      "pattern_type": "stix",
+      "pattern": "[domain-name:value = 'backsjoy.com']",
+      "name": "backsjoy.com",
+      "description": "Adversary controlled domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-04-20T21:55:46.366Z",
+      "valid_until": "2023-04-20T21:55:46.366Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "Domain-Name",
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "387a097e-6bb3-4ddf-a1d6-ea4afdc80c2e",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--33df9660-ea7c-5512-aa3f-44050a155ee2",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:20:51.609Z",
+      "modified": "2022-05-20T20:20:51.609Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = 'bd1c1900ac1a6c7a9f52034618fed74b93acbc33332890e7d738a1d90cbc2126' OR file:hashes.'SHA-1' = 'c3bf87e4cf4073bd1e252bb7928b48c49e9ac899' OR file:hashes.MD5 = '18c5bd51dc833a73288d137a9cee7349']",
+      "name": "bd1c1900ac1a6c7a9f52034618fed74b93acbc33332890e7d738a1d90cbc2126",
+      "description": "FORMBOOK malware",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:20:51.580Z",
+      "valid_until": "2023-05-20T20:20:51.580Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "peexe",
+        "formbook",
+        "xloader",
+        "ref2931",
+        "cve-2021-40444"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "73b3a5e5-f541-4960-a5d0-be2f96503d7a",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--3fd30edb-ab45-5a27-8ef8-5ea38a203e62",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:20:19.446Z",
+      "modified": "2022-05-20T20:20:19.446Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = 'd346b50bf9df7db09363b9227874b8a3c4aafd6648d813e2c59c36b9b4c3fa72' OR file:hashes.'SHA-1' = '68fff07e59ca116228e444370a3ce37f51db2690' OR file:hashes.MD5 = 'eb47824fe3b93f30e6805938814b9cca']",
+      "name": "d346b50bf9df7db09363b9227874b8a3c4aafd6648d813e2c59c36b9b4c3fa72",
+      "description": "Production phase compressed document",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:20:19.415Z",
+      "valid_until": "2023-05-20T20:20:19.415Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "cve-2021-40444",
+        "ref2931",
+        "exploit",
+        "calls-wmi",
+        "docx"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "1fdb06bd-0e45-4dbb-a7c8-00d427c3ca8d",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--3ff12748-3f3b-5947-bd4a-e3660f90c600",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:26:14.232Z",
+      "modified": "2022-05-20T20:26:14.232Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '5a1ef64e27a8a77b13229b684c09b45a521fd6d4a16fdb843044945f12bb20e1' OR file:hashes.'SHA-1' = 'edd9fdcffa71e7ba0ac883f431e1f7aab922a5ef' OR file:hashes.MD5 = 'e1407f664eef87aec8578db175c3db83']",
+      "name": "5a1ef64e27a8a77b13229b684c09b45a521fd6d4a16fdb843044945f12bb20e1",
+      "description": "Generic phase email attachment (RAR file with `.gz` file extension)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:26:14.197Z",
+      "valid_until": "2023-05-20T20:26:14.197Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "attachment",
+        "rar"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "073dbba9-afb9-4d3c-ac4d-d7640300683b",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--417d4a86-ba7a-5cfd-ba41-d4308dd3c936",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:23:48.768Z",
+      "modified": "2022-05-20T20:23:48.768Z",
+      "pattern_type": "stix",
+      "pattern": "[email-addr:value = 'admin0011@issratech.com']",
+      "name": "admin0011@issratech.com",
+      "description": "Sender of the initial phishing email",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:23:48.743Z",
+      "valid_until": "2023-05-20T20:23:48.743Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "Email-Addr",
+      "labels": [
+        "ref2931",
+        "cve-2021-40444"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "8d8513bc-b149-4b71-96db-def9f657a30c",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--479fc422-7bb0-56dd-92bc-61de83d12558",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:32:18.783Z",
+      "modified": "2022-05-23T15:26:13.060Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '0c560d0a7f18b46f9d750e24667721ee123ddd8379246dde968270df1f823881' OR file:hashes.'SHA-1' = '02c3c5e077d30cbbc1cc748e0e477a821ce05868' OR file:hashes.MD5 = '4dca577ffe0781eef34291032326ef33']",
+      "name": "0c560d0a7f18b46f9d750e24667721ee123ddd8379246dde968270df1f823881",
+      "description": "Generic phase email attachment",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:32:18.754Z",
+      "valid_until": "2023-05-20T20:32:18.754Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "attachment",
+        "rar"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "d20443b4-8f8a-445e-93db-117506e03d63",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--489aa486-6348-5b16-939c-4b6fd63a9cd2",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:16:23.936Z",
+      "modified": "2022-05-20T20:16:23.936Z",
+      "pattern_type": "stix",
+      "pattern": "[url:value = 'http://104.244.78.177/Pope.txt']",
+      "name": "http://104.244.78.177/Pope.txt",
+      "description": "Pope.txt contains the exploit code.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:16:23.909Z",
+      "valid_until": "2022-07-19T20:16:23.909Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "Url",
+      "labels": [
+        "cve-2021-40444",
+        "ref2931"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "1c57fc22-6d14-4445-89f9-d71a3e045d8b",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--585eeb2b-31d4-5505-8434-3c77173abe83",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:29:11.736Z",
+      "modified": "2022-05-23T15:28:57.093Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '22cffbcad42363841d01cc7fef290511c0531aa2b4c9ca33656cc4aef315e723' OR file:hashes.'SHA-1' = '88c76271807fe1a4051e791760bc7871c2101ca1' OR file:hashes.MD5 = 'da3fc97c11c507e60c64cb7ed2d18dea']",
+      "name": "22cffbcad42363841d01cc7fef290511c0531aa2b4c9ca33656cc4aef315e723",
+      "description": "Testing phase DLL loader",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:29:11.706Z",
+      "valid_until": "2023-05-20T20:29:11.706Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "invalid-rich-pe-linker-version",
+        "pedll"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "c5f6a3ed-6030-43b9-9f3a-f2ff5654308a",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--82b71909-0a9d-56e6-a35e-4a79104c2dfe",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 50,
+      "created": "2022-04-21T16:50:41.038Z",
+      "modified": "2022-05-23T15:48:54.456Z",
+      "pattern_type": "stix",
+      "pattern": "[email-message:subject = 'Request for Quote' OR email-message:message_id = 'eece7c8fc16ebabdef78a2f90fb38be5@issratech.com']",
+      "name": "Request for Quote",
+      "description": "Testing phase email message",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-04-21T16:50:40.992Z",
+      "valid_until": "2023-04-21T16:50:40.993Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "Email-Message",
+      "labels": [
+        "exploit",
+        "cve-2021-40444"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "5e4c76f1-97a1-488c-acb4-d57c7693b33e",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--85ae6fbb-12ff-53ec-bcd0-742f8c6a1603",
+      "spec_version": "2.1",
+      "revoked": true,
+      "confidence": 75,
+      "created": "2022-04-20T21:58:00.453Z",
+      "modified": "2022-05-20T22:02:03.157Z",
+      "pattern_type": "stix",
+      "pattern": "[ipv4-addr:value = '52.128.23.153']",
+      "name": "52.128.23.153",
+      "description": "\n**ISP:** Dosarrest Internet Security LTD\n\n**OS:** None\n\n--------------------------\nHostnames:\n\n--------------------------\nDomains:\n\n--------------------------\nServices:\n\n**80:**\n```\nHTTP/1.1 200 OK\r\nServer: nginx\r\nDate: Wed, 20 Apr 2022 21:27:51 GMT\r\nContent-Type: text/html\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nKeep-Alive: timeout=20\r\nX-DIS-Request-ID: b667c006b522104f126c116fbd0ae9f1\r\nP3P: CP=\"NON DSP COR ADMa OUR IND UNI COM NAV INT\"\r\nCache-Control: no-cache\n```\n------------------\n        ",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-04-20T21:58:00.000Z",
+      "valid_until": "2022-05-20T21:58:00.000Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "IPv4-Addr",
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "22380e24-26b1-49f5-9739-17e308bcc985",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--87c7eaea-1fa7-56ef-92a9-a1315d999b39",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:25:22.042Z",
+      "modified": "2022-05-20T20:25:22.042Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '7c98db2063c96082021708472e1afb81f3e54fe6a4a8b8516e22b3746e65433b' OR file:hashes.'SHA-1' = 'b74572a29f60ecfa8ac8e0e0061856e019db7f02' OR file:hashes.MD5 = '395b29e0da85e40862ff9a25045f419f']",
+      "name": "7c98db2063c96082021708472e1afb81f3e54fe6a4a8b8516e22b3746e65433b",
+      "description": "Simple indicator of observable {7c98db2063c96082021708472e1afb81f3e54fe6a4a8b8516e22b3746e65433b}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:25:22.015Z",
+      "valid_until": "2023-05-20T20:25:22.015Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "ref2931",
+        "cab",
+        "malware",
+        "cve-2021-40444"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "c97e67ea-aea3-45e0-859d-1de497e3a8b2",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--9cff9861-72d0-5ee1-b2bb-63877dbed23f",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:23:01.758Z",
+      "modified": "2022-05-20T20:23:01.758Z",
+      "pattern_type": "stix",
+      "pattern": "[email-addr:value = 'admin010@backsjoy.com']",
+      "name": "admin010@backsjoy.com",
+      "description": "Phishing sender",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:23:01.730Z",
+      "valid_until": "2023-05-20T20:23:01.730Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "Email-Addr",
+      "labels": [
+        "ref2931",
+        "phishing",
+        "formbook"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "8e83f30d-d491-4a0c-a69c-8bcd36655d01",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--a4177467-fca2-52e3-a602-dadb0d4f80c7",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:10:53.783Z",
+      "modified": "2022-05-20T20:12:23.895Z",
+      "pattern_type": "stix",
+      "pattern": "[email-message:subject = 'New Enquiry - ISRATECH' OR email-message:message_id = '74886fc1350e4d820fa1bbb54e5685a2@issratech.com']",
+      "name": "New Enquiry - ISRATECH",
+      "description": "Lure email",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:10:53.753Z",
+      "valid_until": "2023-05-20T20:10:53.753Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "Email-Message",
+      "labels": [
+        "cve-2021-40444",
+        "ref2931",
+        "email"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-mobile-attack",
+          "phase_name": "initial-access",
+          "x_opencti_order": 0
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "97722488-bdde-4eba-bd85-f5442cf98013",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--ac264e8e-fa15-5b24-84c3-bfaf9eff8257",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:31:40.619Z",
+      "modified": "2022-05-20T20:31:40.619Z",
+      "pattern_type": "stix",
+      "pattern": "[ipv4-addr:value = '104.244.78.177']",
+      "name": "104.244.78.177",
+      "description": "C2 address to download comres.cab and Pope.txt",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:31:40.592Z",
+      "valid_until": "2022-06-19T20:31:40.593Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "IPv4-Addr",
+      "labels": [
+        "cve-2021-40444",
+        "ref2931",
+        "c2 server"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "b17e6576-b90f-411f-92a6-7ca64dbe25ef",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--b1c0abeb-9444-54d2-8398-fb40cfb58d8f",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:30:03.518Z",
+      "modified": "2022-05-20T20:30:03.518Z",
+      "pattern_type": "stix",
+      "pattern": "[ipv4-addr:value = '2.56.59.105']",
+      "name": "2.56.59.105",
+      "description": "issratech IP address",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:30:03.489Z",
+      "valid_until": "2022-06-19T20:30:03.489Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "IPv4-Addr",
+      "labels": [
+        "ref2931",
+        "c2 server",
+        "cve-2021-40444"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "f3089ede-e422-42da-a07e-5b7396d7cf46",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--b3bd8fac-0b06-5e15-be9e-c91fd877d993",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:30:45.135Z",
+      "modified": "2022-05-20T20:30:45.135Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '170eaccdac3c2d6e1777c38d61742ad531d6adbef3b8b031ebbbd6bc89b9add6' OR file:hashes.'SHA-1' = 'fed368535a6f394c8546730eabc5ecdbda21acf8' OR file:hashes.MD5 = 'ebe452c864498aff74c2c74c7e2d6154']",
+      "name": "170eaccdac3c2d6e1777c38d61742ad531d6adbef3b8b031ebbbd6bc89b9add6",
+      "description": "Production phase email attachment",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:30:45.103Z",
+      "valid_until": "2023-05-20T20:30:45.103Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "vba",
+        "create-ole",
+        "cve-2021-40444",
+        "run-file",
+        "exploit",
+        "powershell",
+        "attachment"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "588ba8d6-dc57-4e53-8ed7-4ba7d5203d6d",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--b8259f0d-fc6f-5110-a5ce-b903d02818d8",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:27:38.600Z",
+      "modified": "2022-05-20T20:27:38.600Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '4216ff4fa7533209a6e50c6f05c5216b8afb456e6a3ab6b65ed9fcbdbd275096' OR file:hashes.'SHA-1' = 'aad1eed1c53f1d33ab52e13442b036bfeee91f1b' OR file:hashes.MD5 = 'ff882802d113ed02fa070c496f89d797']",
+      "name": "4216ff4fa7533209a6e50c6f05c5216b8afb456e6a3ab6b65ed9fcbdbd275096",
+      "description": "Simple indicator of observable {4216ff4fa7533209a6e50c6f05c5216b8afb456e6a3ab6b65ed9fcbdbd275096}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:27:38.572Z",
+      "valid_until": "2023-05-20T20:27:38.572Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "invalid-rich-pe-linker-version",
+        "checks-user-input",
+        "peexe"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "a0195341-3274-4f22-aa4c-356e10bb0c54",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--b874ca60-dcd9-5d04-99f6-44958ce6c339",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 15,
+      "created": "2022-05-23T15:41:29.294Z",
+      "modified": "2022-05-23T15:41:29.294Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '776df245d497af81c0e57fb7ef763c8b08a623ea044da9d79aa3b381192f70e2' OR file:hashes.'SHA-1' = 'b26796f41c9d265995a608adc51d604d7cb47851' OR file:hashes.MD5 = '05c21bf3df38d5b8365db71d94dbca37']",
+      "name": "776df245d497af81c0e57fb7ef763c8b08a623ea044da9d79aa3b381192f70e2",
+      "description": "Downloaded by Powershell from C2 server to file named `dllhostSvc.exe` in `%APPDATA%` directory then executed",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-23T15:41:29.256Z",
+      "valid_until": "2023-05-23T15:41:29.256Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "peexe",
+        "checks-user-input",
+        "cve-2021-40444",
+        "long-sleeps",
+        "detect-debug-environment",
+        "invalid-rich-pe-linker-version",
+        "ref2931"
+      ],
+      "x_opencti_id": "65bc074c-3fe1-45bf-9a86-e1823a956d87",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--c6a32671-711d-575a-a628-9bb9bae78619",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:15:01.289Z",
+      "modified": "2022-05-20T20:15:01.289Z",
+      "pattern_type": "stix",
+      "pattern": "[domain-name:value = 'issratech.com']",
+      "name": "issratech.com",
+      "description": "Domain sending the phishing email.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:15:01.263Z",
+      "valid_until": "2023-05-20T20:15:01.263Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "Domain-Name",
+      "labels": [
+        "cve-2021-40444",
+        "ref2931"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "0ffa71be-7ec9-4be8-bb93-74bf8bfcac29",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--ca4c6f5e-648c-57c1-84cf-332a5956e0a1",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-04-20T21:56:32.611Z",
+      "modified": "2022-04-20T21:56:32.611Z",
+      "pattern_type": "stix",
+      "pattern": "[domain-name:value = 'leonei.com']",
+      "name": "leonei.com",
+      "description": "Simple indicator of observable {leonei.com}",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-04-20T21:56:32.575Z",
+      "valid_until": "2023-04-20T21:56:32.575Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "Domain-Name",
+      "x_opencti_id": "7b0786bd-c375-45ed-b67a-8b29a27c9b7f",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--ccd75ba3-d354-5eed-8ba2-ef1d8d77a6f9",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:36:06.004Z",
+      "modified": "2022-05-20T20:36:06.004Z",
+      "pattern_type": "yara",
+      "pattern": "rule Windows_Trojan_FORMBOOK {\n    meta:\n        author = \"Elastic Security\"\n        creation_date = \"2021-06-14\"\n        last_modified = \"2021-08-23\"\n        os = \"Windows\"\n        arch = \"x86\"\n        category_type = \"Trojan\"\n        family = \"FORMBOOK\"\n        threat_name = \"Windows.Trojan.FORMBOOK\"\n\n        reference_sample = \"6246f3b89f0e4913abd88ae535ae3597865270f58201dc7f8ec0c87f15ff370a\"\n\n    strings:\n        $a1 = { 3C 30 50 4F 53 54 74 09 40 }\n        $a2 = { 74 0A 4E 0F B6 08 8D 44 08 01 75 F6 8D 70 01 0F B6 00 8D 55 }\n        $a3 = { 1A D2 80 E2 AF 80 C2 7E EB 2A 80 FA 2F 75 11 8A D0 80 E2 01 }\n        $a4 = { 04 83 C4 0C 83 06 07 5B 5F 5E 8B E5 5D C3 8B 17 03 55 0C 6A 01 83 }\n    condition:\n        any of them\n}\n",
+      "name": "Windows_Trojan_FORMBOOK",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "x_opencti_id": "b112c2cf-2c27-4a70-9e21-265ff4b87e20",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--d5fc9549-190e-527e-84bb-9cd551e5607d",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 85,
+      "created": "2022-05-20T20:28:04.973Z",
+      "modified": "2022-05-20T20:28:04.973Z",
+      "pattern_type": "stix",
+      "pattern": "[file:hashes.'SHA-256' = '363837d5c41ea6b2ff6f6184d817c704e0dc5749e45968a3bc4e45ad5cf028d7' OR file:hashes.'SHA-1' = 'f5b588372c1b96ab2f1eb9293d1bde7311bf2226' OR file:hashes.MD5 = 'd9ece852393073080fed604f4eac3c51']",
+      "name": "363837d5c41ea6b2ff6f6184d817c704e0dc5749e45968a3bc4e45ad5cf028d7",
+      "description": " MIMEType application/octet-stream\nSubsystem Windows GUI\nMachineType Intel 386 or later, and compatibles\nTimeStamp 2020:08:29 07:01:59+00:00\nFileType Win32 DLL\nPEType PE32\nCodeSize 77824\nLinkerVersion 14.16\nImageFileCharacteristics Executable, 32-bit, DLL\nFileTypeExtension dll\nInitializedDataSize 1300992\nSubsystemVersion 6.0\nImageVersion 0.0\nOSVersion 6.0\nEntryPoint 0x550365\nUninitializedDataSize 0 ",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-05-20T20:28:04.947Z",
+      "valid_until": "2023-05-20T20:28:04.948Z",
+      "x_opencti_score": 100,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "StixFile",
+      "labels": [
+        "corrupt",
+        "pedll"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "2b7dd3ca-ee39-4351-9fcf-16ac7d4be2b4",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "indicator--f805d27c-078e-5503-b03d-4aeb5826fb54",
+      "spec_version": "2.1",
+      "revoked": true,
+      "confidence": 75,
+      "created": "2022-04-20T21:57:21.764Z",
+      "modified": "2022-05-20T22:02:03.156Z",
+      "pattern_type": "stix",
+      "pattern": "[ipv4-addr:value = '212.192.241.173']",
+      "name": "212.192.241.173",
+      "description": "\n**ISP:** Delis LLC\n\n**OS:** None\n\n--------------------------\nHostnames:\n\n--------------------------\nDomains:\n\n--------------------------\nServices:\n\n**3389:**\n```\nRemote Desktop Protocol NTLM Info:\n  OS: Windows 10/Windows Server 2019\n  OS Build: 10.0.17763\n  Target Name: WIN-HM6FI4VOIEP\n  NetBIOS Domain Name: WIN-HM6FI4VOIEP\n  NetBIOS Computer Name: WIN-HM6FI4VOIEP\n  DNS Domain Name: WIN-HM6FI4VOIEP\n  FQDN: WIN-HM6FI4VOIEP\n```\n------------------\n        ",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "valid_from": "2022-04-20T21:57:21.000Z",
+      "valid_until": "2022-05-20T21:57:21.000Z",
+      "x_opencti_score": 50,
+      "x_opencti_detection": false,
+      "x_opencti_main_observable_type": "IPv4-Addr",
+      "labels": [
+        "self-signed"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "4f5f5acf-8521-41d5-9532-2ddf19f6bf69",
+      "type": "indicator",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "ipv4-addr--00032b16-b64e-5dcd-ac94-08d63035a645",
+      "spec_version": "2.1",
+      "x_opencti_description": "\n**ISP:** Delis LLC\n\n**OS:** None\n\n--------------------------\nHostnames:\n\n--------------------------\nDomains:\n\n--------------------------\nServices:\n\n**3389:**\n```\nRemote Desktop Protocol NTLM Info:\n  OS: Windows 10/Windows Server 2019\n  OS Build: 10.0.17763\n  Target Name: WIN-HM6FI4VOIEP\n  NetBIOS Domain Name: WIN-HM6FI4VOIEP\n  NetBIOS Computer Name: WIN-HM6FI4VOIEP\n  DNS Domain Name: WIN-HM6FI4VOIEP\n  FQDN: WIN-HM6FI4VOIEP\n```\n------------------\n        ",
+      "x_opencti_score": 50,
+      "value": "212.192.241.173",
+      "labels": [
+        "self-signed"
+      ],
+      "external_references": [
+        {
+          "source_name": "Shodan",
+          "description": "[NL] [UT - Soest] - ",
+          "url": "https://shodan.io/host/212.192.241.173"
+        }
+      ],
+      "x_opencti_id": "9d378283-bb7f-4f33-8472-28bfba889d5e",
+      "type": "ipv4-addr",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "ipv4-addr--23ac08c7-76bb-539c-b598-399d5b120092",
+      "spec_version": "2.1",
+      "x_opencti_description": "issratech IP address",
+      "x_opencti_score": 50,
+      "value": "2.56.59.105",
+      "labels": [
+        "ref2931",
+        "cve-2021-40444",
+        "c2 server"
+      ],
+      "x_opencti_id": "3ab16f08-60ff-42d7-bf79-dc3c4fbfaab9",
+      "type": "ipv4-addr",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "ipv4-addr--3667359c-565a-5e33-9435-36f312ec239c",
+      "spec_version": "2.1",
+      "x_opencti_description": "\n**ISP:** Dosarrest Internet Security LTD\n\n**OS:** None\n\n--------------------------\nHostnames:\n\n--------------------------\nDomains:\n\n--------------------------\nServices:\n\n**80:**\n```\nHTTP/1.1 200 OK\r\nServer: nginx\r\nDate: Wed, 20 Apr 2022 21:27:51 GMT\r\nContent-Type: text/html\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nKeep-Alive: timeout=20\r\nX-DIS-Request-ID: b667c006b522104f126c116fbd0ae9f1\r\nP3P: CP=\"NON DSP COR ADMa OUR IND UNI COM NAV INT\"\r\nCache-Control: no-cache\n```\n------------------\n        ",
+      "x_opencti_score": 50,
+      "value": "52.128.23.153",
+      "external_references": [
+        {
+          "source_name": "Shodan",
+          "description": "[US] [CA - Los Angeles] - ",
+          "url": "https://shodan.io/host/52.128.23.153"
+        }
+      ],
+      "x_opencti_id": "27644e82-9f6b-45fb-a7c2-034a7aec1355",
+      "type": "ipv4-addr",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "ipv4-addr--e1b5b828-3d0c-52e8-b10e-daa02a2581dd",
+      "spec_version": "2.1",
+      "x_opencti_description": "C2 address to download comres.cab and Pope.txt",
+      "x_opencti_score": 50,
+      "value": "104.244.78.177",
+      "labels": [
+        "ref2931",
+        "cve-2021-40444",
+        "c2 server"
+      ],
+      "x_opencti_id": "b70241aa-a6c4-4dfe-a3a9-680d0954ef72",
+      "type": "ipv4-addr",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "malware--d7fe314b-4ef2-50db-af6f-592621554d90",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 15,
+      "created": "2021-11-02T16:25:19.249Z",
+      "modified": "2022-05-20T20:44:36.332Z",
+      "name": "xLoader/Formbook",
+      "description": "xLoader is an information-stealing malware targeting both macOS\u00ae and Windows\u00ae. Previously sold on underground forums under the name Formbook, xLoader surfaced in early 2020 shortly after Formbook was shut down by its author.\n\nxLoader is sold under a Malware-as-a-Service (MaaS) agreement. Subscribers have access to the administrative panel and executable builds for both Windows and macOS. The authors of xLoader retain full control of command-and-control (C2) infrastructure and malware builds for each target environment.",
+      "malware_types": [
+        "keylogger",
+        "screen-capture",
+        "spyware"
+      ],
+      "is_family": true,
+      "first_seen": "1970-01-01T00:00:00.000Z",
+      "last_seen": "5138-11-16T09:46:40.000Z",
+      "architecture_execution_envs": [
+        "x86",
+        "x86-64"
+      ],
+      "labels": [
+        "formbook",
+        "xloader"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-mobile-attack",
+          "phase_name": "exfiltration",
+          "x_opencti_order": 0
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control",
+          "x_opencti_order": 0
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "Formbook",
+          "url": "https://malpedia.caad.fkie.fraunhofer.de/details/win.formbook"
+        }
+      ],
+      "x_opencti_id": "611cdf9e-bca5-4f09-88d1-5c97d0452d0c",
+      "type": "malware",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "identity--c7bf666b-1a16-584a-97d1-ce8016379e28",
+      "spec_version": "2.1",
+      "identity_class": "individual",
+      "name": "Derek Ditch",
+      "contact_information": "dcode@elastic.co",
+      "x_opencti_aliases": [
+        "dcode"
+      ],
+      "created": "2021-04-12T20:40:29.443Z",
+      "modified": "2021-04-29T18:36:30.001Z",
+      "x_opencti_id": "9d421d18-d86e-4c3c-b65f-ed1a43be7f59",
+      "type": "identity"
+    },
+    {
+      "id": "relationship--bbd6b5a6-9c54-4dce-b9e1-29ecfdf94458",
+      "spec_version": "2.1",
+      "relationship_type": "related-to",
+      "start_time": "1970-01-01T00:00:00.000Z",
+      "stop_time": "5138-11-16T09:46:40.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2021-10-19T15:36:29.369Z",
+      "modified": "2021-10-19T15:36:29.369Z",
+      "x_opencti_id": "df5acdaa-7982-41e9-84b3-d2b2e9719ea6",
+      "type": "relationship",
+      "created_by_ref": "identity--c7bf666b-1a16-584a-97d1-ce8016379e28",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "file--6f729755-25f3-5e8e-9b40-e2a03aa9693f",
+      "target_ref": "vulnerability--831a8750-1c0e-5eea-a979-5b0ae7af4b0a"
+    },
+    {
+      "id": "relationship--e9e8c1a0-1b54-44d4-b0fb-24eff06b6a79",
+      "spec_version": "2.1",
+      "relationship_type": "resolves-to",
+      "start_time": "2021-10-13T05:00:00.000Z",
+      "stop_time": "2021-10-21T05:00:00.000Z",
+      "revoked": false,
+      "confidence": 85,
+      "lang": "en",
+      "created": "2022-04-21T15:51:17.595Z",
+      "modified": "2022-04-21T15:51:17.595Z",
+      "x_opencti_id": "aedd2349-8c4d-43a8-b7dd-95593387905b",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "domain-name--2bd23465-a677-5c34-90dd-f87d07f4dbe1",
+      "target_ref": "ipv4-addr--e1b5b828-3d0c-52e8-b10e-daa02a2581dd"
+    },
+    {
+      "id": "relationship--f0803f67-15b9-49cf-b75b-8c6eb138f79e",
+      "spec_version": "2.1",
+      "relationship_type": "related-to",
+      "start_time": "2022-04-20T05:00:00.000Z",
+      "stop_time": "2023-04-20T05:00:00.000Z",
+      "revoked": false,
+      "confidence": 75,
+      "lang": "en",
+      "created": "2022-04-20T22:16:20.088Z",
+      "modified": "2022-04-20T22:16:20.088Z",
+      "x_opencti_id": "6e9b617a-7705-40a0-ad4a-43aa12579f38",
+      "type": "relationship",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "source_ref": "file--bea5cdc4-2fd4-594e-9fd6-5a6953c3cd34",
+      "target_ref": "vulnerability--831a8750-1c0e-5eea-a979-5b0ae7af4b0a"
+    },
+    {
+      "id": "url--563ff9c1-7e82-5097-bd88-087e724c79bf",
+      "spec_version": "2.1",
+      "x_opencti_description": "Provides the malware loader abb01.exe",
+      "x_opencti_score": 50,
+      "value": "http://104.244.78.177/abb01.exe",
+      "labels": [
+        "ref2931",
+        "cve-2021-40444",
+        "c2 server"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "42c74541-c3d8-49fb-8da1-9d910017cc4a",
+      "type": "url",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "url--dbf4183a-7e0a-5a49-947e-b5a35b61158e",
+      "spec_version": "2.1",
+      "x_opencti_description": "Pope.txt contains the exploit code.",
+      "x_opencti_score": 50,
+      "value": "http://104.244.78.177/Pope.txt",
+      "labels": [
+        "cve-2021-40444",
+        "ref2931"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        }
+      ],
+      "x_opencti_id": "1a71df6c-5cfb-4b36-aa4e-14b0c65963e9",
+      "type": "url",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "url--eed68aa5-90cf-54d5-a8a7-b083e5aa5d26",
+      "spec_version": "2.1",
+      "x_opencti_description": "Second stage download link from malicious docx",
+      "x_opencti_score": 100,
+      "value": "http://104.244.78.177/comres.cab",
+      "labels": [
+        "ip"
+      ],
+      "external_references": [
+        {
+          "source_name": "Elastic - FORMBOOK Adopts a CAB-less Approach",
+          "url": "https://elastic.github.io/security-research/intelligence/2022/01/01.formbook-adopts-cabless-approach/article/?utm_source=elastic-security-research&medium=stix-threat-intel"
+        },
+        {
+          "source_name": "Virustotal",
+          "url": "https://www.virustotal.com/gui/url/5181e0c7e1a29bf085644f1f1e813175b0fda397a2f61651473670dfd80d3499",
+          "external_id": "5181e0c7e1a29bf085644f1f1e813175b0fda397a2f61651473670dfd80d3499"
+        }
+      ],
+      "x_opencti_id": "446c30b1-750e-4dc6-8227-f76fcd804395",
+      "type": "url",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "id": "vulnerability--831a8750-1c0e-5eea-a979-5b0ae7af4b0a",
+      "spec_version": "2.1",
+      "revoked": false,
+      "confidence": 15,
+      "created": "2021-09-15T12:15:00.000Z",
+      "modified": "2022-04-20T20:30:17.347Z",
+      "name": "CVE-2021-40444",
+      "description": "Microsoft MSHTML Remote Code Execution Vulnerability",
+      "x_opencti_base_score": 7.8,
+      "x_opencti_base_severity": "HIGH",
+      "x_opencti_attack_vector": "Local",
+      "x_opencti_integrity_impact": "HIGH",
+      "x_opencti_availability_impact": "HIGH",
+      "x_opencti_confidentiality_impact": "HIGH",
+      "external_references": [
+        {
+          "source_name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-40444"
+        },
+        {
+          "source_name": "MISC",
+          "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2021-40444"
+        }
+      ],
+      "x_opencti_id": "354d8b78-31d8-415d-8e38-172d30e9d9be",
+      "type": "vulnerability",
+      "created_by_ref": "identity--9a7de335-5d7b-55a1-bfde-cb9c98ca6ebc",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    }
+  ]
+}
