@@ -29,7 +29,9 @@ jobs:
           rm -rf ./site/*
 
       - name: Run build command
-        run: mkdocs build --config-file mkdocs.insiders.yml
+        run: |
+          git config --global --add safe.directory $(pwd)
+          mkdocs build --config-file mkdocs.insiders.yml
         env:
           GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
           MKDOCS_ENABLE_RSS_PLUGIN: "True"
