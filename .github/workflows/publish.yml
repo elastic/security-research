@@ -33,6 +33,7 @@ jobs:
         env:
           GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
           MKDOCS_ENABLE_RSS_PLUGIN: "True"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
