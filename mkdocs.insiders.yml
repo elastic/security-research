@@ -11,7 +11,7 @@ plugins:
       enable_creation_date: true
       fallback_to_build_date: true
   - authors:
-      enabled: False
+      enabled: True
   - build_ext:
       enabled: True
 
