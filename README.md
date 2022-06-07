@@ -1,5 +1,14 @@
 # Elastic Security Research
 
+**This site has been archived**  
+This site was stood up on a temporary basis as a way to provide threat research to the community.
+
+The popularity of this research has led to the release of Elastic Security Labs.
+
+All research and tools, previous and future, is available on the Elastic Security Labs site **https://elastic.co/security-labs**.
+
+---
+
 The Elastic Security Research team pairs research on emerging threats with analysis of strategic, operational, and
 tactical adversary objectives.
 
